@@ -1,3 +1,39 @@
 body {
-    background-color: rgb(173, 216, 230);
+    background-image: url(https://images.trvl-media.com/place/6108412/789a64f7-293c-4d5a-8c13-569da4658460.jpg);
+    background-size: cover;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+.date-time{
+    margin-right: 0px;
+}
+
+.RayanOS {
+    margin-left: 16px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    padding: 8px;
+    gap: 32px;
+}
+
+.window-box {
+    border: solid;
+    width: 400px;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
