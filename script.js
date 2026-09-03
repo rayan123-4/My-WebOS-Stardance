@@ -23,7 +23,7 @@ if (document.getElementById(element.id + "header")) {
 } else {
 
     // if not from the header then from anywhere else in the window:
-    elmnt.onmousedown = startDragging;
+    element.onmousedown = startDragging;
 
 }
 
@@ -43,12 +43,12 @@ function startDragging(e) {
     // Setting up event listener for mouse movement
     document.onmouseup = stopDragging;
 
-    document.onmousemove = dragElement;
+    document.onmousemove = elementMove;
 
 }
 
 // Function to handle the dragging of the element:
-function dragElement(e) {
+function elementMove(e) {
 
     e = e || window.event;
 
@@ -76,7 +76,7 @@ function stopDragging() {
 
     document.onmouseup = null;
 
-    document.onmousedown = null;
+    document.onmousemove = null;
 
 }
 }
