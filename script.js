@@ -1,7 +1,8 @@
 
 // Code for making the DIV element draggable:
-dragElement(document.getElementById("window-box"));
+dragElement(document.getElementById("welcomepage"));
 
+// Function for making the window drag:
 function dragElement(element) {
 
     // Tracking the elements position:
@@ -12,12 +13,12 @@ function dragElement(element) {
     var currentX = 0;
 
     var currentY = 0;
-}
+
 
 // The if statement that alows the element to be dragged from the header:
-if (document.getElementById(elmnt.id + "header")) {
+if (document.getElementById(element.id + "header")) {
 
-    document.getElementById(elmnt.id + "header").onmousedown = startDragging;
+    document.getElementById(element.id + "header").onmousedown = startDragging;
 
 } else {
 
@@ -25,6 +26,7 @@ if (document.getElementById(elmnt.id + "header")) {
     elmnt.onmousedown = startDragging;
 
 }
+
 
 // Function to handle the mouse down event and initiate dragging:
 function startDragging(e) {
@@ -46,7 +48,7 @@ function startDragging(e) {
 }
 
 // Function to handle the dragging of the element:
-function dragElement(e {
+function dragElement(e) {
 
     e = e || window.event;
 
@@ -77,8 +79,46 @@ function stopDragging() {
     document.onmousedown = null;
 
 }
+}
+
+
+
+// Selecting the window:
+var welcomeScreen = document.querySelector("#welcomepage");
+
+// Function to close window:
+function closeWindow(element) {
+
+    element.style.display = "none";
 
 }
+
+// Function for opening the window:
+function openWindow(element) {
+
+    element.style.display = "flex"
+
+}
+
+// Identifing the buttons:
+var welcomeScreenClose = document.querySelector("#welcomeclose")
+
+var welcomeScreenOpen = document.querySelector("#welcomeopen")
+
+// Adding event listeners to the open and close button:
+welcomeScreenClose.addEventListener("click", function() {
+
+    closeWindow(welcomeScreen);
+
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+
+    openWindow(welcomeScreen);
+
+});
+
+
 
 // Code for making the date/time:
 function updateTime() {
