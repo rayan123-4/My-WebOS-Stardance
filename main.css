@@ -21,13 +21,14 @@ img {
     height: 16px;
     cursor: pointer;
     margin-left: 6px;
+    color: #fff;
 }
 
 .open-button {
-    cursor:pointer;
-}
-
-.top-bar {
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     backdrop-filter: blur(10px);
@@ -36,6 +37,26 @@ img {
     color: #fff;
     padding: 8px;
     gap: 32px;
+    border-radius: 16px;
+    margin: 16px;
+    width: 150px;
+    height: 50px;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    padding: 8px;
+    gap: 32px;
+    border-radius: 16px;
+    margin: 16px;
 }
 
 .window-box {
@@ -51,6 +72,7 @@ img {
     flex-direction: column;
     backdrop-filter: blur 4px;
     background-color: rgba(0, 0, 0, 0.25);
+    border-image: blue, red, orange;
 }
 
 .welcome-page-header {
@@ -62,5 +84,4 @@ img {
     margin-top: 8px;
     color: #fff;
     font-weight: 500;
-
 }
