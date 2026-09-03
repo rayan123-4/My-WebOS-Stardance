@@ -16,12 +16,27 @@ img {
     margin-left: 16px;
 }
 
+.title-image {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: rgb(252, 251, 244);
+}
+
+.welcome-rayanOS { 
+    position: absolute;
+}
+
 .close-button {
     width: 16px;
     height: 16px;
     cursor: pointer;
-    margin-left: 6px;
     color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 21px;
+    margin-left: 21px;
 }
 
 .open-button {
