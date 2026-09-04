@@ -3,17 +3,20 @@ body {
     background-size: cover;
 }
 
-img {
-    width: 300px;
-    height: 300px;
-}
-
 .date-time {
     margin-right: 0px;
 }
 
 .RayanOS {
     margin-left: 16px;
+}
+
+.tiger-gallery {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: #f0f0f0;
+    object-fit: contain;
 }
 
 .title-image {
@@ -23,8 +26,25 @@ img {
     background-color: rgb(252, 251, 244);
 }
 
-.welcome-rayanOS { 
+.title-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tiger-gallery img {
     position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+
+.welcome-rayanOS {
+    position: relative;
+    margin-bottom: 15px;
 }
 
 .close-button {
@@ -32,9 +52,7 @@ img {
     height: 16px;
     cursor: pointer;
     color: #fff;
-    position: fixed;
-    top: 0;
-    right: 0;
+    align-self: flex-end;
     margin: 21px;
     margin-left: 21px;
 }
@@ -85,9 +103,8 @@ img {
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur 4px;
+    backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, 0.25);
-    border-image: blue, red, orange;
 }
 
 .welcome-page-header {
@@ -99,4 +116,5 @@ img {
     margin-top: 8px;
     color: #fff;
     font-weight: 500;
+    margin: 0px;
 }
