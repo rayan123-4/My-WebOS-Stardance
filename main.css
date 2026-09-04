@@ -7,11 +7,57 @@ body {
     margin-right: 0px;
 }
 
+
 .RayanOS {
     margin-left: 16px;
 }
 
+.gallery-images {
+    padding-right: 8px;
+}
+
+.gallery-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.gallery-images {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: rgb(252, 251, 244);
+}
+
+.gallery-photo-grid img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover; 
+    border-radius: 8px;
+    border: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.gallery-title {
+    color: black;
+    margin-bottom: 12px;
+}
+
+
+.gallery-photo-grid img:hover {
+    transform: scale(1.03);
+    border-color: #fff;
+}
+
+
+
 .tiger-gallery {
+    cursor: pointer;
+    position: fixed;
+    top: 100px;
+    left: 16px;
     width: 64px;
     height: 64px;
     border-radius: 16px;
@@ -23,6 +69,7 @@ body {
     border: solid;
     border-radius: 16px;
     padding: 16px;
+    margin-top: 32px;
     background-color: rgb(252, 251, 244);
 }
 
@@ -48,13 +95,14 @@ body {
 }
 
 .close-button {
-    width: 16px;
-    height: 16px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: auto;
+    height: auto;
     cursor: pointer;
     color: #fff;
-    align-self: flex-end;
-    margin: 21px;
-    margin-left: 21px;
+    margin: 0;
 }
 
 .open-button {
@@ -72,7 +120,7 @@ body {
     gap: 32px;
     border-radius: 16px;
     margin: 16px;
-    width: 150px;
+    width: 200px;
     height: 50px;
 }
 
@@ -107,13 +155,31 @@ body {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
+.gallery-window {
+    display: none;
+    border: solid;
+    width: min(600px, calc(100vw - 48px));
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
 .welcome-page-header {
+    position: absolute;
+    top: 16px;
+    left: 16px;
     width: 100%;
+    width: auto;
     display: flex;
     align-items: center;
     cursor: grab;
     justify-content: space-between;
-    margin-top: 8px;
     color: #fff;
     font-weight: 500;
     margin: 0px;

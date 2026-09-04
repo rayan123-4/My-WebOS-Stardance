@@ -1,9 +1,14 @@
 
 // Code for making the DIV element draggable:
-dragElement(document.getElementById("welcomepage"));
+var welcomePageElement = document.getElementById("welcomepage");
+dragElement(welcomePageElement);
 
 // Function for making the window drag:
 function dragElement(element) {
+
+  if (!element) {
+    return;
+  }
 
     // Tracking the elements position:
     var initialX = 0;
@@ -135,4 +140,109 @@ function updateTime() {
 updateTime();
 
 setInterval(updateTime, 1000);
+
+// Storing the icon:
+var selectedIcon = undefined
+
+// For selecting icon:
+function selectIcon(element) {
+  element.classList.add("tiger-gallery");
+  selectedIcon = element
+} 
+
+
+// For deselecting icon:
+function deselectIcon(element) {
+  element.classList.remove("tiger-gallery");
+  selectedIcon = undefined
+}
+
+// If it's not selected, but deselects it if it is already selected.
+function handleIconTap(element) {
+  if (selectedIcon === element) {
+    deselectIcon(element)
+  } else {
+    if (selectedIcon) {
+      deselectIcon(selectedIcon);
+    }
+    selectIcon(element)
+  }
+}
+
+ // For drag:
+dragElement(document.querySelector("#tigergallery"));
+
+var galleryWindow = document.querySelector("#gallerywindow");
+var galleryIcon = document.querySelector("#tigergallery");
+var galleryWindowClose = document.querySelector("#galleryclose");
+
+if (galleryIcon) {
+  galleryIcon.addEventListener("click", function() {
+    openWindow(galleryWindow);
+  });
+}
+
+if (galleryWindowClose) {
+  galleryWindowClose.addEventListener("click", function() {
+    closeWindow(galleryWindow);
+  });
+}
+
+dragElement(galleryWindow);
+
+// Making app closable
+welcomeScreen = document.querySelector("#welcomepage");
+
+var notesScreenClose = document.querySelector("#welcomeclose")
+
+if (notesScreenClose) {
+  notesScreenClose.addEventListener("click", () => closeWindow(welcomeScreen));
+}
+
+// Defining largest index:
+var biggestIndex = 1;
+
+// Function to make window listen for click:
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  )
+}
+
+
+// Making window move on tap:
+function handleWindowTap(element) {
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+
+// Making window on top to move open:
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+
+// For top bar: 
+var topBar = document.querySelector("#top")
+
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  if (topBar) {
+    topBar.style.zIndex = biggestIndex + 1;
+  }
+}
+
+function handleWindowTap(element) {
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  if (topBar) {
+    topBar.style.zIndex = biggestIndex + 1;
+  }
+  if (selectedIcon) {
+    deselectIcon(selectedIcon)
+  }
+}
 
