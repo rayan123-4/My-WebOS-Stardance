@@ -12,6 +12,44 @@ body {
     margin-left: 16px;
 }
 
+h1 {
+    font-style: italic;
+}
+
+.roar-Icon {
+    cursor: pointer;
+    position: fixed;
+    top: 200px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: #f0f0f0;
+    object-fit: contain;
+}
+
+.roar-sound-button {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.roar-sound-button:hover {
+    transform: scale(1.1); 
+}
+
+
+.roar-Icon img {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .gallery-images {
     padding-right: 8px;
 }
@@ -30,20 +68,32 @@ body {
     background-color: rgb(252, 251, 244);
 }
 
+.title-roar-window {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    align-items: center;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: rgb(252, 251, 244);
+}
+
 .gallery-photo-grid img {
     width: 100%;
     height: 140px;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 8px;
     border: solid;
     border-color: rgba(255, 255, 255, 0.2);
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
 }
 
 .gallery-title {
     color: black;
     margin-bottom: 12px;
 }
+
 
 
 .gallery-photo-grid img:hover {
@@ -89,6 +139,19 @@ body {
 
 }
 
+.roar-Icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgb(252, 217, 217));
+}
+
+
+.tiger-gallery:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+
+
 .welcome-rayanOS {
     position: relative;
     margin-bottom: 15px;
@@ -103,6 +166,7 @@ body {
     cursor: pointer;
     color: #fff;
     margin: 0;
+    filter: drop-shadow(0 0 10px white);
 }
 
 .open-button {
@@ -120,9 +184,10 @@ body {
     gap: 32px;
     border-radius: 16px;
     margin: 16px;
-    width: 200px;
+    width: 250px;
     height: 50px;
 }
+
 
 .top-bar {
     position: fixed;
@@ -155,10 +220,11 @@ body {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.gallery-window {
+.gallery-window,
+.window {
     display: none;
     border: solid;
-    width: min(600px, calc(100vw - 48px));
+    width: 400px;
     border-radius: 16px;
     padding: 16px;
     position: absolute;
@@ -183,4 +249,5 @@ body {
     color: #fff;
     font-weight: 500;
     margin: 0px;
+    filter: drop-shadow(0 0 10px white);
 }
