@@ -5,10 +5,6 @@ document.querySelectorAll(".window-box, .gallery-window, .window").forEach(dragE
 // Function for making the window drag:
 function dragElement(element) {
 
-  if (!element) {
-    return;
-  }
-
   // Tracking the elements position:
   var initialX = 0;
 
