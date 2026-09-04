@@ -1,6 +1,6 @@
 
 // Code for making the DIV element draggable:
-document.querySelectorAll(".window-box, .gallery-window, .window").forEach(dragElement);
+document.querySelectorAll(".window-box, .gallery-window, .roar-window").forEach(dragElement);
 
 // Function for making the window drag:
 function dragElement(element) {

@@ -229,7 +229,7 @@ h1 {
 }
 
 .gallery-window,
-.window {
+.roar-window {
     display: none;
     border: solid;
     width: 400px;
