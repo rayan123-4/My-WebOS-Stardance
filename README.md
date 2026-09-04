@@ -13,7 +13,9 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 - I used also **W3Schools tutorials** for some extra help.
 
 ## To look at the source code:
+```bash
 - git clone https://github.com/rayan123-4/My-WebOS-Stardance
+```
 
 ## AI note:
 - I used **AI** a bit when I got very stuck on an error and couldn't fix it. Also I asked it for help on things that I didn't know how to do (eg: putting sound on a button), though still I did most of the hard work.
