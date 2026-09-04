@@ -225,14 +225,14 @@ function addWindowTapHandling(element) {
 
 // Making window move on tap:
 function handleWindowTap(element) {
-  biggestIndex++;  // Increment biggestIndex by 1
+  biggestIndex++; 
   element.style.zIndex = biggestIndex;
 }
 
 // Making window on top to move open:
 function openWindow(element) {
   element.style.display = "flex";
-  biggestIndex++;  // Increment biggestIndex by 1
+  biggestIndex++;
   element.style.zIndex = biggestIndex;
 }
 
@@ -241,7 +241,7 @@ var topBar = document.querySelector("#top")
 
 function openWindow(element) {
   element.style.display = "flex";
-  biggestIndex++;  // Increment biggestIndex by 1
+  biggestIndex++; 
   element.style.zIndex = biggestIndex;
   if (topBar) {
     topBar.style.zIndex = biggestIndex + 1;
