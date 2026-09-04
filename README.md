@@ -14,7 +14,7 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 
 ## To look at the source code:
 ```bash
-- git clone https://github.com/rayan123-4/My-WebOS-Stardance
+git clone https://github.com/rayan123-4/My-WebOS-Stardance
 ```
 
 ## AI note:
