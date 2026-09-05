@@ -260,7 +260,10 @@ function handleWindowTap(element) {
 }
 
 // 1. Find the speaker icon button
-var roarButton = document.querySelector("#roarsoundbutton");
+var roarButton1 = document.querySelector("#roarsoundbutton");
+var roarButton2 = document.querySelector("#roarsoundbutton");
+var roarButton3 = document.querySelector("#roarsoundbutton");
+
 
 // The function to making the button be clicked and a roar sound appear
 
@@ -268,7 +271,7 @@ var roarButton = document.querySelector("#roarsoundbutton");
 
   roarButton.addEventListener("click", function () {
 
-    var audio = new Audio("https://www.gstatic.com/delight/knowledge/animal_sounds/tiger/tiger_bengal_01.mp3");
+    var audio = new Audio("");
     audio.play();
 
   }); 

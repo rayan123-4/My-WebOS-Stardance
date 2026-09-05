@@ -28,27 +28,11 @@ h1 {
     object-fit: contain;
 }
 
-.roar-sound-button {
-    width: 300px;
-    height: 300px;
-    align-self: center;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.5s ease;
-}
 
 .roar-sound-button:hover {
     transform: scale(1.1); 
 }
 
-
-.roar-Icon img {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    border-radius: 8px;
-    object-fit: cover;
-}
 
 .gallery-images {
     padding-right: 8px;
@@ -56,6 +40,12 @@ h1 {
 
 .gallery-photo-grid {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.roar-sound-button {
+      display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 }
@@ -69,10 +59,7 @@ h1 {
 }
 
 .title-roar-window {
-    display: flex;
-    flex-direction: column;
     border: solid;
-    align-items: center;
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
@@ -93,6 +80,17 @@ h1 {
     border-color: rgba(255, 255, 255, 0.2);
     transition: transform 0.5s ease;
 }
+
+.roar-sound-button img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.5s ease;
+}
+
 
 .gallery-title {
     color: black;
@@ -137,7 +135,8 @@ h1 {
 
 
 
-.tiger-gallery img {
+.tiger-gallery img,
+.roar-Icon img {
     position: absolute;
     width: 64px;
     height: 64px;
@@ -148,7 +147,7 @@ h1 {
 
 .roar-Icon:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 10px rgb(252, 217, 217));
+    filter: drop-shadow(0 0 10px white);
 }
 
 
