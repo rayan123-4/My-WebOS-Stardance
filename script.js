@@ -260,19 +260,52 @@ function handleWindowTap(element) {
 }
 
 // 1. Find the speaker icon button
-var roarButton1 = document.querySelector("#roarsoundbutton");
-var roarButton2 = document.querySelector("#roarsoundbutton");
-var roarButton3 = document.querySelector("#roarsoundbutton");
-var roarButton4 = document.querySelector("#roarsoundbutton");
+var roarButton1 = document.querySelector("#roarsoundbutton1");
+var roarButton2 = document.querySelector("#roarsoundbutton2");
+var roarButton3 = document.querySelector("#roarsoundbutton3");
+var roarButton4 = document.querySelector("#roarsoundbutton4");
 
 
 // The function to making the button be clicked and a roar sound appear
 
-  if (roarButton) {
+  if (roarButton1) {
 
-  roarButton.addEventListener("click", function () {
+  roarButton1.addEventListener("click", function () {
 
-    var audio = new Audio("");
+    var audio = new Audio("bengal-tiger-sound-effects_31BebgSW.mp3");
+    audio.play();
+
+  }); 
+
+}
+
+if (roarButton2) {
+
+  roarButton2.addEventListener("click", function () {
+
+    var audio = new Audio("sumatran-tiger-sound-effects_A2KQoZrL.mp3");
+    audio.play();
+
+  }); 
+
+}
+
+if (roarButton3) {
+
+  roarButton3.addEventListener("click", function () {
+
+    var audio = new Audio("siberian-tiger-sound-effects-mp4_QyCzfm0Z.mp3");
+    audio.play();
+
+  }); 
+
+}
+
+if (roarButton4) {
+
+  roarButton4.addEventListener("click", function () {
+
+    var audio = new Audio("south-china-tiger-sound-effects_h2y6hZYS.mp3");
     audio.play();
 
   }); 
