@@ -263,6 +263,7 @@ function handleWindowTap(element) {
 var roarButton1 = document.querySelector("#roarsoundbutton");
 var roarButton2 = document.querySelector("#roarsoundbutton");
 var roarButton3 = document.querySelector("#roarsoundbutton");
+var roarButton4 = document.querySelector("#roarsoundbutton");
 
 
 // The function to making the button be clicked and a roar sound appear
