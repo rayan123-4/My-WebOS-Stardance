@@ -16,6 +16,23 @@ h1 {
     font-style: italic;
 }
 
+.tiger-map-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 300px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: #fff;
+    object-fit: contain;
+}
+
+.tiger-map-icon img {
+    width: 64px;
+    height: 64px;
+}
+
 .roar-Icon {
     cursor: pointer;
     position: fixed;
@@ -24,13 +41,13 @@ h1 {
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    background-color: #f0f0f0;
+    background-color: #fff;
     object-fit: contain;
 }
 
 
 .roar-sound-button:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 
@@ -121,11 +138,19 @@ h1 {
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    background-color: #f0f0f0;
+    background-color: #fff;
     object-fit: contain;
 }
 
 .title-image {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: rgb(252, 251, 244);
+}
+
+.tiger-map-content {
     border: solid;
     border-radius: 16px;
     padding: 16px;
@@ -143,16 +168,27 @@ h1 {
 
 
 .tiger-gallery img,
-.roar-Icon img {
+.roar-Icon img,
+.tiger-map-icon img {
     position: absolute;
     width: 64px;
     height: 64px;
     border-radius: 8px;
     object-fit: cover;
+}
 
+.tiger-map-icon img {
+    width: 61px;
+    height: 61px;
+    left: 2px;
 }
 
 .roar-Icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+.tiger-map-icon:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px white);
 }
@@ -161,6 +197,26 @@ h1 {
 .tiger-gallery:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px white);
+}
+
+.tiger-map-window {
+    display: none;
+    border: solid;
+    width: 600px;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.tiger-map-image {
+    width: auto;
+    height: 400px;
 }
 
 .roar-window {
@@ -176,7 +232,7 @@ h1 {
     flex-direction: column;
     backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, 0.25);
-    
+
 }
 
 

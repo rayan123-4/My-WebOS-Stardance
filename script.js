@@ -1,6 +1,6 @@
 
 // Code for making the DIV element draggable:
-document.querySelectorAll(".window-box, .gallery-window, .roar-window").forEach(dragElement);
+document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window").forEach(dragElement);
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -164,7 +164,7 @@ function handleIconTap(element) {
   }
 }
 
-// For drag:
+// For drag on gallery window:
 dragElement(document.querySelector("#tigergallery"));
 
 var galleryWindow = document.querySelector("#gallerywindow");
@@ -183,6 +183,9 @@ if (galleryWindowClose) {
   });
 }
 
+// For roar window drag:
+dragElement(document.querySelector("#roarwindow"));
+
 var roarWindow = document.querySelector("#roarwindow");
 var roarIcon = document.querySelector("#roarIcon");
 var roarWindowClose = document.querySelector("#roarwindow-close");
@@ -193,19 +196,40 @@ if (roarIcon) {
   });
 }
 
+// For map window drag:
+dragElement(document.querySelector("#tigermapwindow"));
+
+var tigerMapWindow = document.querySelector("#tigermapwindow");
+var tigerMapIcon = document.querySelector("#tigermapicon");
+var tigerMapWindowClose = document.querySelector("#mapwindow-close");
+
+if (tigerMapIcon) {
+  tigerMapIcon.addEventListener("click", function () {
+    openWindow(tigerMapWindow);
+  });
+}
+
+// Making map app closable:
+if (tigerMapWindowClose) {
+  tigerMapWindowClose.addEventListener("click", function () {
+    closeWindow(tigerMapWindow);
+  });
+}
+
+// Making roar app closable:
 if (roarWindowClose) {
   roarWindowClose.addEventListener("click", function () {
     closeWindow(roarWindow);
   });
 }
 
-// Making app closable
+// Making app closable:
 welcomeScreen = document.querySelector("#welcomepage");
 
 function initializeIcon(name) {
   var icon = document.querySelector("#" + name + "Icon");
   var screen = document.querySelector("#" + name);
-  
+
   if (icon) {
     icon.addEventListener("click", () => handleIconTap(icon));
   }
@@ -225,7 +249,7 @@ function addWindowTapHandling(element) {
 
 // Making window move on tap:
 function handleWindowTap(element) {
-  biggestIndex++; 
+  biggestIndex++;
   element.style.zIndex = biggestIndex;
 }
 
@@ -241,7 +265,7 @@ var topBar = document.querySelector("#top")
 
 function openWindow(element) {
   element.style.display = "flex";
-  biggestIndex++; 
+  biggestIndex++;
   element.style.zIndex = biggestIndex;
   if (topBar) {
     topBar.style.zIndex = biggestIndex + 1;
@@ -266,16 +290,16 @@ var roarButton3 = document.querySelector("#roarsoundbutton3");
 var roarButton4 = document.querySelector("#roarsoundbutton4");
 
 
-// The function to making the button be clicked and a roar sound appear
+// Making the button be clicked and a roar sound appears
 
-  if (roarButton1) {
+if (roarButton1) {
 
   roarButton1.addEventListener("click", function () {
 
     var audio = new Audio("bengal-tiger-sound-effects_31BebgSW.mp3");
     audio.play();
 
-  }); 
+  });
 
 }
 
@@ -286,7 +310,7 @@ if (roarButton2) {
     var audio = new Audio("sumatran-tiger-sound-effects_A2KQoZrL.mp3");
     audio.play();
 
-  }); 
+  });
 
 }
 
@@ -297,7 +321,7 @@ if (roarButton3) {
     var audio = new Audio("siberian-tiger-sound-effects-mp4_QyCzfm0Z.mp3");
     audio.play();
 
-  }); 
+  });
 
 }
 
@@ -308,9 +332,11 @@ if (roarButton4) {
     var audio = new Audio("south-china-tiger-sound-effects_h2y6hZYS.mp3");
     audio.play();
 
-  }); 
+  });
 
 }
+
+// Making the map window closable 
 
 
 
