@@ -217,6 +217,15 @@ h1 {
 .tiger-map-image {
     width: auto;
     height: 400px;
+    transition: transform 1s ease-in-out;
+    border-radius: 16px;
+    cursor: pointer;
+
+}
+
+.tiger-map-image:hover {
+    transform: scale(1.8);
+
 }
 
 .roar-window {
