@@ -1,6 +1,9 @@
 body {
-    background-image: url(https://images.trvl-media.com/place/6108412/789a64f7-293c-4d5a-8c13-569da4658460.jpg);
+    background-image: url(lightTheme.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .date-time {
@@ -165,16 +168,32 @@ h1 {
     border-radius: 8px;
 }
 
+.settings-Icon {
+    cursor: pointer;
+    position: fixed;
+    top: 400px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: #fff;
+}
+
 
 
 .tiger-gallery img,
 .roar-Icon img,
-.tiger-map-icon img {
+.tiger-map-icon img,
+.settings-Icon img {
     position: absolute;
     width: 64px;
     height: 64px;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+.settings-Icon img {
+    background-color: #fff;
 }
 
 .tiger-map-icon img {

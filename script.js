@@ -1,6 +1,6 @@
 
 // Code for making the DIV element draggable:
-document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window").forEach(dragElement);
+document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window").forEach(dragElement);
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -152,6 +152,32 @@ function deselectIcon(element) {
   selectedIcon = undefined
 }
 
+// For selecting icon:
+function selectIcon(element) {
+  element.classList.add("roarwindow");
+  selectedIcon = element
+}
+
+
+// For deselecting icon:
+function deselectIcon(element) {
+  element.classList.remove("roarwindow");
+  selectedIcon = undefined
+}
+
+// For selecting icon:
+function selectIcon(element) {
+  element.classList.add("settingswindow");
+  selectedIcon = element
+}
+
+
+// For deselecting icon:
+function deselectIcon(element) {
+  element.classList.remove("settingswindow");
+  selectedIcon = undefined
+}
+
 // If it's not selected, but deselects it if it is already selected.
 function handleIconTap(element) {
   if (selectedIcon === element) {
@@ -209,6 +235,19 @@ if (tigerMapIcon) {
   });
 }
 
+// For settings draggable and close:
+dragElement(document.querySelector("#settingswindow"));
+
+var settingsWindow = document.querySelector("#roarwindow");
+var settingsIcon = document.querySelector("#settingsIcon");
+var settingsWindowClose = document.querySelector("#settingswindow-close");
+
+if (settingsIcon) {
+  settingsIcon.addEventListener("click", function () {
+    openWindow(settingsWindow);
+  });
+}
+
 // Making map app closable:
 if (tigerMapWindowClose) {
   tigerMapWindowClose.addEventListener("click", function () {
@@ -220,6 +259,14 @@ if (tigerMapWindowClose) {
 if (roarWindowClose) {
   roarWindowClose.addEventListener("click", function () {
     closeWindow(roarWindow);
+  });
+}
+
+
+// Making setting app closable:
+if (settingsWindowClose) {
+  settingsWindowClose.addEventListener("click", function () {
+    closeWindow(settingsWindow);
   });
 }
 
@@ -336,7 +383,30 @@ if (roarButton4) {
 
 }
 
-// Making the map window closable 
+// For theme light:
+var lightTheme = document.querySelector("#lightThemeButton");
+
+if (lightTheme) {
+
+  lightTheme.addEventListener("click", function () {
+
+    change background-image: lightTheme.jpg
+
+  });
+}
+
+// For dark theme:
+  var darkTheme = document.querySelector("#darkThemeButton");
+
+if (darkTheme) {
+
+  darkTheme.addEventListener("click", function () {
+
+    change background-image: darkTheme.jpg
+
+  });
+
+}
 
 
 
