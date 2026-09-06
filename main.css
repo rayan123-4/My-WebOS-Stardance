@@ -32,6 +32,7 @@ body {
     margin-left: 40px;
     gap: 4px;
 }
+
 .background-switcher p {
     margin-bottom: 0;
 }
@@ -269,7 +270,7 @@ h1 {
 }
 
 .settings-Icon:hover {
-     transform: scale(1.1);
+    transform: scale(1.1);
     filter: drop-shadow(0 0 10px white);
 }
 

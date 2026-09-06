@@ -396,7 +396,7 @@ if (lightTheme) {
 }
 
 // For dark theme:
-  var darkTheme = document.querySelector("#darkBackground");
+var darkTheme = document.querySelector("#darkBackground");
 
 if (darkTheme) {
 
