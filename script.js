@@ -238,7 +238,7 @@ if (tigerMapIcon) {
 // For settings draggable and close:
 dragElement(document.querySelector("#settingswindow"));
 
-var settingsWindow = document.querySelector("#roarwindow");
+var settingsWindow = document.querySelector("#settingswindow");
 var settingsIcon = document.querySelector("#settingsIcon");
 var settingsWindowClose = document.querySelector("#settingswindow-close");
 
@@ -384,25 +384,25 @@ if (roarButton4) {
 }
 
 // For theme light:
-var lightTheme = document.querySelector("#lightThemeButton");
+var lightTheme = document.querySelector("#lightBackground");
 
 if (lightTheme) {
 
   lightTheme.addEventListener("click", function () {
 
-    change background-image: lightTheme.jpg
+    document.body.style.backgroundImage = "url('lightTheme.jpg')";
 
   });
 }
 
 // For dark theme:
-  var darkTheme = document.querySelector("#darkThemeButton");
+  var darkTheme = document.querySelector("#darkBackground");
 
 if (darkTheme) {
 
   darkTheme.addEventListener("click", function () {
 
-    change background-image: darkTheme.jpg
+    document.body.style.backgroundImage = "url('darkTheme.jpg')";
 
   });
 
