@@ -127,7 +127,7 @@ function updateTime() {
 
   var timeText = document.querySelector("#timeElement");
 
-  timeText.innerHTML = currentTime;
+  timeText.textContent = currentTime;
 
 }
 

@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none';">
+    <meta name="referrer" content="no-referrer">
     <title>My WebOS</title>
     <link rel="stylesheet" href="main.css">
     <script src="script.js" defer> </script>
@@ -35,26 +37,26 @@
         <div id="title&image" class="title-image">
             <h1 class="welcome-rayanOS"><i>Welcome to Rayan's OS</i></h1>
             <p> This WebOS is about Tigers! 🐯</p>
-            <img src="https://transforms.stlzoo.org/production/animals/amur-tiger-01-01.jpg?w=1200&h=1200&auto=compress%2Cformat&fit=crop&dm=1658935145&s=95d03aceddd44dc8271beed46eae30bc"
+            <img src="WelcomeTiger.webp"
                 alt="Tiger-Image" />
         </div>
 
 
     </div>
     <div id="settingsIcon" class="settings-Icon">
-        <img src="https://cdn-icons-png.flaticon.com/256/6704/6704985.png"
+        <img src="SettingsIcon.png"
             alt="Settings Icon" />
     </div>
 
     <div id="tigergallery" class="tiger-gallery">
-        <img src="https://cdn-icons-png.flaticon.com/512/1375/1375106.png" alt="gallery-icon">
+        <img src="GalleryIcon.png" alt="gallery-icon">
     </div>
     <div id="roarIcon" class="roar-Icon">
         <img src="Speaker_Icon.png"
             alt="Tiger-roar">
     </div>
     <div id="tigermapicon" class="tiger-map-icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/4746/4746231.png" alt="tiger map app">
+        <img src="MapIcon.png" alt="tiger map app">
     </div>
     <div id="settingswindow" class="settings-window">
         <p class="welcome-page-header" id="settingswindow-header">Handle</p>
@@ -81,7 +83,7 @@
         <p class="close-button" id="mapwindow-close">X</p>
         <div class="tiger-map-content">
             <h1 class="tiger-map-title">Tiger Species Habitat Map</h1>
-            <img class="tiger-map-image" src="https://www.wfft.org/wp-content/uploads/2023/02/Tiger-map.png"
+            <img class="tiger-map-image" src="Tiger-mapWFFT.webp"
                 alt="Tiger habitat map image">
                 <p class="Credits from Image">
                     Image from Wildlife Friends Foundation Thailand (WFFT)
@@ -98,24 +100,24 @@
                 <div class="roar-item">
                     <p>Bengal</p>
                     <img id="roarsoundbutton1" class="roar-sound-button"
-                        src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Bengal_tiger_roaring.png/960px-Bengal_tiger_roaring.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+                        src="BengalTiger.png"
                         alt="Bengal-roar">
                 </div>
                 <div class="roar-item">
                     <p>Sumatran</p>
                     <img id="roarsoundbutton2" class="roar-sound-button"
-                        src="https://www.internationaltigerproject.org/static/media/uploads/tigerfact3.jpg"
+                        src="SumatranTiger.jpg"
                         alt="Sumatran-roar">
                 </div>
                 <div class="roar-item">
                     <p>Siberian/Amur</p>
                     <img id="roarsoundbutton3" class="roar-sound-button"
-                        src="https://miro.medium.com/v2/resize:fit:1400/0*LwUbOE9zHdPKs32V.jpg" alt="Siberian-roar">
+                        src="SiberianTiger.jpg" alt="Siberian-roar">
                 </div>
                 <div class="roar-item">
                     <p>South China</p>
                     <img id="roarsoundbutton4" class="roar-sound-button"
-                        src="https://photos.mongabay.com/10/0214tiger.jpg" alt="South China-roar">
+                        src="SouthChinaTiger.jpg" alt="South China-roar">
                 </div>
             </div>
         </div>
@@ -129,17 +131,17 @@
         <div class="gallery-images">
             <h1 class="gallery-title"> Tiger Photo Gallery</h1>
             <div class="gallery-photo-grid">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUwV9ivLmaOeP64NeKRH6jr88Sr-b0-4dPjsWh8jij_pjg7YV95AB_9OA&s=10"
+                <img src="Tiger1.jpeg"
                     alt="Tiger1">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/2012_Suedchinesischer_Tiger.JPG/1280px-2012_Suedchinesischer_Tiger.JPG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+                <img src="Tiger2.JPG"
                     alt="Tiger2">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC3FvtSMnDHRRfHm3vJ17TMzD3YnkM27LkjzCmh6SDDg&s=10"
+                <img src="Tiger3.jpeg"
                     alt="Tiger3">
-                <img src="https://s3.eu-west-3.amazonaws.com/cdn.bigcatsindia.com/wp-content/uploads/2018/06/08135531/Royal-Bengal-Tiger.jpg"
+                <img src="Tiger4.jpg"
                     alt="Tiger4">
-                <img src="https://static.wikia.nocookie.net/disney/images/6/6d/Junglebook526.jpg/revision/latest?cb=20170810020505"
+                <img src="Tiger5.webp"
                     alt="Tiger5">
-                <img src="https://static.wikia.nocookie.net/disney/images/6/60/Profile_-_Tigger.png/revision/latest?cb=20230430081828"
+                <img src="Tiger6.webp"
                     alt="Tiger6" class="Tiger-6">
 
             </div>
