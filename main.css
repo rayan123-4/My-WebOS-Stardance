@@ -29,7 +29,13 @@ body {
     flex-direction: column;
     vertical-align: top;
     width: 300px;
+    margin-left: 40px;
+    gap: 4px;
 }
+.background-switcher p {
+    margin-bottom: 0;
+}
+
 
 .date-time {
     margin-right: 0px;
@@ -48,7 +54,7 @@ h1 {
 .settings-window {
     display: none;
     border: solid;
-    width: 700px;
+    width: 750px;
     border-radius: 16px;
     padding: 16px;
     position: absolute;
