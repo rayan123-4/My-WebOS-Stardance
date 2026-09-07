@@ -409,5 +409,31 @@ if (darkTheme) {
 }
 
 
+// For dark mode color change:
+var darkMode = document.querySelector("#darkColorTheme");
+
+if (darkMode) {
+
+  darkTheme.addEventListener("click", function () {
+
+    document.body.style.// Not finished
+
+  });
+
+}
+
+// For light mode color changer:
+var lightMode = document.querySelector("#lightColorTheme");
+
+if (lightMode) {
+
+  darkMode.addEventListener("click", function () {
+
+    document.body.style.// Not finished
+
+  });
+
+}
+
 
 
