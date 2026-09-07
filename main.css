@@ -4,7 +4,18 @@
     --color-panel-background: rgb(252, 251, 244);
     --color-glass-background: rgba(0, 0, 0, 0.25);
     --color-subtle-border: rgba(255, 255, 255, 0.2);
+    --color-color-text-dark: #000;
 }
+
+.darkmode{
+    --color-ui-white: #fff;
+    --color-text-dark: #fff;
+    --color-panel-background: rgb(0, 0, 0);
+    --color-glass-background: rgba(0, 0, 0, 0.25);
+    --color-subtle-border: rgba(255, 255, 255, 0.2);
+    --color-color-text-dark: #fff;
+}
+
 
 body {
     background-image: url(Images/lightTheme.jpg);
@@ -12,6 +23,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: var(--color-text-dark);
 }
 
 .background-theme-image {
@@ -26,15 +38,39 @@ body {
 }
 
 #ColorThemeSwitch {
-height: 50px;
-width: 50px;
-padding: 0;
-border-radius: 50%;
-background-color: var(--color-ui-white);
-display: flex;
-justify-content: center;
-align-items: center;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--color-ui-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
 }
+
+#ColorThemeSwitch img{
+    width: 24px;
+    height: 24px;
+    display: block;
+    object-fit: contain;
+}
+
+#ColorThemeSwitch img:last-child {
+    display: none;
+}
+
+.darkmode #ColorThemeSwitch img:first-child {
+    display: none;
+}
+
+.darkmode #ColorThemeSwitch img:last-child {
+    display: block;
+}
+
 
 .background-theme-image:hover {
     transform: scale(1.05);
