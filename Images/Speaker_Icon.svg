@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454 456" role="img" aria-labelledby="title">
+  <title id="title">Speaker with sound waves</title>
+  <path fill="#111" d="M22 159c0-13 11-24 24-24h83L216 49c15-13 37-2 37 18v322c0 20-22 31-37 18l-87-86H46c-13 0-24-11-24-24V159Z"/>
+  <path fill="none" stroke="#111" stroke-linecap="round" stroke-width="38" d="M286 174c22 31 22 77 0 108M332 132c43 54 43 138 0 192M378 91c65 76 65 197 0 273"/>
+</svg>
