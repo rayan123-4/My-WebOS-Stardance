@@ -343,7 +343,7 @@ if (roarButton1) {
 
   roarButton1.addEventListener("click", function () {
 
-    var audio = new Audio("bengal-tiger-sound-effects_31BebgSW.mp3");
+    var audio = new Audio("audio/bengal-tiger-sound-effects_31BebgSW.mp3");
     audio.play();
 
   });
@@ -354,7 +354,7 @@ if (roarButton2) {
 
   roarButton2.addEventListener("click", function () {
 
-    var audio = new Audio("sumatran-tiger-sound-effects_A2KQoZrL.mp3");
+    var audio = new Audio("audio/sumatran-tiger-sound-effects_A2KQoZrL.mp3");
     audio.play();
 
   });
@@ -365,7 +365,7 @@ if (roarButton3) {
 
   roarButton3.addEventListener("click", function () {
 
-    var audio = new Audio("siberian-tiger-sound-effects-mp4_QyCzfm0Z.mp3");
+    var audio = new Audio("audio/siberian-tiger-sound-effects-mp4_QyCzfm0Z.mp3");
     audio.play();
 
   });
@@ -376,7 +376,7 @@ if (roarButton4) {
 
   roarButton4.addEventListener("click", function () {
 
-    var audio = new Audio("south-china-tiger-sound-effects_h2y6hZYS.mp3");
+    var audio = new Audio("audio/south-china-tiger-sound-effects_h2y6hZYS.mp3");
     audio.play();
 
   });
@@ -390,7 +390,7 @@ if (lightTheme) {
 
   lightTheme.addEventListener("click", function () {
 
-    document.body.style.backgroundImage = "url('lightTheme.jpg')";
+    document.body.style.backgroundImage = "url('Images/lightTheme.jpg')";
 
   });
 }
@@ -402,7 +402,7 @@ if (darkTheme) {
 
   darkTheme.addEventListener("click", function () {
 
-    document.body.style.backgroundImage = "url('darkTheme.jpg')";
+    document.body.style.backgroundImage = "url('Images/darkTheme.jpg')";
 
   });
 
