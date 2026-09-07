@@ -410,30 +410,28 @@ if (darkTheme) {
 
 
 // For dark mode color change:
-var darkMode = document.querySelector("#darkColorTheme");
+let darkmode = localStorage.getItem('darkmode')
+const themeSwitch = document.getElementById('ColorThemeSwitch')
 
-if (darkMode) {
-
-  darkTheme.addEventListener("click", function () {
-
-    document.body.style.// Not finished
-
-  });
-
+// To enable dark mode:
+const enableDarkmode = () => {
+  document.body.classList.add('darkmode')
+  localStorage.setItem('darkmode', 'active')
 }
 
-// For light mode color changer:
-var lightMode = document.querySelector("#lightColorTheme");
-
-if (lightMode) {
-
-  darkMode.addEventListener("click", function () {
-
-    document.body.style.// Not finished
-
-  });
-
+// To disable dark mode:
+const disableDarkmode = () => {
+  document.body.classList.remove('darkmode')
+  localStorage.setItem('darkmode', 'null')
 }
+
+if(darkmode === "active") enableDarkmode()
+
+// Is also an if statement, but smaller:
+themeSwitch.addEventListener("click", () => {
+  darkmode = localStorage.getItem('darkmode')
+  darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
 
 
 
