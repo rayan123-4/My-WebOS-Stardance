@@ -5,15 +5,19 @@
     --color-glass-background: rgba(0, 0, 0, 0.25);
     --color-subtle-border: rgba(255, 255, 255, 0.2);
     --color-color-text-dark: #000;
+    --color-window-border: #000;
+    --color-icon-glow: #fff;
 }
 
 .darkmode{
     --color-ui-white: #fff;
     --color-text-dark: #fff;
-    --color-panel-background: rgb(0, 0, 0);
+    --color-panel-background: #1B1B1B;
     --color-glass-background: rgba(0, 0, 0, 0.25);
     --color-subtle-border: rgba(255, 255, 255, 0.2);
     --color-color-text-dark: #fff;
+    --color-window-border: #000;
+    --color-icon-glow: #000;
 }
 
 
@@ -57,6 +61,20 @@ body {
     height: 24px;
     display: block;
     object-fit: contain;
+    filter: brightness(0);
+}
+
+#ColorThemeSwitch img:first-child {
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-window-border);
+    border-radius: 50%;
+    box-shadow: 0 0 0 15px var(--color-window-border);
+    filter: none;
+}
+
+.darkmode #ColorThemeSwitch {
+    background-color: var(--color-ui-white);
 }
 
 #ColorThemeSwitch img:last-child {
@@ -69,6 +87,7 @@ body {
 
 .darkmode #ColorThemeSwitch img:last-child {
     display: block;
+    filter: brightness(0);
 }
 
 
@@ -108,6 +127,7 @@ h1 {
 .settings-window {
     display: none;
     border: solid;
+    border-color: var(--color-window-border);
     width: 750px;
     border-radius: 16px;
     padding: 16px;
@@ -336,6 +356,7 @@ h1 {
 .tiger-map-window {
     display: none;
     border: solid;
+    border-color: var(--color-window-border);
     width: 600px;
     border-radius: 16px;
     padding: 16px;
@@ -365,6 +386,7 @@ h1 {
 .roar-window {
     display: none;
     border: solid;
+    border-color: var(--color-window-border);
     width: 400px;
     border-radius: 16px;
     padding: 16px;
@@ -435,6 +457,7 @@ h1 {
 
 .window-box {
     border: solid;
+    border-color: var(--color-window-border);
     width: 400px;
     border-radius: 16px;
     padding: 16px;
@@ -451,6 +474,7 @@ h1 {
 .gallery-window {
     display: none;
     border: solid;
+    border-color: var(--color-window-border);
     width: 400px;
     border-radius: 16px;
     padding: 16px;

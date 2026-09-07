@@ -383,26 +383,43 @@ if (roarButton4) {
 
 }
 
-// For theme light:
-var lightTheme = document.querySelector("#lightBackground");
+// To save the background when you close the tab:
+let selectedBackground = localStorage.getItem('selectedBackground')
+const lightTheme = document.querySelector("#lightBackground");
+const darkTheme = document.querySelector("#darkBackground");
 
+// To enable the light background:
+const enableLightBackground = () => {
+  document.body.style.backgroundImage = "url('Images/lightTheme.jpg')";
+  localStorage.setItem('selectedBackground', 'Images/lightTheme.jpg')
+}
+
+// To enable the dark background:
+const enableDarkBackground = () => {
+  document.body.style.backgroundImage = "url('Images/darkTheme.jpg')";
+  localStorage.setItem('selectedBackground', 'Images/darkTheme.jpg')
+}
+
+if(selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
+if(selectedBackground === "Images/darkTheme.jpg") enableDarkBackground()
+
+// Adding the new event listener for light theme:
 if (lightTheme) {
 
-  lightTheme.addEventListener("click", function () {
+  lightTheme.addEventListener("click", () => {
 
-    document.body.style.backgroundImage = "url('Images/lightTheme.jpg')";
+    enableLightBackground()
 
   });
 }
 
-// For dark theme:
-var darkTheme = document.querySelector("#darkBackground");
 
+// Adding the new event listener for dark theme:
 if (darkTheme) {
 
-  darkTheme.addEventListener("click", function () {
+  darkTheme.addEventListener("click", () => {
 
-    document.body.style.backgroundImage = "url('Images/darkTheme.jpg')";
+    enableDarkBackground()
 
   });
 
