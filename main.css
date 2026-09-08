@@ -313,7 +313,8 @@ h1 {
 .tiger-gallery img,
 .roar-Icon img,
 .tiger-map-icon img,
-.settings-Icon img {
+.settings-Icon img,
+.information-icon img {
     position: absolute;
     width: 64px;
     height: 64px;
@@ -381,9 +382,31 @@ h1 {
     filter: drop-shadow(0 0 10px white);
 }
 
+.information-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
 
 .roar-sound-button:hover {
     transform: scale(1.1);
+}
+
+/* Tiger information window: */
+.Tiger-Information {
+    display: none;
+    border: solid;
+    border-color: var(--color-window-border);
+    width: 400px;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: var(--color-glass-background);
 }
 
 /* Gallery Window: */
