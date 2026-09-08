@@ -1,3 +1,4 @@
+/* Main body and stuff: */
 :root {
     --color-ui-white: #fff;
     --color-text-dark: #000;
@@ -7,6 +8,15 @@
     --color-color-text-dark: #000;
     --color-window-border: #000;
     --color-icon-glow: #fff;
+}
+
+body {
+    background-image: url(Images/lightTheme.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--color-text-dark);
 }
 
 .darkmode {
@@ -20,16 +30,7 @@
     --color-icon-glow: #000;
 }
 
-
-body {
-    background-image: url(Images/lightTheme.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: var(--color-text-dark);
-}
-
+/* Background stuff: */
 .background-theme-image {
     background-size: cover;
     border-radius: 16px;
@@ -52,6 +53,71 @@ body {
     background-position: center;
     z-index: 1;
 }
+
+.background-switcher {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    width: 300px;
+    margin-left: 40px;
+    gap: 4px;
+}
+
+.background-switcher p {
+    margin-bottom: 0;
+}
+
+/* Color them Switcher stuff: */
+#ColorThemeSwitch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--color-ui-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+}
+
+#ColorThemeSwitch img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0);
+}
+
+#ColorThemeSwitch img:first-child {
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-window-border);
+    border-radius: 50%;
+    box-shadow: 0 0 0 15px var(--color-window-border);
+    filter: none;
+}
+
+.darkmode #ColorThemeSwitch {
+    background-color: var(--color-ui-white);
+}
+
+#ColorThemeSwitch img:last-child {
+    display: none;
+}
+
+.darkmode #ColorThemeSwitch img:first-child {
+    display: none;
+}
+
+.darkmode #ColorThemeSwitch img:last-child {
+    display: block;
+    filter: brightness(0);
+}
+
+/* Start up Banner: */
 
 .Tiger-container {
     position: absolute;
@@ -186,89 +252,7 @@ body {
     }
 }
 
-#ColorThemeSwitch {
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background-color: var(--color-ui-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    top: 20px;
-    right: 20px;
-}
-
-#ColorThemeSwitch img {
-    width: 24px;
-    height: 24px;
-    display: block;
-    object-fit: contain;
-    filter: brightness(0);
-}
-
-#ColorThemeSwitch img:first-child {
-    width: 24px;
-    height: 24px;
-    background-color: var(--color-window-border);
-    border-radius: 50%;
-    box-shadow: 0 0 0 15px var(--color-window-border);
-    filter: none;
-}
-
-.darkmode #ColorThemeSwitch {
-    background-color: var(--color-ui-white);
-}
-
-#ColorThemeSwitch img:last-child {
-    display: none;
-}
-
-.darkmode #ColorThemeSwitch img:first-child {
-    display: none;
-}
-
-.darkmode #ColorThemeSwitch img:last-child {
-    display: block;
-    filter: brightness(0);
-}
-
-
-.background-theme-image:hover {
-    transform: scale(1.05);
-
-}
-
-.background-switcher {
-    display: inline-flex;
-    flex-direction: column;
-    vertical-align: top;
-    width: 300px;
-    margin-left: 40px;
-    gap: 4px;
-}
-
-.background-switcher p {
-    margin-bottom: 0;
-}
-
-
-.date-time {
-    margin-right: 0px;
-}
-
-
-.RayanOS {
-    margin-left: 16px;
-}
-
-h1 {
-    font-style: italic;
-}
-
-
+/* Settings Window: */
 .settings-window {
     display: none;
     border: solid;
@@ -293,6 +277,27 @@ h1 {
     background-color: var(--color-panel-background);
 }
 
+.background-theme-image:hover {
+    transform: scale(1.05);
+
+}
+
+/* Random Stuff: */
+.date-time {
+    margin-right: 0px;
+}
+
+
+.RayanOS {
+    margin-left: 16px;
+}
+
+h1 {
+    font-style: italic;
+}
+
+/* App icons: */
+
 .tiger-map-icon {
     cursor: pointer;
     position: fixed;
@@ -303,6 +308,38 @@ h1 {
     border-radius: 16px;
     background-color: var(--color-ui-white);
     object-fit: contain;
+}
+
+.tiger-gallery img,
+.roar-Icon img,
+.tiger-map-icon img,
+.settings-Icon img {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.settings-Icon img {
+    background-color: var(--color-ui-white);
+}
+
+.tiger-map-icon img {
+    width: 61px;
+    height: 61px;
+    left: 2px;
+}
+
+.settings-Icon {
+    cursor: pointer;
+    position: fixed;
+    top: 400px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-ui-white);
 }
 
 .tiger-map-icon img {
@@ -322,16 +359,51 @@ h1 {
     object-fit: contain;
 }
 
+/* App Icon Hover: */
+.roar-Icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+.tiger-map-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+.settings-Icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+
+.tiger-gallery:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
 
 .roar-sound-button:hover {
     transform: scale(1.1);
 }
 
+/* Gallery Window: */
 
 .gallery-photo-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+}
+
+.tiger-gallery {
+    cursor: pointer;
+    position: fixed;
+    top: 100px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-ui-white);
+    object-fit: contain;
 }
 
 .gallery-images {
@@ -343,18 +415,20 @@ h1 {
     padding-right: 8px;
 }
 
-.title-roar-window {
+.gallery-window {
+    display: none;
     border: solid;
+    border-color: var(--color-window-border);
+    width: 400px;
     border-radius: 16px;
     padding: 16px;
-    margin-top: 32px;
-    background-color: var(--color-panel-background);
-}
-
-
-.Tiger-6 {
-    object-fit: cover;
-    object-position: center 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: var(--color-glass-background);
 }
 
 .gallery-photo-grid img {
@@ -366,6 +440,51 @@ h1 {
     border-color: var(--color-subtle-border);
     transition: transform 0.5s ease;
 }
+
+.gallery-title {
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+}
+
+
+
+.gallery-photo-grid img:hover {
+    transform: scale(1.05);
+    border-color: var(--color-ui-white);
+}
+
+.Tiger-6 {
+    object-fit: cover;
+    object-position: center 10%;
+}
+
+/* Tiger roar window: */
+
+.roar-window {
+    display: none;
+    border: solid;
+    border-color: var(--color-window-border);
+    width: 400px;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: var(--color-glass-background);
+
+}
+
+.title-roar-window {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: var(--color-panel-background);
+}
+
 
 .roar-sound-button {
     cursor: pointer;
@@ -392,110 +511,13 @@ h1 {
     align-items: center;
 }
 
-
-.gallery-title {
-    color: var(--color-text-dark);
-    margin-bottom: 12px;
-}
-
-
-
-.gallery-photo-grid img:hover {
-    transform: scale(1.05);
-    border-color: var(--color-ui-white);
-}
-
-
-
-.tiger-gallery {
-    cursor: pointer;
-    position: fixed;
-    top: 100px;
-    left: 16px;
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    background-color: var(--color-ui-white);
-    object-fit: contain;
-}
-
-.title-image {
-    border: solid;
-    border-radius: 16px;
-    padding: 16px;
-    margin-top: 32px;
-    background-color: var(--color-panel-background);
-}
-
+/* Tiger map window: */
 .tiger-map-content {
     border: solid;
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
     background-color: var(--color-panel-background);
-}
-
-.title-image img {
-    width: 340px;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.settings-Icon {
-    cursor: pointer;
-    position: fixed;
-    top: 400px;
-    left: 16px;
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    background-color: var(--color-ui-white);
-}
-
-
-
-
-.tiger-gallery img,
-.roar-Icon img,
-.tiger-map-icon img,
-.settings-Icon img {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    border-radius: 8px;
-    object-fit: contain;
-}
-
-.settings-Icon img {
-    background-color: var(--color-ui-white);
-}
-
-.tiger-map-icon img {
-    width: 61px;
-    height: 61px;
-    left: 2px;
-}
-
-.roar-Icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px white);
-}
-
-.tiger-map-icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px white);
-}
-
-.settings-Icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px white);
-}
-
-
-.tiger-gallery:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px white);
 }
 
 .tiger-map-window {
@@ -528,8 +550,45 @@ h1 {
 
 }
 
-.roar-window {
-    display: none;
+/* Welcome window: */
+.welcome-page-header {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    justify-content: space-between;
+    color: var(--color-ui-white);
+    font-weight: 500;
+    margin: 0px;
+    filter: drop-shadow(0 0 10px var(--color-ui-white));
+}
+
+.title-image {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: var(--color-panel-background);
+}
+
+
+.title-image img {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.welcome-rayanOS {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.window-box {
     border: solid;
     border-color: var(--color-window-border);
     width: 400px;
@@ -539,18 +598,13 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
     flex-direction: column;
     backdrop-filter: blur(4px);
     background-color: var(--color-glass-background);
-
 }
 
-
-.welcome-rayanOS {
-    position: relative;
-    margin-bottom: 15px;
-}
-
+/* Top bar for every window: */
 .close-button {
     position: absolute;
     top: 16px;
@@ -597,53 +651,4 @@ h1 {
     gap: 32px;
     border-radius: 16px;
     margin: 16px;
-}
-
-
-.window-box {
-    border: solid;
-    border-color: var(--color-window-border);
-    width: 400px;
-    border-radius: 16px;
-    padding: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    backdrop-filter: blur(4px);
-    background-color: var(--color-glass-background);
-}
-
-.gallery-window {
-    display: none;
-    border: solid;
-    border-color: var(--color-window-border);
-    width: 400px;
-    border-radius: 16px;
-    padding: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    flex-direction: column;
-    backdrop-filter: blur(4px);
-    background-color: var(--color-glass-background);
-}
-
-.welcome-page-header {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    width: 100%;
-    width: auto;
-    display: flex;
-    align-items: center;
-    cursor: grab;
-    justify-content: space-between;
-    color: var(--color-ui-white);
-    font-weight: 500;
-    margin: 0px;
-    filter: drop-shadow(0 0 10px var(--color-ui-white));
 }
