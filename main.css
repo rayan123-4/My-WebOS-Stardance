@@ -53,6 +53,24 @@ body {
     z-index: 1;
 }
 
+.Tiger-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    animation-name: TigerBannerAnimation;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    z-index: 3;
+}
+
+
 .startup-overlay {
     position: fixed;
     top: 0;
