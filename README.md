@@ -17,6 +17,45 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 git clone https://github.com/rayan123-4/My-WebOS-Stardance
 ```
 
-## AI note:
-- I used **AI** a bit when I got very stuck on an error and couldn't fix it. Also I asked it for help on things that I didn't know how to do (eg: putting sound on a button), though still I did most of the hard work.
-- Most of the help I got was from the **official guide**, **W3Schools tutorials**, and my **prior knowledge**.
+## Updates after 1st Ship:
+1. A startup banner animation
+2. A settings app with a background switcher and a light/dark theme switcher
+3. A map app that shows different Tiger species habitats
+4. ...
+
+## Credits:
+
+**Images:**
+1. Welcome Window Tiger - https://stlzoo.org/animals/mammals/carnivores/amur-tiger
+2. Icons - https://commons.wikimedia.org/wiki/Main_Page
+3. Light/Dark mode icons - https://fonts.google.com/icons
+4. Bengal Tiger roar- https://commons.wikimedia.org/wiki/File:Bengal_tiger_roaring.png
+5. Sumatran Tiger roar - https://www.internationaltigerproject.org/tigers/sumatran-tiger-facts/
+6. Siberian/Amur Tiger roar - https://pixabay.com/photos/tiger-amurtiger-predator-big-cat-1972731/
+7. South China Tiger roar - https://news.mongabay.com/2010/02/the-critically-endangered-south-china-tiger-roars-again-in-2010-the-chinese-year-of-the-tiger/
+8. Gallery Tiger6 - https://disney.fandom.com/wiki/Tigger
+9. Gallery Tiger5 - https://disney.fandom.com/wiki/Shere_Khan
+10. Gallery Tiger4 - https://upecotourism.in/DudhwaNationalPark.aspx
+11. Gallery Tiger3 - https://bigcatswildcats.com/tiger/sumatran-tiger/
+12. Gallery Tiger2 - https://en.wikipedia.org/wiki/South_China_tiger
+13. Gallery Tiger1 - https://pixabay.com/images/search/siberische%20tijger/
+14. Tiger habitat map - https://www.wfft.org/projects/tiger-rescue-centre/attachment/tiger-map/
+15. Warm background - https://www.naturesafariindia.com/national-parks/
+16. Cool background - https://www.pugdundeesafaris.com/bandhavgarh-national-park
+17. Start banner background grass - https://www.shutterstock.com/image-photo/flooded-road-botswana-after-rain-1413663341?dd_referrer=https%3A%2F%2Fwww.google.com%2F
+18. Tiger in the start banner - https://www.worldanimalprotection.ca/education/animal-facts/tiger-facts/
+    
+**Audio:**
+1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
+2. Sumatran Tiger roar - https://youtu.be/J-JUHpO1Eaw?si=hx_qPuWQu8ubVlf4
+3. Siberian/Amur Tiger roar - https://youtu.be/gGgWlIXWvRo?si=oeIaiLINrzzHIXja
+4. South China Tiger roar - https://youtu.be/fGrZWGfKihQ?si=HKqr7_OG308z_fDm
+
+**Other:**
+1. Background remover - https://www.adobe.com/products/firefly/features/remove-background.html
+2. Making text for start banner - https://www.canva.com/
+3. Audio file cutter - https://youtu.be/gGgWlIXWvRo?si=oeIaiLINrzzHIXja
+4. Tutorial for light/dark theme - https://youtu.be/_gKEUYarehE?si=AgS2rTlwhXKqBQA0
+5. And of course we cannot forget - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
+  
+
