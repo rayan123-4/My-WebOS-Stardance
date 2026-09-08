@@ -41,6 +41,31 @@ body {
     transition: transform 0.5s ease;
 }
 
+.Baner {
+    animation-name: BanerAnimation;
+    animation-duration: 5s ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes BanerAnimation {
+    0% {
+        top: 0%; left: -200%; display: block;
+    }
+
+    50% {
+        top: 0%; left: 0%; display: block;
+    }
+
+    80% {
+        top: 0%; left: 0%; display: none;
+    }
+
+    100% {
+        top: 0%; left: 0%; display: none;
+    }
+}
+
 #ColorThemeSwitch {
     height: 50px;
     width: 50px;
