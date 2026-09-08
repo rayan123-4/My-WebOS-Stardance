@@ -41,14 +41,16 @@ body {
     transition: transform 0.5s ease;
 }
 
-.Baner {
-    animation-name: BanerAnimation;
+.Banner {
+    animation-name: BannerAnimation;
     animation-duration: 5s ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes BanerAnimation {
+
+
+@keyframes BannerAnimation {
     0% {
         top: 0%; left: -200%; display: block;
     }
