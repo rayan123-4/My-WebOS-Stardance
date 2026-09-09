@@ -29,72 +29,6 @@ function dragElement(element) {
 
 
   // Function to handle the mouse down event and initiate dragging:
-  function startDragging(e) {
-
-    e = e || window.event;
-
-    e.preventDefault();
-
-    // Getting mouse cursor position
-    initialX = e.clientX;
-
-    initialY = e.clientY;
-
-    // Setting up event listener for mouse movement
-    document.onmouseup = stopDragging;
-
-    document.onmousemove = elementMove;
-
-  }
-
-  // Function to handle the dragging of the element:
-  function elementMove(e) {
-
-    e = e || window.event;
-
-    e.preventDefault();
-
-    // Calculate new cursor position
-
-    currentX = initialX - e.clientX;
-
-    currentY = initialY - e.clientY;
-
-    initialX = e.clientX;
-
-    initialY = e.clientY;
-
-    // Update element's new position
-    element.style.top = (element.offsetTop - currentY) + "px";
-
-    element.style.left = (element.offsetLeft - currentX) + "px";
-
-  }
-
-  // Function to stop dragging the element when the mouse button is released:
-  function stopDragging() {
-
-    document.onmouseup = null;
-
-    document.onmousemove = null;
-
-  }
-}
-
-
-
-// Selecting the window:
-var welcomeScreen = document.querySelector("#welcomepage");
-
-// Function to close window:
-function closeWindow(element) {
-
-  element.style.display = "none";
-
-}
-
-// Function for opening the window:
-function openWindow(element) {
 
   element.style.display = "flex"
 
@@ -223,14 +157,14 @@ if (galleryWindowClose) {
 }
 
 // For information window drag:
-dragElement(document.querySelector("#tigergallery"));
+dragElement(document.querySelector("#TigerInformation"));
 
-var informationWindow = document.querySelector("#TigerInfomation");
-var infomationIcon = document.querySelector("#information-icon");
+var informationWindow = document.querySelector("#TigerInformation");
+var informationIcon = document.querySelector("#informationicon");
 var informationWindowClose = document.querySelector("#informationclose");
 
 if (informationIcon) {
-  infomationIcon.addEventListener("click", function () {
+  informationIcon.addEventListener("click", function () {
     openWindow(informationWindow);
   });
 }
@@ -305,16 +239,6 @@ if (settingsWindowClose) {
 // Making app closable:
 welcomeScreen = document.querySelector("#welcomepage");
 
-function initializeIcon(name) {
-  var icon = document.querySelector("#" + name + "Icon");
-  var screen = document.querySelector("#" + name);
-
-  if (icon) {
-    icon.addEventListener("click", () => handleIconTap(icon));
-  }
-}
-initializeIcon("notes");
-
 // Defining largest index:
 var biggestIndex = 1;
 
@@ -326,12 +250,6 @@ function addWindowTapHandling(element) {
 }
 
 
-// Making window move on tap:
-function handleWindowTap(element) {
-  biggestIndex++;
-  element.style.zIndex = biggestIndex;
-}
-
 // Making window on top to move open:
 function openWindow(element) {
   element.style.display = "flex";
@@ -342,23 +260,11 @@ function openWindow(element) {
 // For top bar: 
 var topBar = document.querySelector("#top")
 
-function openWindow(element) {
-  element.style.display = "flex";
-  biggestIndex++;
-  element.style.zIndex = biggestIndex;
-  if (topBar) {
-    topBar.style.zIndex = biggestIndex + 1;
-  }
-}
-
 function handleWindowTap(element) {
   biggestIndex++;  // Increment biggestIndex by 1
   element.style.zIndex = biggestIndex;
   if (topBar) {
     topBar.style.zIndex = biggestIndex + 1;
-  }
-  if (selectedIcon) {
-    deselectIcon(selectedIcon)
   }
 }
 
