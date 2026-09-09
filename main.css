@@ -357,6 +357,7 @@ h1 {
     border-radius: 16px;
     background-color: var(--color-ui-white);
 }
+
 .roar-Icon {
     cursor: pointer;
     position: fixed;
@@ -440,9 +441,9 @@ h1 {
     font-family: sans-serif;
 }
 
-.info-image1, 
-.info-image2, 
-.info-image3, 
+.info-image1,
+.info-image2,
+.info-image3,
 .info-image4 {
     display: block;
     width: 300px;
@@ -457,9 +458,9 @@ h1 {
 
 }
 
-.info-image1:hover, 
-.info-image2:hover, 
-.info-image3:hover, 
+.info-image1:hover,
+.info-image2:hover,
+.info-image3:hover,
 .info-image4:hover {
     transform: scale(1.4);
     position: relative;
@@ -734,5 +735,96 @@ h1 {
 }
 
 .Weather-Window {
-    
+    border: solid;
+    border-color: var(--color-window-border);
+    width: 400px;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: var(--color-glass-background);
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 16px;
+}
+
+.weather {
+    text-align: center;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px; 
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+.weather-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+
 }
