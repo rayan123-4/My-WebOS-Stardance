@@ -19,9 +19,10 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 
 ## Updates after 1st Ship:
 1. A startup banner animation
-2. A settings app with a background switcher and a light/dark theme switcher
-3. A map app that shows different Tiger species habitats
-4. ...
+2. A settings app, with a background switcher and a light/dark theme switcher
+3. A map app, that shows different Tiger species habitats
+4. An information app, that has a lot of information about tigers
+5. ...
 
 ## Credits:
 
@@ -44,6 +45,14 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 16. Cool background - https://www.pugdundeesafaris.com/bandhavgarh-national-park
 17. Start banner background grass - https://www.shutterstock.com/image-photo/flooded-road-botswana-after-rain-1413663341?dd_referrer=https%3A%2F%2Fwww.google.com%2F
 18. Tiger in the start banner - https://www.worldanimalprotection.ca/education/animal-facts/tiger-facts/
+19. Tiger information image1 - https://www.animalspot.net/tiger
+20. Tiger information image2 - https://abcnews.com/Lifestyle/adorable-tiger-cubs-meet-dad-1st-time/story?id=50735588
+21. Tiger information image2 - Made in Canva using a mix of these images:
+- https://en.wikipedia.org/wiki/White_tiger#/media/File:White_tiger_Nandankanan.jpeg
+- https://en.wikipedia.org/wiki/White_tiger#/media/File:Standing_white_tiger.jpg
+- https://en.wikipedia.org/wiki/Golden_tiger#/media/File:Golden_tiger_3_-_Buffalo_Zoo.jpg
+- https://www.scientificamerican.com/article/secrets-of-ultrarare-black-tigers-revealed/
+22. Tiger information image4 - https://peapix.com/bing/35612
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
@@ -57,5 +66,6 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 3. Audio file cutter - https://youtu.be/gGgWlIXWvRo?si=oeIaiLINrzzHIXja
 4. Tutorial for light/dark theme - https://youtu.be/_gKEUYarehE?si=AgS2rTlwhXKqBQA0
 5. And of course we cannot forget - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
+6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
   
 
