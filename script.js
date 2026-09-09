@@ -1,6 +1,6 @@
 
 // Code for making the DIV element draggable:
-document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window").forEach(dragElement);
+document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information").forEach(dragElement);
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -178,6 +178,19 @@ function deselectIcon(element) {
   selectedIcon = undefined
 }
 
+// For selecting icon:
+function selectIcon(element) {
+  element.classList.add("TigerInformation");
+  selectedIcon = element
+}
+
+
+// For deselecting icon:
+function deselectIcon(element) {
+  element.classList.remove("TigerInformation");
+  selectedIcon = undefined
+}
+
 // If it's not selected, but deselects it if it is already selected.
 function handleIconTap(element) {
   if (selectedIcon === element) {
@@ -209,6 +222,25 @@ if (galleryWindowClose) {
   });
 }
 
+// For information window drag:
+dragElement(document.querySelector("#tigergallery"));
+
+var informationWindow = document.querySelector("#TigerInfomation");
+var infomationIcon = document.querySelector("#information-icon");
+var informationWindowClose = document.querySelector("#informationclose");
+
+if (informationIcon) {
+  infomationIcon.addEventListener("click", function () {
+    openWindow(informationWindow);
+  });
+}
+
+if (informationWindowClose) {
+  informationWindowClose.addEventListener("click", function () {
+    closeWindow(informationWindow);
+  });
+}
+
 // For roar window drag:
 dragElement(document.querySelector("#roarwindow"));
 
@@ -235,7 +267,7 @@ if (tigerMapIcon) {
   });
 }
 
-// For settings draggable and close:
+// For map draggable and close:
 dragElement(document.querySelector("#settingswindow"));
 
 var settingsWindow = document.querySelector("#settingswindow");
@@ -263,7 +295,7 @@ if (roarWindowClose) {
 }
 
 
-// Making setting app closable:
+// Making settings app closable:
 if (settingsWindowClose) {
   settingsWindowClose.addEventListener("click", function () {
     closeWindow(settingsWindow);
