@@ -437,6 +437,7 @@ h1 {
 
 .Tiger-Information-content p {
     line-height: 1.6;
+    font-family: sans-serif;
 }
 
 .info-image1, 
@@ -730,4 +731,8 @@ h1 {
     gap: 32px;
     border-radius: 16px;
     margin: 16px;
+}
+
+.Weather-Window {
+    
 }

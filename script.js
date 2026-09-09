@@ -411,4 +411,7 @@ themeSwitch.addEventListener("click", () => {
 })
 
 
+// Weather window code:
+
+
 
