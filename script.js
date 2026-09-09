@@ -80,6 +80,54 @@ function selectIcon(element) {
 }
 
 
+// Storing the icon:
+var selectedIcon = undefined
+
+// For selecting icon:
+function selectIcon(element) {
+  element.classList.add("tiger-gallery");
+  selectedIcon = element
+}
+
+
+// For deselecting icon:
+function deselectIcon(element) {
+  element.classList.remove("tiger-gallery");
+  selectedIcon = undefined
+}
+
+// For selecting icon:
+function selectIcon(element) {
+  element.classList.add("roarwindow");
+  selectedIcon = element
+}
+
+
+// For deselecting icon:
+function deselectIcon(element) {
+  element.classList.remove("roarwindow");
+  selectedIcon = undefined
+}
+
+// For selecting icon:
+function selectIcon(element) {
+  element.classList.add("settingswindow");
+  selectedIcon = element
+}
+
+
+// For deselecting icon:
+function deselectIcon(element) {
+  element.classList.remove("settingswindow");
+  selectedIcon = undefined
+}
+
+// For selecting icon:
+function selectIcon(element) {
+  element.classList.add("TigerInformation");
+  selectedIcon = element
+}
+
 // For deselecting icon:
 function deselectIcon(element) {
   element.classList.remove("tiger-gallery");
@@ -157,14 +205,14 @@ if (galleryWindowClose) {
 }
 
 // For information window drag:
-dragElement(document.querySelector("#TigerInformation"));
+dragElement(document.querySelector("#tigergallery"));
 
-var informationWindow = document.querySelector("#TigerInformation");
-var informationIcon = document.querySelector("#informationicon");
+var informationWindow = document.querySelector("#TigerInfomation");
+var infomationIcon = document.querySelector("#information-icon");
 var informationWindowClose = document.querySelector("#informationclose");
 
 if (informationIcon) {
-  informationIcon.addEventListener("click", function () {
+  infomationIcon.addEventListener("click", function () {
     openWindow(informationWindow);
   });
 }
@@ -239,6 +287,19 @@ if (settingsWindowClose) {
 // Making app closable:
 welcomeScreen = document.querySelector("#welcomepage");
 
+// Making app closable:
+welcomeScreen = document.querySelector("#welcomepage");
+
+function initializeIcon(name) {
+  var icon = document.querySelector("#" + name + "Icon");
+  var screen = document.querySelector("#" + name);
+
+  if (icon) {
+    icon.addEventListener("click", () => handleIconTap(icon));
+  }
+}
+initializeIcon("notes");
+
 // Defining largest index:
 var biggestIndex = 1;
 
@@ -250,6 +311,12 @@ function addWindowTapHandling(element) {
 }
 
 
+// Making window move on tap:
+function handleWindowTap(element) {
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+}
+
 // Making window on top to move open:
 function openWindow(element) {
   element.style.display = "flex";
@@ -260,11 +327,23 @@ function openWindow(element) {
 // For top bar: 
 var topBar = document.querySelector("#top")
 
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  if (topBar) {
+    topBar.style.zIndex = biggestIndex + 1;
+  }
+}
+
 function handleWindowTap(element) {
   biggestIndex++;  // Increment biggestIndex by 1
   element.style.zIndex = biggestIndex;
   if (topBar) {
     topBar.style.zIndex = biggestIndex + 1;
+  }
+  if (selectedIcon) {
+    deselectIcon(selectedIcon)
   }
 }
 
