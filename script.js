@@ -29,17 +29,60 @@ function dragElement(element) {
 
 
   // Function to handle the mouse down event and initiate dragging:
+  function startDragging(e) {
 
-  element.style.display = "flex"
+    e = e || window.event;
+
+    e.preventDefault();
+
+    initialX = e.clientX;
+    initialY = e.clientY;
+
+    document.onmouseup = stopDragging;
+    document.onmousemove = elementMove;
+
+  }
+
+  // Function to handle the dragging of the element:
+  function elementMove(e) {
+
+    e = e || window.event;
+
+    e.preventDefault();
+
+    currentX = initialX - e.clientX;
+    currentY = initialY - e.clientY;
+
+    initialX = e.clientX;
+    initialY = e.clientY;
+
+    element.style.top = (element.offsetTop - currentY) + "px";
+    element.style.left = (element.offsetLeft - currentX) + "px";
+
+  }
+
+  // Function to stop dragging the element when the mouse button is released:
+  function stopDragging() {
+
+    document.onmouseup = null;
+    document.onmousemove = null;
+
+  }
 
 }
 
 // Identifing the buttons:
+var welcomeScreen = document.querySelector("#welcomepage")
+
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
 
 // Adding event listeners to the open and close button:
+function closeWindow(element) {
+  element.style.display = "none";
+}
+
 welcomeScreenClose.addEventListener("click", function () {
 
   closeWindow(welcomeScreen);
@@ -75,97 +118,9 @@ var selectedIcon = undefined
 
 // For selecting icon:
 function selectIcon(element) {
-  element.classList.add("tiger-gallery");
-  selectedIcon = element
-}
-
-
-// Storing the icon:
-var selectedIcon = undefined
-
-// For selecting icon:
-function selectIcon(element) {
-  element.classList.add("tiger-gallery");
-  selectedIcon = element
-}
-
-
-// For deselecting icon:
-function deselectIcon(element) {
-  element.classList.remove("tiger-gallery");
-  selectedIcon = undefined
-}
-
-// For selecting icon:
-function selectIcon(element) {
-  element.classList.add("roarwindow");
-  selectedIcon = element
-}
-
-
-// For deselecting icon:
-function deselectIcon(element) {
-  element.classList.remove("roarwindow");
-  selectedIcon = undefined
-}
-
-// For selecting icon:
-function selectIcon(element) {
-  element.classList.add("settingswindow");
-  selectedIcon = element
-}
-
-
-// For deselecting icon:
-function deselectIcon(element) {
-  element.classList.remove("settingswindow");
-  selectedIcon = undefined
-}
-
-// For selecting icon:
-function selectIcon(element) {
   element.classList.add("TigerInformation");
   selectedIcon = element
 }
-
-// For deselecting icon:
-function deselectIcon(element) {
-  element.classList.remove("tiger-gallery");
-  selectedIcon = undefined
-}
-
-// For selecting icon:
-function selectIcon(element) {
-  element.classList.add("roarwindow");
-  selectedIcon = element
-}
-
-
-// For deselecting icon:
-function deselectIcon(element) {
-  element.classList.remove("roarwindow");
-  selectedIcon = undefined
-}
-
-// For selecting icon:
-function selectIcon(element) {
-  element.classList.add("settingswindow");
-  selectedIcon = element
-}
-
-
-// For deselecting icon:
-function deselectIcon(element) {
-  element.classList.remove("settingswindow");
-  selectedIcon = undefined
-}
-
-// For selecting icon:
-function selectIcon(element) {
-  element.classList.add("TigerInformation");
-  selectedIcon = element
-}
-
 
 // For deselecting icon:
 function deselectIcon(element) {
@@ -173,6 +128,7 @@ function deselectIcon(element) {
   selectedIcon = undefined
 }
 
+// For deselecting icon:
 // If it's not selected, but deselects it if it is already selected.
 function handleIconTap(element) {
   if (selectedIcon === element) {
@@ -205,14 +161,14 @@ if (galleryWindowClose) {
 }
 
 // For information window drag:
-dragElement(document.querySelector("#tigergallery"));
+dragElement(document.querySelector("#TigerInformation"));
 
-var informationWindow = document.querySelector("#TigerInfomation");
-var infomationIcon = document.querySelector("#information-icon");
+var informationWindow = document.querySelector("#TigerInformation");
+var informationIcon = document.querySelector("#informationicon");
 var informationWindowClose = document.querySelector("#informationclose");
 
 if (informationIcon) {
-  infomationIcon.addEventListener("click", function () {
+  informationIcon.addEventListener("click", function () {
     openWindow(informationWindow);
   });
 }
@@ -287,19 +243,6 @@ if (settingsWindowClose) {
 // Making app closable:
 welcomeScreen = document.querySelector("#welcomepage");
 
-// Making app closable:
-welcomeScreen = document.querySelector("#welcomepage");
-
-function initializeIcon(name) {
-  var icon = document.querySelector("#" + name + "Icon");
-  var screen = document.querySelector("#" + name);
-
-  if (icon) {
-    icon.addEventListener("click", () => handleIconTap(icon));
-  }
-}
-initializeIcon("notes");
-
 // Defining largest index:
 var biggestIndex = 1;
 
@@ -324,7 +267,7 @@ function openWindow(element) {
   element.style.zIndex = biggestIndex;
 }
 
-// For top bar: 
+// For top bar:
 var topBar = document.querySelector("#top")
 
 function openWindow(element) {

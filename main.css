@@ -419,6 +419,14 @@ h1 {
     background-color: var(--color-glass-background);
 }
 
+.Tiger-Information-content {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: var(--color-panel-background);
+}
+
 /* Gallery Window: */
 
 .gallery-photo-grid {
