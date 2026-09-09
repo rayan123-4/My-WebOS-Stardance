@@ -427,6 +427,31 @@ h1 {
     background-color: var(--color-panel-background);
 }
 
+.Tiger-Information-content br {
+    display: none;
+}
+
+.info-image1, 
+.info-image2, 
+.info-image3, 
+.info-image4 {
+    display: flex;
+    width: 40px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #000;
+    flex-shrink: 0;
+
+}
+
+.Tiger-information-content p:has(+ br + .info-image1),
+.Tiger-information-content p:has(+ br + .info-image3) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 /* Gallery Window: */
 
 .gallery-photo-grid {
