@@ -71,7 +71,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 **Other:**
 1. Background remover - https://www.adobe.com/products/firefly/features/remove-background.html
 2. Making text for start banner - https://www.canva.com/
-3. Audio file cutter - https://youtu.be/gGgWlIXWvRo?si=oeIaiLINrzzHIXja
+3. Audio file cutter - https://clideo.com/cut-audio
 4. Tutorial for light/dark theme - https://youtu.be/_gKEUYarehE?si=AgS2rTlwhXKqBQA0
 5. And of course we cannot forget - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
 6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
