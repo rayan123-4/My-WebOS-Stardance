@@ -53,6 +53,11 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 - https://en.wikipedia.org/wiki/Golden_tiger#/media/File:Golden_tiger_3_-_Buffalo_Zoo.jpg
 - https://www.scientificamerican.com/article/secrets-of-ultrarare-black-tigers-revealed/
 22. Tiger information image4 - https://peapix.com/bing/35612
+23. Weather icon - https://www.flaticon.com/free-icon/rain_6142570
+24. Weather sun image - https://www.flaticon.com/free-icon/hot-temperature_9421276?term=hot+sun&related_id=9421276
+25. Humidity - https://www.flaticon.com/free-icon/humidity_8923689?term=humidity&page=1&position=1&origin=search&related_id=8923689
+26. Wind - https://www.flaticon.com/free-icon/wind_5024369?term=wind&page=1&position=2&origin=search&related_id=5024369
+27.
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
@@ -67,5 +72,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 4. Tutorial for light/dark theme - https://youtu.be/_gKEUYarehE?si=AgS2rTlwhXKqBQA0
 5. And of course we cannot forget - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
 6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
+7. Data from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
+8. 
   
 
