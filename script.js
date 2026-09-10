@@ -432,3 +432,54 @@ themeSwitch.addEventListener("click", () => {
   darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
 
+
+// Trying to make a real weather app this time: 
+const apiKey = "dfb5a6298d484b45b7593608261009";
+const apiUrl = "https://api.weatherapi.com/v1/current.json";
+
+const searchBox = document.querySelector(".search-input");
+const searchBtn = document.querySelector(".search-button");
+const weatherEmoji = document.querySelector(".weather-Emoji");
+
+
+async function checkWeather(city) {
+  const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
+
+  if (response.status == 404) {
+    document.querySelector(".error").style.display = "block";
+    document.querySelector(".weather").style.display = "none";
+  } else {
+    const data = await response.json();
+
+    document.querySelector(".city").innerHTML = data.location.name;
+    document.querySelector(".temp").innerHTML = Math.round(data.current.temp_c) + "°c";
+    document.querySelector(".humidity").innerHTML = data.current.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.current.wind_kph + " km/h";
+
+    const condition = data.current.condition.text.toLowerCase();
+
+    if (condition.includes("cloud")) {
+      weatherEmoji.src = "Images/clouds.png";
+    }
+    else if (condition.includes("clear") || condition.includes("sun")) {
+      weatherEmoji.src = "Images/Clear.png";
+    }
+    else if (condition.includes("rain")) {
+      weatherEmoji.src = "Images/Rain.png";
+    }
+    else if (condition.includes("snow")) {
+      weatherEmoji.src = "Images/Snow.png";
+    }
+
+    document.querySelector(".weather").style.display = "block";
+    document.querySelector(".error").style.display = "none";
+  }
+
+
+
+}
+
+
+searchBtn.addEventListener("click", () => {
+  checkWeather(searchBox.value);
+})
