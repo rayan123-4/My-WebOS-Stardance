@@ -205,6 +205,21 @@ if (tigerMapIcon) {
   });
 }
 
+// For map window drag:
+dragElement(document.querySelector("#tigermapwindow"));
+
+var WeatherWindow = document.querySelector("#WeatherWindow");
+var WeatherIcon = document.querySelector("#weatherIcon");
+var WeatherWindowClose = document.querySelector("#Weatherwindow-close");
+
+dragElement(WeatherWindow);
+
+if (WeatherIcon) {
+  WeatherIcon.addEventListener("click", function () {
+    openWindow(WeatherWindow);
+  });
+}
+
 // For map draggable and close:
 dragElement(document.querySelector("#settingswindow"));
 
@@ -237,6 +252,13 @@ if (roarWindowClose) {
 if (settingsWindowClose) {
   settingsWindowClose.addEventListener("click", function () {
     closeWindow(settingsWindow);
+  });
+}
+
+// Making settings app closable:
+if (WeatherWindowClose) {
+  WeatherWindowClose.addEventListener("click", function () {
+    closeWindow(WeatherWindow);
   });
 }
 
@@ -410,50 +432,3 @@ themeSwitch.addEventListener("click", () => {
   darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
 
-
-// Weather window code:
-const weatherWindow = document.getElementById("WeatherWindow");
-const searchInput = weatherWindow.querySelector(".search-input")
-const searchButton = weatherWindow.querySelector(".search-button")
-
-// The main async thread to coordinate data tracking:
-async function checkWeather(city) {
-  try {
-
-    // Await data from the search coordinate pipeline:
-    const geoResponse = await fetch("https://open-meteo.com{encodeURIComponent(city)}&count=1&language=en&format=json");)
-    const geoData = await geoResponse.json();
-
-    if (!geoData.results || geoData.results.length === 0) {
-      console.log("WebOS Engine: City matching target criteria not found");
-      return;
-    }
-
-    // Safely extract coordinate elements from the geoData array item:
-    const lat = geoData.results[0].latitude;
-    const lon = geoData.results[0].longitude;
-    const targetName = geoData.results[0].name;
-
-    // Use map coordinates to fetch the live metrics array object:
-    const weatherResponse = await fetch("https://open-meteo.com{lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m")
-    const weatherData = await weatherResponse.json();
-
-    // Inject processed variables into your HTML layout layers:
-    weatherWindow.querySelector(".city").innerHTML = targetName;
-    weatherWindow.querySelector(".temp").innerHTML = Math.round(weatherData.current.temperature_2m) + "°c";
-    weatherWindow.querySelector(".humidity").innerHTML = Math.round(weatherData.current.relative_humidity_2m) + "%";
-    weatherWindow.querySelector(".wind").innerHTML = Math.round(weatherData.current.wind_10m) + " km/h";
-
-  } catch (error) {
-    console.error("Critical WebOS Thread Crash:", error);
-  }
-
-
-}
-
-// Set up event handler listening for click triggers
-searchButton.addEventListener("click", () => {
-  if (searchInput.value.trim() !== "") {
-    checkWeather(searchInput.value);
-  }
-});
