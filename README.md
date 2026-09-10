@@ -16,6 +16,9 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 ```bash
 git clone https://github.com/rayan123-4/My-WebOS-Stardance
 ```
+## AI note:
+- I used **AI** a bit when I got very stuck on an error and couldn't fix it. Also I asked it for help on things that I didn't know how to do (eg: putting sound on a button), though still I did most of the hard work.
+- Most of the help I got was from the **official guide**, **W3Schools tutorials**, and my **prior knowledge**.
 
 ## Updates after 1st Ship:
 1. A startup banner animation
