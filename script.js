@@ -33,6 +33,10 @@ function dragElement(element) {
 
     e = e || window.event;
 
+    if (["INPUT", "BUTTON", "TEXTAREA", "SELECT"].includes(e.target.tagName)) {
+      return;
+    }
+
     e.preventDefault();
 
     initialX = e.clientX;
@@ -456,7 +460,7 @@ themeSwitch.addEventListener("click", () => {
 
 
 // Trying to make a real weather app this time: 
-const apiKey = "dfb5a6298d484b45b7593608261009";
+const apiKey = "88d0ea56b63f4f9188a65331261109";
 const apiUrl = "https://api.weatherapi.com/v1/current.json";
 
 const searchBox = document.querySelector("#city-input");
@@ -465,41 +469,38 @@ const weatherEmoji = document.querySelector(".real-weather-image");
 
 
 async function checkWeather(city) {
-  const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
-
-  if (!response.ok) {
-    document.querySelector(".real-weather").style.display = "none";
-  } else {
-    const data = await response.json();
-
-    document.querySelector(".real-city").innerHTML = data.location.name;
-    document.querySelector(".real-temp").innerHTML = Math.round(data.current.temp_c) + "°c";
-    document.querySelector(".real-humidity").innerHTML = data.current.humidity + "%";
-    document.querySelector(".real-wind").innerHTML = data.current.wind_kph + " km/h";
-
-    const condition = data.current.condition.text.toLowerCase();
-
-    if (condition.includes("cloud")) {
-      weatherEmoji.src = "Images/clouds.png";
-    }
-    else if (condition.includes("clear") || condition.includes("sun")) {
-      weatherEmoji.src = "Images/Clear.png";
-    }
-    else if (condition.includes("rain")) {
-      weatherEmoji.src = "Images/Rain.png";
-    }
-    else if (condition.includes("snow")) {
-      weatherEmoji.src = "Images/Snow.png";
-    }
-
-    document.querySelector(".real-weather").style.display = "grid";
+  if (!city.trim()) {
+    alert("Please enter a city name.");
+    return;
   }
 
+  try {
+    const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
+    const data = await response.json();
 
+    if (!response.ok) {
+      throw new Error(data.error?.message || "Weather request failed.");
+    }
 
+    document.querySelector(".real-city").textContent = data.location.name;
+    document.querySelector(".real-temp").textContent = Math.round(data.current.temp_c) + "°c";
+    document.querySelector(".real-humidity").textContent = data.current.humidity + "%";
+    document.querySelector(".real-wind").textContent = data.current.wind_kph + " km/h";
+    if (weatherEmoji) {
+      weatherEmoji.src = "https:" + data.current.condition.icon;
+    }
+    document.querySelector(".real-weather").style.display = "grid";
+  } catch (error) {
+    alert(error.message);
+  }
 }
-
 
 searchBtn.addEventListener("click", () => {
   checkWeather(searchBox.value);
-})
+});
+
+searchBox.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    checkWeather(searchBox.value);
+  }
+});

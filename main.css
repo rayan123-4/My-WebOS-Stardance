@@ -646,7 +646,7 @@ h1 {
     display: none;
     border: solid;
     border-color: var(--color-window-border);
-    width: 600px;
+    width: 500px;
     border-radius: 16px;
     padding: 16px;
     position: absolute;
@@ -875,7 +875,9 @@ h1 {
     display: none;
     border: solid;
     border-color: var(--color-window-border);
-    width: 500px;
+    width: 600px;
+    max-width: 100%;
+    min-height: 420px;
     border-radius: 16px;
     padding: 16px;
     position: absolute;
@@ -887,6 +889,26 @@ h1 {
     background-color: var(--color-glass-background);
 }
 
+.weather-search input {
+    color: #000;
+    flex: 1;
+    min-width: 0;
+}
+
+.weather-search {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 8px;
+    grid-column: 1 / -1;
+    margin-top: 0;
+}
+
+.weather-search input::placeholder {
+    color: #000;
+    opacity: 1;
+}
+
 .real-weather {
     border: solid;
     border-radius: 16px;
@@ -896,6 +918,7 @@ h1 {
     color: var(--color-color-text-dark);
     display: grid;
     grid-template-columns: 1fr 170px;
+    min-height: 360px;
     gap: 8px 20px;
     text-align: left;
 }
@@ -917,7 +940,7 @@ h1 {
 
 .real-weather-image {
     grid-column: 2;
-    grid-row: 1 / span 4;
+    grid-row: 3 / span 4;
     width: 170px;
     align-self: center;
 }
@@ -937,6 +960,11 @@ h1 {
 .real-weather-note,
 .real-weather-date {
     margin: 0;
+}
+
+.real-city h3 {
+    overflow-wrap: anywhere;
+    font-size: 40px;
 }
 
 .real-weather-details {
