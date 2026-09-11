@@ -41,8 +41,8 @@
                         <p class="real-humid-wind-text">Wind Speed</p>
                     </div>
                 </div>
-    </div>
-    </div>
+            </div>
+        </div>
     </div>
     <div id="WeatherWindow" class="Weather-Window">
         <p class="welcome-page-header" id="Weatherwindow-header">Handle</p>
@@ -171,116 +171,121 @@
 
 
     </div>
-    <div id="informationicon" class="information-icon">
-        <img src="Images/tigerInformation.jpeg" alt="Information Icon" />
-    </div>
-    <div id="weatherIcon" class="weather-icon">
-        <img src="Images/factweather-icon.png" alt="Weather Icon">
-    </div>
-    <div id="realweatherIcon" class="real-weather-icon">
-        <img src="Images/weather-icon.png" alt="Real Weather Icon">
-    </div>
-    <div id="settingsIcon" class="settings-Icon">
-        <img src="Images/SettingsIcon.png" alt="Settings Icon" />
-    </div>
+    <div class="icon-bar">
+        <div class="icon-list">
+        <div id="informationicon" class="information-icon">
+            <img src="Images/tigerInformation.jpeg" alt="Information Icon" />
+        </div>
+        <div id="weatherIcon" class="weather-icon">
+            <img src="Images/factweather-icon.png" alt="Weather Icon">
+        </div>
+        <div id="realweatherIcon" class="real-weather-icon">
+            <img src="Images/weather-icon.png" alt="Real Weather Icon">
+        </div>
+        <div id="settingsIcon" class="settings-Icon">
+            <img src="Images/SettingsIcon.png" alt="Settings Icon" />
+        </div>
+        <div id="tigergallery" class="tiger-gallery">
+            <img src="Images/GalleryIcon.png" alt="gallery-icon">
+        </div>
+        <div id="roarIcon" class="roar-Icon">
+            <img src="Images/Speaker_Icon.svg" alt="Tiger-roar">
+        </div>
+        <div id="tigermapicon" class="tiger-map-icon">
+            <img src="Images/MapIcon.png" alt="tiger map app">
+        </div>
+        </div>
+        </div>
+        <div id="settingswindow" class="settings-window">
+            <p class="welcome-page-header" id="settingswindow-header">Handle</p>
+            <p class="close-button" id="settingswindow-close">X</p>
+            <div class="settings-content">
+                <h1> Settings</h1>
+                <p>Switch between light and dark mode</p>
+                <button id="ColorThemeSwitch">
+                    <img src="Images/Darkmode.svg" height="24" width="24" alt="Dark mode icon">
+                    <img src="Images/Lightmode.svg" height="24" width="24" alt="Light mode icon">
+                </button>
 
-    <div id="tigergallery" class="tiger-gallery">
-        <img src="Images/GalleryIcon.png" alt="gallery-icon">
-    </div>
-    <div id="roarIcon" class="roar-Icon">
-        <img src="Images/Speaker_Icon.svg" alt="Tiger-roar">
-    </div>
-    <div id="tigermapicon" class="tiger-map-icon">
-        <img src="Images/MapIcon.png" alt="tiger map app">
-    </div>
-    <div id="settingswindow" class="settings-window">
-        <p class="welcome-page-header" id="settingswindow-header">Handle</p>
-        <p class="close-button" id="settingswindow-close">X</p>
-        <div class="settings-content">
-            <h1> Settings</h1>
-            <p>Switch between light and dark mode</p>
-            <button id="ColorThemeSwitch">
-                <img src="Images/Darkmode.svg" height="24" width="24" alt="Dark mode icon">
-                <img src="Images/Lightmode.svg" height="24" width="24" alt="Light mode icon">
-            </button>
+                <p><strong>Pick a background image</strong></p>
+                <div id="backgroundswitcher" class="background-switcher">
+                    <p><strong>🔥Warm</strong></p>
+                    <img id="lightBackground" class="background-theme-image" src="Images/lightTheme.jpg"
+                        alt="Light theme">
+                </div>
 
-            <p><strong>Pick a background image</strong></p>
-            <div id="backgroundswitcher" class="background-switcher">
-                <p><strong>🔥Warm</strong></p>
-                <img id="lightBackground" class="background-theme-image" src="Images/lightTheme.jpg" alt="Light theme">
+                <div id="backgroundswitcher" class="background-switcher">
+                    <p><strong>❄Cool</strong></p>
+                    <img id="darkBackground" class="background-theme-image" src="Images/darkTheme.jpg" alt="Dark theme">
+                </div>
             </div>
 
-            <div id="backgroundswitcher" class="background-switcher">
-                <p><strong>❄Cool</strong></p>
-                <img id="darkBackground" class="background-theme-image" src="Images/darkTheme.jpg" alt="Dark theme">
+        </div>
+
+
+        <div id="tigermapwindow" class="tiger-map-window">
+            <p class="welcome-page-header" id="mapwindow-header">Handle</p>
+            <p class="close-button" id="mapwindow-close">X</p>
+            <div class="tiger-map-content">
+                <h1 class="tiger-map-title">Tiger Species Habitat Map</h1>
+                <img class="tiger-map-image" src="Images/Tiger-mapWFFT.webp" alt="Tiger habitat map image">
+                <p class="Credits from Image">
+                    Image from Wildlife Friends Foundation Thailand (WFFT)
+                </p>
             </div>
         </div>
 
-    </div>
-
-
-    <div id="tigermapwindow" class="tiger-map-window">
-        <p class="welcome-page-header" id="mapwindow-header">Handle</p>
-        <p class="close-button" id="mapwindow-close">X</p>
-        <div class="tiger-map-content">
-            <h1 class="tiger-map-title">Tiger Species Habitat Map</h1>
-            <img class="tiger-map-image" src="Images/Tiger-mapWFFT.webp" alt="Tiger habitat map image">
-            <p class="Credits from Image">
-                Image from Wildlife Friends Foundation Thailand (WFFT)
-            </p>
-        </div>
-    </div>
-
-    <div id="roarwindow" class="roar-window">
-        <p class="welcome-page-header" id="roarwindow-header">Handle</p>
-        <p class="close-button" id="roarwindow-close">X</p>
-        <div class="title-roar-window">
-            <h1 class="roar-title"> Tiger Roar Sound Effects</h1>
-            <div class="roar-list">
-                <div class="roar-item">
-                    <p>Bengal</p>
-                    <img id="roarsoundbutton1" class="roar-sound-button" src="Images/BengalTiger.png" alt="Bengal-roar">
+        <div id="roarwindow" class="roar-window">
+            <p class="welcome-page-header" id="roarwindow-header">Handle</p>
+            <p class="close-button" id="roarwindow-close">X</p>
+            <div class="title-roar-window">
+                <h1 class="roar-title"> Tiger Roar Sound Effects</h1>
+                <div class="roar-list">
+                    <div class="roar-item">
+                        <p>Bengal</p>
+                        <img id="roarsoundbutton1" class="roar-sound-button" src="Images/BengalTiger.png"
+                            alt="Bengal-roar">
+                    </div>
+                    <div class="roar-item">
+                        <p>Sumatran</p>
+                        <img id="roarsoundbutton2" class="roar-sound-button" src="Images/SumatranTiger.jpg"
+                            alt="Sumatran-roar">
+                    </div>
+                    <div class="roar-item">
+                        <p>Siberian/Amur</p>
+                        <img id="roarsoundbutton3" class="roar-sound-button" src="Images/SiberianTiger.jpg"
+                            alt="Siberian-roar">
+                    </div>
+                    <div class="roar-item">
+                        <p>South China</p>
+                        <img id="roarsoundbutton4" class="roar-sound-button" src="Images/SouthChinaTiger.jpg"
+                            alt="South China-roar">
+                    </div>
                 </div>
-                <div class="roar-item">
-                    <p>Sumatran</p>
-                    <img id="roarsoundbutton2" class="roar-sound-button" src="Images/SumatranTiger.jpg"
-                        alt="Sumatran-roar">
-                </div>
-                <div class="roar-item">
-                    <p>Siberian/Amur</p>
-                    <img id="roarsoundbutton3" class="roar-sound-button" src="Images/SiberianTiger.jpg"
-                        alt="Siberian-roar">
-                </div>
-                <div class="roar-item">
-                    <p>South China</p>
-                    <img id="roarsoundbutton4" class="roar-sound-button" src="Images/SouthChinaTiger.jpg"
-                        alt="South China-roar">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="gallerywindow" class="gallery-window">
-        <p id="gallerywindow-header" class="welcome-page-header">Handle</p>
-        <p id="galleryclose" class="close-button">X</p>
-
-        <div class="gallery-images">
-            <h1 class="gallery-title"> Tiger Photo Gallery</h1>
-            <div class="gallery-photo-grid">
-                <img src="Images/Tiger1.jpeg" alt="Tiger1">
-                <img src="Images/Tiger2.JPG" alt="Tiger2">
-                <img src="Images/Tiger3.jpeg" alt="Tiger3">
-                <img src="Images/Tiger4.jpg" alt="Tiger4">
-                <img src="Images/Tiger5.webp" alt="Tiger5">
-                <img src="Images/Tiger6.webp" alt="Tiger6" class="Tiger-6">
-
             </div>
         </div>
 
 
+        <div id="gallerywindow" class="gallery-window">
+            <p id="gallerywindow-header" class="welcome-page-header">Handle</p>
+            <p id="galleryclose" class="close-button">X</p>
 
-    </div>
+            <div class="gallery-images">
+                <h1 class="gallery-title"> Tiger Photo Gallery</h1>
+                <div class="gallery-photo-grid">
+                    <img src="Images/Tiger1.jpeg" alt="Tiger1">
+                    <img src="Images/Tiger2.JPG" alt="Tiger2">
+                    <img src="Images/Tiger3.jpeg" alt="Tiger3">
+                    <img src="Images/Tiger4.jpg" alt="Tiger4">
+                    <img src="Images/Tiger5.webp" alt="Tiger5">
+                    <img src="Images/Tiger6.webp" alt="Tiger6" class="Tiger-6">
+
+                </div>
+            </div>
+
+
+
+        </div>
 
 </body>
 

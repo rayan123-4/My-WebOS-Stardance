@@ -8,6 +8,7 @@
     --color-color-text-dark: #000;
     --color-window-border: #000;
     --color-icon-glow: #fff;
+    --icon-bar: rgba(256, 256, 256, 0.125);
 }
 
 body {
@@ -28,6 +29,7 @@ body {
     --color-color-text-dark: #fff;
     --color-window-border: #000;
     --color-icon-glow: #000;
+    --icon-bar: rgba(256, 256, 256, 0.125);
 }
 
 /* Background stuff: */
@@ -301,7 +303,7 @@ h1 {
 .tiger-map-icon {
     cursor: pointer;
     position: fixed;
-    top: 300px;
+    top: 230px;
     left: 16px;
     width: 64px;
     height: 64px;
@@ -313,7 +315,19 @@ h1 {
 .information-icon {
     cursor: pointer;
     position: fixed;
-    top: 500px;
+    top: 430px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-ui-white);
+    object-fit: contain;
+}
+
+.tiger-gallery {
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
     left: 16px;
     width: 64px;
     height: 64px;
@@ -325,7 +339,7 @@ h1 {
 .weather-icon {
     cursor: pointer;
     position: fixed;
-    top: 600px;
+    top: 530px;
     left: 16px;
     width: 64px;
     height: 64px;
@@ -347,7 +361,7 @@ h1 {
 .real-weather-icon {
     cursor: pointer;
     position: fixed;
-    top: 700px;
+    top: 630px;
     left: 16px;
     width: 64px;
     height: 64px;
@@ -385,7 +399,7 @@ h1 {
 .settings-Icon {
     cursor: pointer;
     position: fixed;
-    top: 400px;
+    top: 330px;
     left: 16px;
     width: 64px;
     height: 64px;
@@ -396,7 +410,7 @@ h1 {
 .roar-Icon {
     cursor: pointer;
     position: fixed;
-    top: 200px;
+    top: 130px;
     left: 16px;
     width: 64px;
     height: 64px;
@@ -514,18 +528,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-}
-
-.tiger-gallery {
-    cursor: pointer;
-    position: fixed;
-    top: 100px;
-    left: 16px;
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    background-color: var(--color-ui-white);
-    object-fit: contain;
 }
 
 .gallery-images {
@@ -997,4 +999,37 @@ h1 {
 
 .real-humid-wind-text {
     transform: translateY(2px);
+}
+
+/* Icon app side bar */
+.icon-bar {
+    position: fixed;
+    background-color: var(--icon-bar);
+    border-radius: 16px;
+    width: 100px;
+    top: 100px;
+    height: 600px;
+    max-height: 600px;
+    padding-top: 0px;
+    padding-left: 0;
+    margin-top: 100;
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+}
+
+.icon-list {
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+   width: 100%;
+}
+
+.tiger-gallery,
+.roar-Icon,
+.tiger-map-icon,
+.settings-Icon,
+.information-icon,
+.real-weather-icon,
+.weather-icon {
+    position: absolute;
 }
