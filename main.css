@@ -334,12 +334,34 @@ h1 {
     object-fit: contain;
 }
 
+.weather-icon img {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.real-weather-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 700px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-ui-white);
+}
+
+
 .tiger-gallery img,
 .roar-Icon img,
 .tiger-map-icon img,
 .settings-Icon img,
 .information-icon img,
-.weather-icon img {
+.real-weather-icon img {
     position: absolute;
     top: 0;
     left: 0;
@@ -753,6 +775,8 @@ h1 {
     margin: 16px;
 }
 
+/* Fun fact weather window:*/
+
 .Weather-Window {
     display: none;
     border: solid;
@@ -843,5 +867,106 @@ h1 {
 }
 
 .humid-wind-text {
+    transform: translateY(2px);
+}
+
+/* Real working weather window:*/
+.real-weather-window {
+    display: none;
+    border: solid;
+    border-color: var(--color-window-border);
+    width: 500px;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 96px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: var(--color-glass-background);
+}
+
+.real-weather {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: var(--color-panel-background);
+    color: var(--color-color-text-dark);
+    display: grid;
+    grid-template-columns: 1fr 170px;
+    gap: 8px 20px;
+    text-align: left;
+}
+
+.real-weather-title {
+    grid-column: 1 / -1;
+    margin: 0 0 16px;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.real-weather-main-image {
+    grid-column: 2;
+    grid-row: 2 / span 4;
+    width: 170px;
+    align-self: center;
+}
+
+.real-weather-image {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    width: 170px;
+    align-self: center;
+}
+
+.real-weather h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.real-weather h2 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.real-temp,
+.real-city,
+.real-weather-note,
+.real-weather-date {
+    margin: 0;
+}
+
+.real-weather-details {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 20px;
+    padding-top: 16px;
+}
+
+.real-col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.real-col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.real-humidity,
+.real-wind {
+    font-size: 28px;
+    margin: 0;
+    transform: translateY(17px);
+}
+
+.real-humid-wind-text {
     transform: translateY(2px);
 }

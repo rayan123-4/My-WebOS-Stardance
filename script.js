@@ -205,7 +205,7 @@ if (tigerMapIcon) {
   });
 }
 
-// For map window drag:
+// For fun fact weather window drag:
 dragElement(document.querySelector("#tigermapwindow"));
 
 var WeatherWindow = document.querySelector("#WeatherWindow");
@@ -220,7 +220,22 @@ if (WeatherIcon) {
   });
 }
 
-// For map draggable and close:
+// For real working weather window drag:
+dragElement(document.querySelector("#RealWeatherWindow"));
+
+var realWeatherWindow = document.querySelector("#RealWeatherWindow");
+var realWeatherIcon = document.querySelector("#realweatherIcon");
+var realWeatherWindowClose = document.querySelector("#Real-Weatherwindow-close");
+
+dragElement(realWeatherWindow);
+
+if (realWeatherIcon) {
+  realWeatherIcon.addEventListener("click", function () {
+    openWindow(realWeatherWindow);
+  });
+}
+
+// For setting draggable and close:
 dragElement(document.querySelector("#settingswindow"));
 
 var settingsWindow = document.querySelector("#settingswindow");
@@ -255,10 +270,17 @@ if (settingsWindowClose) {
   });
 }
 
-// Making settings app closable:
+// Making fun fact weather app closable:
 if (WeatherWindowClose) {
   WeatherWindowClose.addEventListener("click", function () {
     closeWindow(WeatherWindow);
+  });
+}
+
+// Making Real working weather app closable:
+if (realWeatherWindowClose) {
+  realWeatherWindowClose.addEventListener("click", function () {
+    closeWindow(realWeatherWindow);
   });
 }
 
@@ -437,24 +459,23 @@ themeSwitch.addEventListener("click", () => {
 const apiKey = "dfb5a6298d484b45b7593608261009";
 const apiUrl = "https://api.weatherapi.com/v1/current.json";
 
-const searchBox = document.querySelector(".search-input");
-const searchBtn = document.querySelector(".search-button");
-const weatherEmoji = document.querySelector(".weather-Emoji");
+const searchBox = document.querySelector("#city-input");
+const searchBtn = document.querySelector("#search-button");
+const weatherEmoji = document.querySelector(".real-weather-image");
 
 
 async function checkWeather(city) {
   const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
 
-  if (response.status == 404) {
-    document.querySelector(".error").style.display = "block";
-    document.querySelector(".weather").style.display = "none";
+  if (!response.ok) {
+    document.querySelector(".real-weather").style.display = "none";
   } else {
     const data = await response.json();
 
-    document.querySelector(".city").innerHTML = data.location.name;
-    document.querySelector(".temp").innerHTML = Math.round(data.current.temp_c) + "°c";
-    document.querySelector(".humidity").innerHTML = data.current.humidity + "%";
-    document.querySelector(".wind").innerHTML = data.current.wind_kph + " km/h";
+    document.querySelector(".real-city").innerHTML = data.location.name;
+    document.querySelector(".real-temp").innerHTML = Math.round(data.current.temp_c) + "°c";
+    document.querySelector(".real-humidity").innerHTML = data.current.humidity + "%";
+    document.querySelector(".real-wind").innerHTML = data.current.wind_kph + " km/h";
 
     const condition = data.current.condition.text.toLowerCase();
 
@@ -471,8 +492,7 @@ async function checkWeather(city) {
       weatherEmoji.src = "Images/Snow.png";
     }
 
-    document.querySelector(".weather").style.display = "block";
-    document.querySelector(".error").style.display = "none";
+    document.querySelector(".real-weather").style.display = "grid";
   }
 
 
