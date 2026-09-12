@@ -263,6 +263,11 @@ if (tigerMapWindowClose) {
 if (roarWindowClose) {
   roarWindowClose.addEventListener("click", function () {
     closeWindow(roarWindow);
+
+    // Making the Roar sound turn off when tab closed: 
+    if (window.audioStopper) {
+      window.audioStopper.pause();
+    }
   });
 }
 
@@ -345,13 +350,14 @@ var roarButton3 = document.querySelector("#roarsoundbutton3");
 var roarButton4 = document.querySelector("#roarsoundbutton4");
 
 
-// Making the button be clicked and a roar sound appears
+// Making the button be clicked and a roar sound appears:
 
 if (roarButton1) {
 
   roarButton1.addEventListener("click", function () {
 
     var audio = new Audio("audio/bengal-tiger-sound-effects_31BebgSW.mp3");
+    window.audioStopper = audio;
     audio.play();
 
   });
@@ -363,6 +369,7 @@ if (roarButton2) {
   roarButton2.addEventListener("click", function () {
 
     var audio = new Audio("audio/sumatran-tiger-sound-effects_A2KQoZrL.mp3");
+    window.audioStopper = audio;
     audio.play();
 
   });
@@ -374,6 +381,7 @@ if (roarButton3) {
   roarButton3.addEventListener("click", function () {
 
     var audio = new Audio("audio/siberian-tiger-sound-effects-mp4_QyCzfm0Z.mp3");
+    window.audioStopper = audio;
     audio.play();
 
   });
@@ -385,11 +393,14 @@ if (roarButton4) {
   roarButton4.addEventListener("click", function () {
 
     var audio = new Audio("audio/south-china-tiger-sound-effects_h2y6hZYS.mp3");
+    window.audioStopper = audio;
     audio.play();
 
   });
 
 }
+
+
 
 // To save the background when you close the tab:
 let selectedBackground = localStorage.getItem('selectedBackground')
