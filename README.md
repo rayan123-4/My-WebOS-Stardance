@@ -31,7 +31,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 
 **Images:**
 1. Welcome Window Tiger - https://stlzoo.org/animals/mammals/carnivores/amur-tiger
-2. Icons - https://commons.wikimedia.org/wiki/Main_Page
+2. Some Icons - https://commons.wikimedia.org/wiki/Main_Page
 3. Light/Dark mode icons - https://fonts.google.com/icons
 4. Bengal Tiger roar- https://commons.wikimedia.org/wiki/File:Bengal_tiger_roaring.png
 5. Sumatran Tiger roar - https://www.internationaltigerproject.org/tigers/sumatran-tiger-facts/
@@ -60,7 +60,8 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 24. Weather sun image - https://www.flaticon.com/free-icon/hot-temperature_9421276?term=hot+sun&related_id=9421276
 25. Humidity - https://www.flaticon.com/free-icon/humidity_8923689?term=humidity&page=1&position=1&origin=search&related_id=8923689
 26. Wind - https://www.flaticon.com/free-icon/wind_5024369?term=wind&page=1&position=2&origin=search&related_id=5024369
-27.
+27. Manual icon - https://www.flaticon.com/free-icon/user-manual_10000766
+28.
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
