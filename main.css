@@ -651,7 +651,7 @@ h1 {
     display: none;
     border: solid;
     border-color: var(--color-window-border);
-    width: 500px;
+    width: 600px;
     border-radius: 16px;
     padding: 16px;
     position: absolute;
@@ -880,7 +880,7 @@ h1 {
     display: none;
     border: solid;
     border-color: var(--color-window-border);
-    width: 600px;
+    width: 500px;
     max-width: 100%;
     min-height: 420px;
     border-radius: 16px;
