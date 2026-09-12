@@ -385,6 +385,18 @@ h1 {
     object-fit: contain;
 }
 
+.manual-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 3px;
+    margin-left: 4px;
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
 .settings-Icon img {
     background-color: var(--color-ui-white);
 }
@@ -419,6 +431,18 @@ h1 {
     object-fit: contain;
 }
 
+.manual-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 720px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-ui-white);
+    object-fit: contain;
+}
+
 /* App Icon Hover: */
 .roar-Icon:hover {
     transform: scale(1.1);
@@ -436,6 +460,11 @@ h1 {
 }
 
 .settings-Icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+.manual-icon:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px white);
 }
@@ -1008,7 +1037,7 @@ h1 {
     transform: translateY(2px);
 }
 
-/* Icon app side bar */
+/* Icon app side bar: */
 .icon-bar {
     position: fixed;
     background-color: var(--icon-bar);
@@ -1027,7 +1056,7 @@ h1 {
     position: relative;
     overflow-y: auto;
     height: 100%;
-   width: 100%;
+    width: 100%;
 }
 
 .tiger-gallery,
@@ -1036,6 +1065,32 @@ h1 {
 .settings-Icon,
 .information-icon,
 .real-weather-icon,
-.weather-icon {
+.weather-icon,
+.manual-icon {
     position: absolute;
+}
+
+/* Instruction Manual window: */
+.manual-content {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: var(--color-panel-background);
+}
+
+.manual-window {
+    display: none;
+    border: solid;
+    border-color: var(--color-window-border);
+    width: 600px;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: var(--color-glass-background);
 }

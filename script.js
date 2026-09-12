@@ -1,6 +1,6 @@
 
 // Code for making the DIV element draggable:
-document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window").forEach(dragElement);
+document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, manual-window").forEach(dragElement);
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -239,6 +239,21 @@ if (realWeatherIcon) {
   });
 }
 
+// For Instruction Manual window drag:
+dragElement(document.querySelector("#ManualWindow"));
+
+var ManualWindow = document.querySelector("#ManualWindow");
+var ManualIcon = document.querySelector("#manualicon");
+var ManualWindowClose = document.querySelector("#Manualwindow-close");
+
+dragElement(ManualWindow);
+
+if (ManualIcon) {
+  ManualIcon.addEventListener("click", function () {
+    openWindow(ManualWindow);
+  });
+}
+
 // For setting draggable and close:
 dragElement(document.querySelector("#settingswindow"));
 
@@ -256,6 +271,13 @@ if (settingsIcon) {
 if (tigerMapWindowClose) {
   tigerMapWindowClose.addEventListener("click", function () {
     closeWindow(tigerMapWindow);
+  });
+}
+
+// Making Manual Window closable:
+if (ManualWindowClose) {
+  ManualWindowClose.addEventListener("click", function () {
+    closeWindow(ManualWindow);
   });
 }
 
