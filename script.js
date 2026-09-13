@@ -1,4 +1,4 @@
-
+  
 // Code for making the DIV element draggable:
 document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, manual-window").forEach(dragElement);
 
@@ -26,7 +26,6 @@ function dragElement(element) {
     element.onmousedown = startDragging;
 
   }
-
 
   // Function to handle the mouse down event and initiate dragging:
   function startDragging(e) {
