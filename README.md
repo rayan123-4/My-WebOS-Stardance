@@ -17,7 +17,8 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 git clone https://github.com/rayan123-4/My-WebOS-Stardance
 ```
 ## AI note:
-- I used **AI** a bit when I got very stuck on an error and couldn't fix it. Also I asked it for help on things that I didn't know how to do (eg: putting sound on a button), though still I did most of the hard work.
+- I used **AI** a bit when I got very stuck on an error and couldn't fix it. I also used it to learn how to make new things(eg: putting sound on a button or setting up an API for the first time), though still I did most of the hard work. I also used it for some light debugging, if I was completely stuck and wasn't going anywhere.
+  
 - Most of the help I got was from the **official guide**, **W3Schools tutorials**, and my **prior knowledge**.
 
 ## Updates after 1st Ship:
@@ -25,7 +26,10 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 2. A settings app, with a background switcher and a light/dark theme switcher
 3. A map app, that shows different Tiger species habitats
 4. An information app, that has a lot of information about tigers
-5. ...
+5. A Fun fact, app that shows a cool fun fact about a place with a lot of tigers.
+6. A Weather API app, that you can search a city in the world and it will show the current weather there.
+7. A Manual app, to learn what features this OS has and where to find them.
+8. ...
 
 ## Credits:
 
