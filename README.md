@@ -22,14 +22,14 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 - Most of the help I got was from the **official guide**, **W3Schools tutorials**, and my **prior knowledge**.
 
 ## Updates after 1st Ship:
-1. A startup banner animation
-2. A settings app, with a background switcher and a light/dark theme switcher
-3. A map app, that shows different Tiger species habitats
-4. An information app, that has a lot of information about tigers
+1. A startup banner animation.
+2. A settings app, with a background switcher and a light/dark theme switcher.
+3. A map app, that shows different Tiger species habitats.
+4. An information app, that has a lot of information about tigers.
 5. A Fun fact, app that shows a cool fun fact about a place with a lot of tigers.
 6. A Weather API app, that you can search a city in the world and it will show the current weather there.
-7. A Manual app, to learn what features this OS has and where to find them.
-8. ...
+7. A Scrollable side icon bar, to sort out all my apps.
+8. A Manual app, to learn what features this OS has and where to find them.
 
 ## Credits:
 
@@ -65,7 +65,6 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 25. Humidity - https://www.flaticon.com/free-icon/humidity_8923689?term=humidity&page=1&position=1&origin=search&related_id=8923689
 26. Wind - https://www.flaticon.com/free-icon/wind_5024369?term=wind&page=1&position=2&origin=search&related_id=5024369
 27. Manual icon - https://www.flaticon.com/free-icon/user-manual_10000766
-28.
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
@@ -81,6 +80,3 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 5. And of course we cannot forget - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
 6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
 7. Data from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
-8. 
-  
-
