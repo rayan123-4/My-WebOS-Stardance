@@ -65,6 +65,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 25. Humidity - https://www.flaticon.com/free-icon/humidity_8923689?term=humidity&page=1&position=1&origin=search&related_id=8923689
 26. Wind - https://www.flaticon.com/free-icon/wind_5024369?term=wind&page=1&position=2&origin=search&related_id=5024369
 27. Manual icon - https://www.flaticon.com/free-icon/user-manual_10000766
+28. Brown paper image in manual - https://www.vecteezy.com/png/54574046-a-close-up-of-a-wrinkled-torn-piece-of-brown-cardboard-paper
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
