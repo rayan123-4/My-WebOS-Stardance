@@ -9,6 +9,7 @@
     --color-window-border: #000;
     --color-icon-glow: #fff;
     --icon-bar: rgba(256, 256, 256, 0.125);
+    --close-color: #FF0038;
 }
 
 body {
@@ -775,14 +776,21 @@ h1 {
 /* Top bar for every window: */
 .close-button {
     position: absolute;
-    top: 16px;
+    top: 9px;
     right: 16px;
-    width: auto;
-    height: auto;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     color: var(--color-ui-white);
     margin: 0;
     filter: drop-shadow(0 0 10px var(--color-ui-white));
+    background-color: var(--close-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
 }
 
 .open-button {
