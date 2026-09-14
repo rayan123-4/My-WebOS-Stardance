@@ -1089,13 +1089,15 @@ h1 {
     padding: 16px;
     margin-top: 32px;
     background-color: var(--color-panel-background);
+    height: 530px;
 }
 
 .manual-window {
     display: none;
     border: solid;
     border-color: var(--color-window-border);
-    width: 600px;
+    width: 620px;
+    height: 550px;
     border-radius: 16px;
     padding: 16px;
     position: absolute;
@@ -1109,17 +1111,17 @@ h1 {
 
 .manual-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 500px;
-    height: 500px;
+    top: 5px;
+    left: 25px;
+    width: 600px;
+    height: 600px;
     z-index: 1;
     pointer-events: none;
 }
 
 .manual-image img {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     object-fit: cover;
 }
 
@@ -1127,6 +1129,7 @@ h1 {
     position: relative;
     z-index: 2;
     margin-bottom: 15px;
+    font-size: 15px;
 }
 
 .manual-content h1 {
