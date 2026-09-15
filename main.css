@@ -297,6 +297,7 @@ body {
 
 h1 {
     font-style: italic;
+    font-weight: 700;
 }
 
 /* App icons: */
@@ -484,6 +485,10 @@ h1 {
 .weather-icon:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px white);
+}
+
+.stardance-Button:hover {
+    transform: scale(1.1);
 }
 
 
@@ -710,16 +715,13 @@ h1 {
 /* Welcome window: */
 .welcome-page-header {
     position: absolute;
-    top: 16px;
+    top: 2px;
     left: 16px;
-    width: 100%;
-    width: auto;
+    width: 45px;
+    height: 45px;
     display: flex;
     cursor: grab;
-    color: var(--color-ui-white);
-    font-weight: 500;
     margin: 0px;
-    filter: drop-shadow(0 0 10px var(--color-ui-white));
 }
 
 .title-image {
@@ -793,6 +795,23 @@ h1 {
     padding: 0;
 }
 
+.stardance-Trio {
+    width: 50px;
+    height: 50px;
+    top: 9px;
+    display: none;
+}
+
+.stardance-Button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
 .open-button {
     cursor: pointer;
     position: fixed;
@@ -829,6 +848,7 @@ h1 {
     margin: 16px;
 }
 
+
 /* Fun fact weather window:*/
 
 .Weather-Window {
@@ -864,7 +884,7 @@ h1 {
     grid-column: 1 / -1;
     margin: 0 0 16px;
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -877,7 +897,8 @@ h1 {
 
 .weather h1 {
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .weather h2 {
@@ -985,7 +1006,7 @@ h1 {
     grid-column: 1 / -1;
     margin: 0 0 16px;
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -1001,11 +1022,22 @@ h1 {
     grid-row: 3 / span 4;
     width: 170px;
     align-self: center;
+    display: none;
+}
+
+
+.default-weather-image {
+    grid-column: 2;
+    grid-row: 3 / span 4;
+    width: 170px;
+    align-self: center;
+    display: block;
 }
 
 .real-weather h1 {
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .real-weather h2 {

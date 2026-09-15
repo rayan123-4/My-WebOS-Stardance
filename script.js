@@ -507,6 +507,7 @@ async function checkWeather(city) {
   }
 
   try {
+
     const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
     const data = await response.json();
 
@@ -518,8 +519,19 @@ async function checkWeather(city) {
     document.querySelector(".real-temp").textContent = Math.round(data.current.temp_c) + "°c";
     document.querySelector(".real-humidity").textContent = data.current.humidity + "%";
     document.querySelector(".real-wind").textContent = data.current.wind_kph + " km/h";
+
+const defaultEmoji = document.querySelector(".default-weather-image");
+
     if (weatherEmoji) {
+
       weatherEmoji.src = "https:" + data.current.condition.icon;
+
+      weatherEmoji.style.display = "block"
+
+      if (defaultEmoji)  {
+        defaultEmoji.style.display = "none";
+      }
+
     }
     document.querySelector(".real-weather").style.display = "grid";
   } catch (error) {
