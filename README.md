@@ -69,6 +69,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 28. Brown paper image in manual - https://www.vecteezy.com/png/54574046-a-close-up-of-a-wrinkled-torn-piece-of-brown-cardboard-paper
 29. Real Weather app default weather - https://www.flaticon.com/free-icon/sun_4814268?term=weather&page=1&position=3&origin=search&related_id=4814268
 30. Secret button ding sound effect - https://pixabay.com/sound-effects/film-special-effects-ding-402325/
+31. The Tiger OS web Icon - https://www.tierart.de/en-us/interesting-facts-about-animals/about-tigers
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
