@@ -30,6 +30,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 6. A Weather API app, that you can search a city in the world and it will show the current weather there.
 7. A Scrollable side icon bar, to sort out all my apps.
 8. A Manual app, to learn what features this OS has and where to find them.
+9. Added a secret feature and a ding sound when its activated.
 
 ## Credits:
 
