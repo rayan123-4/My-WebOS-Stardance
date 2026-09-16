@@ -548,3 +548,24 @@ searchBox.addEventListener("keydown", (event) => {
     checkWeather(searchBox.value);
   }
 });
+
+
+  // Secret stardance trio button in bottom right corner:
+  var secretButton  = document.querySelector("#stardanceButton");
+
+  if (secretButton) {
+    secretButton.addEventListener("click", function () {
+
+      var secretAudio = new Audio("audio/secretDing.mp3");
+    secretAudio.play();
+
+      alert("🔓 TIGER OS SECRET FEATURE UNLOCKED!");
+
+      var allSecretImages = document.querySelectorAll(".stardance-Trio")
+
+      allSecretImages.forEach(function (image) {
+        image.style.display = "block";
+      });
+
+    });
+  }

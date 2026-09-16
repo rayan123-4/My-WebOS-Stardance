@@ -293,7 +293,15 @@ body {
 
 .RayanOS {
     margin-left: 16px;
+    color: var(--color-ui-white); 
+    text-decoration: none;
 }
+
+.RayanOS-link {
+    color: var(--color-ui-white); 
+    text-decoration: none;
+}
+
 
 h1 {
     font-style: italic;
@@ -488,7 +496,7 @@ h1 {
 }
 
 .stardance-Button:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 
@@ -704,8 +712,10 @@ h1 {
     transition: transform 1s ease-in-out;
     border-radius: 16px;
     cursor: pointer;
-
+    position: relative;
+    z-index: 20;
 }
+
 
 .tiger-map-image:hover {
     transform: scale(1.8);
@@ -793,23 +803,38 @@ h1 {
     justify-content: center;
     text-align: center;
     padding: 0;
-}
+}   
 
 .stardance-Trio {
-    width: 50px;
-    height: 50px;
-    top: 9px;
+    position: absolute;
+    width: 105px;
+    height: auto;
+    top: 7px;
     display: none;
+    margin-bottom: 0;
+    pointer-events: none;
+    left: 40%;
+    right: none;
+    z-index: 10;
 }
+
+.tiger-map-window .stardance-Trio,
+.settings-window .stardance-Trio,
+.Tiger-Information .stardance-Trio,
+.manual-window .stardance-Trio {
+    left: 44%;
+    z-index: 10;
+}
+
 
 .stardance-Button {
     position: absolute;
     bottom: 16px;
     right: 16px;
-    width: 100px;
+    width: 150px;
     height: auto;
     cursor: pointer;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .open-button {
