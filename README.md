@@ -70,7 +70,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 29. Real Weather app default weather - https://www.flaticon.com/free-icon/sun_4814268?term=weather&page=1&position=3&origin=search&related_id=4814268
 30. Secret button ding sound effect - https://pixabay.com/sound-effects/film-special-effects-ding-402325/
 31. The Tiger OS web Icon - https://www.tierart.de/en-us/interesting-facts-about-animals/about-tigers
-32. Snake game Icon - https://www.flaticon.com/free-icon/snake_8160941?term=snake&page=1&position=37&origin=search&related_id=8160941
+32. Snake game Icon (Canva to customize it) - https://www.flaticon.com/free-icon/snake_8160941?term=snake&page=1&position=37&origin=search&related_id=8160941
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
@@ -80,7 +80,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 
 **Other:**
 1. Background remover - https://www.adobe.com/products/firefly/features/remove-background.html
-2. Making text for start banner - https://www.canva.com/
+2. Making text for start banner and other custom images - https://www.canva.com/
 3. Audio file cutter - https://clideo.com/cut-audio
 4. Tutorial for light/dark theme - https://youtu.be/_gKEUYarehE?si=AgS2rTlwhXKqBQA0
 5. And of course we cannot forget - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
