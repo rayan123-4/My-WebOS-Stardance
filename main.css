@@ -496,7 +496,8 @@ h1 {
 }
 
 .stardance-Button:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #FAD233);
 }
 
 
@@ -785,26 +786,7 @@ h1 {
     background-color: var(--color-glass-background);
 }
 
-/* Top bar for every window: */
-.close-button {
-    position: absolute;
-    top: 9px;
-    right: 16px;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    color: var(--color-ui-white);
-    margin: 0;
-    filter: drop-shadow(0 0 10px var(--color-ui-white));
-    background-color: var(--close-color);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0;
-}   
-
+/* Stardance trio secret feature:*/
 .stardance-Trio {
     position: absolute;
     width: 105px;
@@ -836,6 +818,26 @@ h1 {
     cursor: pointer;
     transition: transform 0.5s ease;
 }
+
+/* Top bar for every window: */
+.close-button {
+    position: absolute;
+    top: 9px;
+    right: 16px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: var(--color-ui-white);
+    margin: 0;
+    filter: drop-shadow(0 0 10px var(--color-ui-white));
+    background-color: var(--close-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}   
 
 .open-button {
     cursor: pointer;

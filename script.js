@@ -559,6 +559,7 @@ searchBox.addEventListener("keydown", (event) => {
       var secretAudio = new Audio("audio/secretDing.mp3");
     secretAudio.play();
 
+      // Shows a message from the browser:
       alert("🔓 TIGER OS SECRET FEATURE UNLOCKED!");
 
       var allSecretImages = document.querySelectorAll(".stardance-Trio")
