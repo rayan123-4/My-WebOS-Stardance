@@ -17,7 +17,7 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 git clone https://github.com/rayan123-4/My-WebOS-Stardance
 ```
 ## AI note:
-- I used **AI** a bit when I got very stuck on an error and couldn't fix it. I also used it to learn how to make new things(eg: putting sound on a button or setting up an API for the first time), though still I did most of the hard work. I also used it for some light debugging, if I was completely stuck and wasn't going anywhere.
+- I used **AI** a bit when I got very stuck on an error and couldn't fix it. I also used it to learn **sometimes** how to make new things(eg: putting sound on a button or setting up an API for the first time), though still I did most of the hard work. I also used it for some light debugging, if I was completely stuck and wasn't going anywhere.
   
 - Most of the help I got was from the **official guide**, **W3Schools tutorials**, and my **prior knowledge**.
 
