@@ -605,6 +605,10 @@ const unitSize = 25;
 const solidSkinBtn = document.querySelector("#solidSkinBtn");
 const stripeSkinBtn = document.querySelector("#stripeSkinBtn");
 const highScoreText = document.querySelector("#highScoreText");
+const scoreAlert0 = document.querySelector("#scoreAlert0");
+const scoreAlert1 = document.querySelector("#scoreAlert1");
+const scoreAlert2 = document.querySelector("#scoreAlert2");
+const scoreAlert3 = document.querySelector("#scoreAlert3");
 
 let running = false;
 let xVelocity = unitSize;
@@ -696,6 +700,26 @@ function moveSnake(){
     if(snake[0].x === foodX && snake[0].y === foodY){
       score += 1;
       scoreText.textContent = score;
+
+      if (score === 1) {
+        scoreAlert0.style.display = "block";
+        setTimeout(() => { scoreAlert0.style.display = "none"; }, 2000);
+     }
+
+      if (score === 10) {
+        scoreAlert1.style.display = "block";
+        setTimeout(() => { scoreAlert1.style.display = "none"; }, 2000);
+     }
+
+      if (score === 20) {
+        scoreAlert2.style.display = "block";
+        setTimeout(() => { scoreAlert2.style.display = "none"; }, 2000);
+     }
+
+     if (score === 30) {
+        scoreAlert3.style.display = "block";
+        setTimeout(() => { scoreAlert3.style.display = "none"; }, 2000);
+     }
 
       highScore = score >= highScore ? score : highScore;
       localStorage.setItem("highScoreText", highScore);

@@ -833,14 +833,19 @@ h1 {
     left: 40%;
     right: none;
     z-index: 10;
+    filter: blur(0);
+    animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
 }
 
 .tiger-map-window .stardance-Trio,
 .settings-window .stardance-Trio,
 .Tiger-Information .stardance-Trio,
-.manual-window .stardance-Trio {
+.manual-window .stardance-Trio,
+.snake-Game-Window .stardance-Trio {
     left: 44%;
     z-index: 10;
+    animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    filter: blur(0);
 }
 
 
@@ -908,6 +913,19 @@ h1 {
     gap: 32px;
     border-radius: 16px;
     margin: 16px;
+}
+
+#welcomepage, 
+#snakeGameWindow, 
+#ManualWindow, 
+#RealWeatherWindow, 
+#WeatherWindow, 
+#TigerInformation, 
+#settingswindow, 
+#tigermapwindow, 
+#roarwindow, 
+#gallerywindow {
+    animation: alertPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
 }
 
 
@@ -1164,6 +1182,7 @@ h1 {
     padding-left: 0;
     overflow: hidden;
     backdrop-filter: blur(1px);
+    z-index: -1;
 }
 
 .icon-list {
@@ -1330,4 +1349,39 @@ h1 {
     font-size: 25px;
 }
 
+.alert-list {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+    text-align: center;
+    filter: blur(0);
+}
 
+.alert-list div {
+     color: var(--color--text--dark);
+     font-size: 35px;
+     font-weight: bold;
+     display: none;
+     height: auto;
+     width: auto;
+     background-color: var(--color-panel-background);
+     border-radius: 12px;
+     filter: blur(0);
+     animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+}
+
+@keyframes alertPop {
+    0% {
+        scale: 0.6;
+        opacity: 0;
+    }
+    70% {
+        scale: 1.04;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
