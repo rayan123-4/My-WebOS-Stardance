@@ -90,4 +90,4 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 7. Data from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
 8. Tutorial for Snake game - https://youtu.be/Je0B3nHhKmM?si=DQiSr36gDDSM3Psj
 9. Python Tkinter calculator app - https://youtu.be/28tj-IBfGH4?si=Jp0YirhSjQEl7D6L
-10. How I got Tkinter to work in the website - Replit.com
+10. How I got Tkinter to work in the website - https://replit.com
