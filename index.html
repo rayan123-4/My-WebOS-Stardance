@@ -11,7 +11,7 @@
     <title>Tiger OS</title>
     <link rel="icon" type="image/png" href="Images/tiger-web-icon.png">
     <link rel="stylesheet" href="main.css">
-    <script src="script.js" defer> </script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -20,8 +20,29 @@
         <img src="Images/stardance.avif" class="welcome-page-header" id="Calcwindow-header">
         <p class="close-button" id="CalcWindow-close">X</p>
         <div class="calc-container">
-
-
+            <div class="calculater">
+            <input type="text" id="calc-display" readonly>
+            <div id="keys">
+            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()" class="operator-btn">C</button>
+            </div>
+        </div>
+        </div>
     </div>
 </div>
 

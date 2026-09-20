@@ -176,6 +176,7 @@ if (calcIcon) {
   });
 }
 
+// Making map app closable:
 if (calcWindowClose) {
   calcWindowClose.addEventListener("click", function () {
     closeWindow(calcWindow);
@@ -884,4 +885,31 @@ function resetGame(){
 gameStart();
 
 };
+
+// Making calculator window
+function appendToDisplay(input){
+  const calcDisplay = document.getElementById("calc-display");
+  if (calcDisplay) calcDisplay.value += input;
+}
+
+function clearDisplay(){
+  const calcDisplay = document.getElementById("calc-display");
+  if (calcDisplay) calcDisplay.value = "";
+}
+
+function calculate(){
+  const calcDisplay = document.getElementById("calc-display");
+  if (!calcDisplay || calcDisplay.value.trim() === "") return;
+  try {
+    calcDisplay.value = eval(calcDisplay.value);
+  }
+  catch(error){
+    calcDisplay.value = "Error";
+  }
+}
+
+// Ensure global visibility
+window.appendToDisplay = appendToDisplay;
+window.clearDisplay = clearDisplay;
+window.calculate = calculate;
 
