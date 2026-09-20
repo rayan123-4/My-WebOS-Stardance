@@ -1,6 +1,6 @@
   
 // Code for making the DIV element draggable:
-document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, manual-window, .snake-Game-Window").forEach(dragElement);
+document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, manual-window, .snake-Game-Window, .calc-Window").forEach(dragElement);
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -160,6 +160,25 @@ if (galleryIcon) {
 if (galleryWindowClose) {
   galleryWindowClose.addEventListener("click", function () {
     closeWindow(galleryWindow);
+  });
+}
+
+// For calculator drag window
+dragElement(document.querySelector("#calcWindow"));
+
+var calcWindow = document.querySelector("#calcWindow");
+var calcIcon = document.querySelector("#calcIcon");
+var calcWindowClose = document.querySelector("#CalcWindow-close");
+
+if (calcIcon) {
+  calcIcon.addEventListener("click", function () {
+    openWindow(calcWindow);
+  });
+}
+
+if (calcWindowClose) {
+  calcWindowClose.addEventListener("click", function () {
+    closeWindow(calcWindow);
   });
 }
 
