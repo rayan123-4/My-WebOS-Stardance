@@ -89,5 +89,4 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
 7. Data from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
 8. Tutorial for Snake game - https://youtu.be/Je0B3nHhKmM?si=DQiSr36gDDSM3Psj
-9. Tutorial for calculator - https://youtu.be/I5kj-YsmWjM?si=khQjLA8ua-h43nw1
 
