@@ -31,7 +31,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 7. A Scrollable side icon bar, to sort out all my apps.
 8. A Manual app, to learn what features this OS has and where to find them.
 9. Added a secret feature and a ding sound when its activated.
-10. Made a calculator app using PythonScript.
+10. Made a calculator app.
 
 ## Credits:
 
@@ -89,5 +89,5 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
 7. Data from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
 8. Tutorial for Snake game - https://youtu.be/Je0B3nHhKmM?si=DQiSr36gDDSM3Psj
-9. Python Tkinker calculator app (used it for help to get started then converted to pyscript) - https://youtu.be/28tj-IBfGH4?si=Jp0YirhSjQEl7D6L
+9. Tutorial for calculator - https://youtu.be/I5kj-YsmWjM?si=khQjLA8ua-h43nw1
 
