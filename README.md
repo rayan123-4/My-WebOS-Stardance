@@ -71,6 +71,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 30. Secret button ding sound effect - https://pixabay.com/sound-effects/film-special-effects-ding-402325/
 31. The Tiger OS web Icon - https://www.tierart.de/en-us/interesting-facts-about-animals/about-tigers
 32. Snake game Icon (Canva to customize it) - https://www.flaticon.com/free-icon/snake_8160941?term=snake&page=1&position=37&origin=search&related_id=8160941
+33. Calculator Icon - https://www.flaticon.com/free-icon/calculator_548251
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
