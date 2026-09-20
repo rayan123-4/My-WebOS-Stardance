@@ -395,6 +395,7 @@ h1 {
     object-fit: contain;
 }
 
+
 .manual-icon img {
     position: absolute;
     top: 0;
@@ -408,6 +409,17 @@ h1 {
 }
 
 .snake-icon img {
+    background-color: var(--color-ui-white);
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.calc-Icon img {
     background-color: var(--color-ui-white);
     position: absolute;
     top: 6px;
@@ -445,6 +457,18 @@ h1 {
     height: 64px;
     border-radius: 16px;
     background-color: var(--color-ui-white);
+}
+
+.calc-Icon {
+    cursor: pointer;
+    position: fixed;
+    top: 920px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-ui-white);
+    object-fit: contain;
 }
 
 .roar-Icon {
@@ -485,6 +509,11 @@ h1 {
 
 /* App Icon Hover: */
 .roar-Icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+.calc-Icon:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px white);
 }
@@ -924,7 +953,8 @@ h1 {
 #settingswindow, 
 #tigermapwindow, 
 #roarwindow, 
-#gallerywindow {
+#gallerywindow,
+#calcWindow {
     animation: alertPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
 }
 
@@ -1200,7 +1230,8 @@ h1 {
 .real-weather-icon,
 .weather-icon,
 .manual-icon,
-.snake-icon {
+.snake-icon,
+.calc-Icon {
     position: absolute;
 }
 
@@ -1384,4 +1415,33 @@ h1 {
         scale: 1;
         opacity: 1;
     }
+}
+
+/* Tiger calculater window:*/
+.calc-Window {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: var(--color-panel-background);
+    color: var(--color-color-text-dark);
+    display: grid;
+    grid-template-columns: 1fr 170px;
+    min-height: 360px;
+    gap: 8px 20px;
+    text-align: left;
+}
+
+.calc-container {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background-color: var(--color-panel-background);
+    color: var(--color-color-text-dark);
+    display: grid;
+    grid-template-columns: 1fr 170px;
+    min-height: 360px;
+    gap: 8px 20px;
+    text-align: left;
 }
