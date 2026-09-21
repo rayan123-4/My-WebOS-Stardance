@@ -73,6 +73,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 31. The Tiger OS web Icon - https://www.tierart.de/en-us/interesting-facts-about-animals/about-tigers
 32. Snake game Icon (Canva to customize it) - https://www.flaticon.com/free-icon/snake_8160941?term=snake&page=1&position=37&origin=search&related_id=8160941
 33. Calculator Icon - https://www.flaticon.com/free-icon/calculator_548251
+34. Paint canvas Icon - https://www.flaticon.com/free-icon/brush_15299746?term=canvas&page=1&position=22&origin=tag&related_id=15299746
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
@@ -90,4 +91,5 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 7. Data from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
 8. Tutorial for Snake game - https://youtu.be/Je0B3nHhKmM?si=DQiSr36gDDSM3Psj
 9. Number 1 best tutorial for JavaScript calculater: https://youtu.be/KM8PIiqq97c?si=74JOiETd0lBZZytu
+10. Paint canvas tutorial - https://youtu.be/TYiFhk9hKy0?si=imWCNUuhktyDkJ2m
 
