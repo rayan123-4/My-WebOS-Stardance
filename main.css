@@ -10,6 +10,9 @@
     --color-icon-glow: #fff;
     --icon-bar: rgba(256, 256, 256, 0.125);
     --close-color: #FF0038;
+    --paint-board: #fff;
+    --paint-border: #000;
+    --paint-body: whitesmoke;
 }
 
 body {
@@ -32,6 +35,9 @@ body {
     --color-window-border: #000;
     --color-icon-glow: #000;
     --icon-bar: rgba(256, 256, 256, 0.125);
+    --paint-board: #000;
+    --paint-border: #fff;
+    --paint-body: smoke;
 }
 
 /* Background stuff: */
@@ -323,6 +329,18 @@ h1 {
     object-fit: contain;
 }
 
+.paint-Icon {
+    cursor: pointer;
+    position: fixed;
+    top: 1020px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-ui-white);
+    object-fit: contain;
+}
+
 .information-icon {
     cursor: pointer;
     position: fixed;
@@ -409,6 +427,17 @@ h1 {
 }
 
 .snake-icon img {
+    background-color: var(--color-ui-white);
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.paint-Icon img {
     background-color: var(--color-ui-white);
     position: absolute;
     top: 6px;
@@ -512,6 +541,12 @@ h1 {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px white);
 }
+
+.paint-Icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
 
 .calc-Icon:hover {
     transform: scale(1.1);
@@ -954,7 +989,8 @@ h1 {
 #tigermapwindow, 
 #roarwindow, 
 #gallerywindow,
-#calcWindow {
+#calcWindow,
+#paintWindow {
     animation: alertPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
 }
 
@@ -1231,7 +1267,8 @@ h1 {
 .weather-icon,
 .manual-icon,
 .snake-icon,
-.calc-Icon {
+.calc-Icon,
+.paint-Icon {
     position: absolute;
 }
 
@@ -1500,4 +1537,24 @@ h1 {
 
 #buttons button:active {
     opacity: 90%;
+}
+
+/* Paint window:*/
+#paintBoard {
+    border: 1px solid ;
+    border-color: var(--paint-border);
+    background-color: var(--paint-board);
+    cursor: crosshair;
+}
+
+#paintToolBar {
+    margin: 10px;
+}
+
+.paint-body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--paint-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

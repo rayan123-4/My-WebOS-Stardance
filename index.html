@@ -15,6 +15,25 @@
 </head>
 
 <body>
+    <div id="paintWindow" class="paintWindow">
+        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt="Stardance pop up trio">
+        <img src="Images/stardance.avif" class="welcome-page-header" id="Paintwindow-header">
+        <p class="close-button" id="PaintWindow-close">X</p>
+        <div class="paint-content">
+            <div class="paint-body">
+    <div id="paintToolBar">
+        <input type="color" id="color-picker" value="#000000">
+        <input type="range" id="brush-size" min="1" max="50">
+        <button id="paint-clear-button">Clear</button>
+        <button id="paint-fill-button">Fill</button>
+        <button id="paint-download-button">Download (if you dont feel confortable downloading just screenshot your masterpiece)</button>
+    </div>
+    <canvas id="paintBoard" width="640" height="480"></canvas>
+</div>
+</div>
+</div>
+
+
     <div id="calcWindow" class="calc-Window">
     <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt="Stardance pop up trio">
     <img src="Images/stardance.avif" class="welcome-page-header" id="Calcwindow-header">
@@ -246,6 +265,9 @@
     </div>
     <div class="icon-bar">
         <div class="icon-list">
+            <div id="paintIcon" class="paint-Icon">
+                <img src="Images/paint-Icon.png" alt="Paint canvas Icon">
+            </div>
             <div id="calcIcon" class="calc-Icon">
                 <img src="Images/tigerCalculater.png" alt="Calculator Icon">    
             </div>

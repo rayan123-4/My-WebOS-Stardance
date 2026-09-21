@@ -932,8 +932,11 @@ for (let i = 0; i < buttonValues.length; i++) {
       button.addEventListener("click", function() {
         if (rightSymbols.includes(value)) {
           if (value == "=") {
-            if (A != null) {
-              B = display.value;
+            if (A != null && operator != null) {
+              let currentCalcDisplay = display.value;
+              let operatorIndex = currentCalcDisplay.indexOf(operator);
+              B = currentCalcDisplay.slice(operatorIndex + 1);
+
               let numA = Number(A);
               let numB = Number(B);
 
@@ -953,9 +956,12 @@ for (let i = 0; i < buttonValues.length; i++) {
             }
           }
           else {
-                operator = value; //÷ × - +
-                A = display.value;
-                display.value = "";
+                 if (operator == null && display.value != "") {
+                   A = display.value;
+                   operator = value; //÷ × - +
+                   display.value += value;
+                 }
+
               }
             }
         else if (topSymbols.includes(value)) { //AC +/- %
@@ -979,7 +985,8 @@ for (let i = 0; i < buttonValues.length; i++) {
         else { //digits or .
           if (value == ".") {
                 //don't add multiple decimal places
-            if (display.value != "" && !display.value.includes(value)) {
+            let currentCalcInput = operator ? display.value.split(operator)[1] : display.value;
+            if (currentCalcInput != "" && !currentCalcInput.includes(".")) {
               display.value += value;
             }
           }
@@ -996,3 +1003,13 @@ for (let i = 0; i < buttonValues.length; i++) {
     //add button to calculator
       document.getElementById("buttons").appendChild(button);
     }
+
+// Paint canvas window:
+const paintBoard = document.getElementById("paintBoard");
+const paintContext = board.getContext("2d");
+
+const colorPicker = document.getElementById("color-picker");
+const brushSize = document.getElementById("brush-size");
+const clearButton = document.getElement.ById("paint-clear-button");
+const fillButton = document.getElement.ById("paint-fill-button");
+const downloadButton = document.getElement.ById("paint-download-button");
