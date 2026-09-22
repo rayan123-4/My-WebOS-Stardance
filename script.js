@@ -1,6 +1,6 @@
   
 // Code for making the DIV element draggable:
-document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, manual-window, .snake-Game-Window, .calc-Window, .paint-window").forEach(dragElement);
+document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window").forEach(dragElement);
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -1024,26 +1024,20 @@ for (let i = 0; i < buttonValues.length; i++) {
     }
 
 // Paint canvas window:
-const paintBoard = document.getElementById("paintBoard");
+const paintBoard = document.getElementById("#paintBoard");
 const paintContext = paintBoard.getContext("2d");
 
 let isDrawing = false;
 const colorPicker = document.getElementById("color-picker");
-const brushSize = document.getElementById("brush-size");
+const brushSize = document.getElementById("#brush-size");
 const clearButton = document.getElementById("paint-clear-button");
 const fillButton = document.getElementById("paint-fill-button");
 
 // drawing function:
-paintBoard.addEventListener("mousedown", () => {
-isDrawing = true
-paintContext.beginPath();
-paintContext.lineTo(e.offsetX, e.offsetY);
-painContext.stroke();
-});
-
+paintBoard.addEventListener("mousedown", (e) => {isDrawing = true});
 paintBoard.addEventListener("mouseup", () => {
-isDrawing = false;
-paintContext.beginPath();
+  isDrawing = false;
+  paintContext.beginPath();
 });
 paintBoard.addEventListener("mouseout", () => {isDrawing = false});
 paintBoard.addEventListener("mousemove", draw);
@@ -1054,23 +1048,23 @@ fillButton.addEventListener("click", fillCanvas);
 
 
 function draw(e) {
-if (!isDrawing) return;
+  if (!isDrawing) return;
 
-paintContext.lineWidth = brushSize.value;
-paintContext.lineCap = "round";
-paintContext.strokeStyle = colorPicker.value;
+  paintContext.lineWidth = brushSize.value;
+  paintContext.lineCap = "round";
+  paintContext.strokeStyle = colorPicker.value;
 
-paintContext.lineTo(e.offsetX, e.offsetY);
-paintContext.stroke();
-paintContext.beginPath();
-paintContext.moveTo(e.offsetX, e.offsetY);
+  paintContext.lineTo(e.offsetX, e.offsetY);
+  paintContext.stroke();
+  paintContext.beginPath();
+  paintContext.moveTo(e.offsetX, e.offsetY);
 }
 
 function clearCanvas() {
-paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
+  paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
 }
 
 function fillCanvas() {
-paintContext.fillStyle = colorPicker.value;
-paintContext.fillRect(0, 0, paintBoard.width, paintBoard.height);
+  paintContext.fillStyle = colorPicker.value;
+  paintContext.fillRect(0, 0, paintBoard.width, paintBoard.height);
 }

@@ -1545,7 +1545,7 @@ display: none;
 border: solid;
 border-color: var(--color-window-border);
 width: 430px;
-height: 600px;
+height: 590px;
 border-radius: 16px;
 padding: 25px;
 position: absolute;
@@ -1579,6 +1579,7 @@ border: 1px solid ;
 border-color: var(--paint-border);
 background-color: var(--paint-board);
 cursor: crosshair;
+display: block;
 }
 
 #paintToolBar {
