@@ -1,4 +1,3 @@
-  
 // Code for making the DIV element draggable:
 document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window").forEach(dragElement);
 
@@ -20,21 +19,24 @@ function dragElement(element) {
 
     document.getElementById(element.id + "-header").onmousedown = startDragging;
 
-  } else {
-
-    // if not from the header then from anywhere else in the window:
-    element.onmousedown = startDragging;
-
   }
+    //else {
+
+  //   // if not from the header then from anywhere else in the window:
+  //   element.onmousedown = startDragging;
+
+  // }
+
+  var headerImg = element.querySelector("img[src*='Images/stardance.avif']");
+  if (headerImg) {
+    headerImg.onmousedown = startDragging;
+  }
+
 
   // Function to handle the mouse down event and initiate dragging:
   function startDragging(e) {
 
     e = e || window.event;
-
-    if (["INPUT", "BUTTON", "TEXTAREA", "SELECT"].includes(e.target.tagName)) {
-      return;
-    }
 
     e.preventDefault();
 
@@ -657,6 +659,7 @@ let foodY;
 let score = 0;
 let currentSkin = "stripes";
 let highScore = localStorage.getItem("highScoreText") || 0;
+let shownAlert0 = false;
 
 // Setting snake positon
 let snake = [
@@ -703,7 +706,7 @@ function nextTick(){
         drawSnake();
         checkGameOver();
         nextTick();
-    }, 130)
+    }, 150)
   }
   else {
     displayGameOver();
@@ -741,6 +744,7 @@ function moveSnake(){
       scoreText.textContent = score;
 
       if (score === 1) {
+        shownAlert0 = true;
         scoreAlert0.style.display = "block";
         setTimeout(() => { scoreAlert0.style.display = "none"; }, 2000);
      }
@@ -893,6 +897,7 @@ function resetGame(){
   xVelocity = unitSize;
   yVelocity = 0;
   running = true;
+  hasShownAlert0 = false;
 
   snake = [
   {x:unitSize * 4, y:0},
@@ -1024,20 +1029,34 @@ for (let i = 0; i < buttonValues.length; i++) {
     }
 
 // Paint canvas window:
-const paintBoard = document.getElementById("#paintBoard");
+const paintBoard = document.getElementById("paintBoard");
 const paintContext = paintBoard.getContext("2d");
 
+let restore_art = [];
+let artIndex = -1;
 let isDrawing = false;
 const colorPicker = document.getElementById("color-picker");
-const brushSize = document.getElementById("#brush-size");
+const brushSize = document.getElementById("brush-size");
 const clearButton = document.getElementById("paint-clear-button");
 const fillButton = document.getElementById("paint-fill-button");
+const undoButton = document.getElementById("paint-undo-button");
+
 
 // drawing function:
-paintBoard.addEventListener("mousedown", (e) => {isDrawing = true});
-paintBoard.addEventListener("mouseup", () => {
+paintBoard.addEventListener("mousedown", (e) => {
+  isDrawing = true
+
+  paintContext.beginPath();
+  paintContext.moveTo(e.offsetX, e.offsetY);
+
+});
+paintBoard.addEventListener("mouseup", (e) => {
   isDrawing = false;
   paintContext.beginPath();
+  if ( e.type != 'mouseout') {
+  restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
+  artIndex += 1;
+}
 });
 paintBoard.addEventListener("mouseout", () => {isDrawing = false});
 paintBoard.addEventListener("mousemove", draw);
@@ -1046,6 +1065,9 @@ paintBoard.style.touchAction = "none";
 clearButton.addEventListener("click", clearCanvas);
 fillButton.addEventListener("click", fillCanvas);
 
+if (undoButton) {
+  undoButton.addEventListener("click", undo_last);
+}
 
 function draw(e) {
   if (!isDrawing) return;
@@ -1056,15 +1078,33 @@ function draw(e) {
 
   paintContext.lineTo(e.offsetX, e.offsetY);
   paintContext.stroke();
-  paintContext.beginPath();
   paintContext.moveTo(e.offsetX, e.offsetY);
 }
 
 function clearCanvas() {
   paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
+  restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
+  artIndex += 1;
 }
 
 function fillCanvas() {
   paintContext.fillStyle = colorPicker.value;
   paintContext.fillRect(0, 0, paintBoard.width, paintBoard.height);
+  restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
+  artIndex += 1;
 }
+
+
+// Undo button:
+function undo_last() {
+  if ( artIndex <= 0 ) {
+    paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
+    restore_art = [];
+    artIndex = -1;
+  } else {
+    restore_art.pop();
+    artIndex -= 1;
+    paintContext.putImageData(restore_art[artIndex], 0, 0);
+  }
+}
+

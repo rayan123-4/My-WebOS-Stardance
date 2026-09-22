@@ -5,8 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https:; connect-src 'self' https://api.weatherapi.com; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none';">
     <meta name="referrer" content="no-referrer">
     <title>Tiger OS</title>
     <link rel="icon" type="image/png" href="Images/tiger-web-icon.png">
@@ -22,12 +20,14 @@
         <div class="paint-content">
             <div class="paint-body">
     <div id="paintToolBar">
-        <input type="color" id="color-picke value="#000000">
+        <h1>Draw your own Tiger!</h1>
+        <input type="color" id="color-picker" value="#000000">
         <input type="range" id="brush-size" min="1" max="50">
         <button id="paint-clear-button">Clear</button>
         <button id="paint-fill-button">Fill</button>
+        <button id="paint-undo-button">Undo</button>
     </div>
-    <canvas id="paintBoard" width="400" height="480"></canvas>
+    <canvas id="paintBoard" width="400" height="470"></canvas>
 </div>
 </div>
 </div>
@@ -49,9 +49,9 @@
 
     <div class="alert-list">
     <div id="scoreAlert0">🐯: &quot;I need more food!&quot;</div>
-    <div id="scoreAlert1">Have you played this game before?</div>
-    <div id="scoreAlert2">That's Impressive!</div>
-    <div id="scoreAlert3">Your very hungry today</div>
+    <div id="scoreAlert1">🐯: &quot;Have you played this game before?&quot;</div>
+    <div id="scoreAlert2">🐯: &quot;That's Impressive, thank you!&quot;</div>
+    <div id="scoreAlert3">🐯: &quot;I think I'm starting to get full&quot;</div>
 </div>
     <div id="snakeGameWindow" class="snake-Game-Window">
         <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt="Stardance pop up trio">
