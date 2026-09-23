@@ -1279,7 +1279,7 @@ h1 {
     padding: 16px;
     margin-top: 32px;
     background-color: var(--color-panel-background);
-    height: 630px;
+    height: 635px;
 }
 
 .manual-window {
@@ -1287,7 +1287,7 @@ h1 {
     border: solid;
     border-color: var(--color-window-border);
     width: 620px;
-    height: 650px;
+    height: 655px;
     border-radius: 16px;
     padding: 16px;
     position: absolute;
@@ -1301,7 +1301,7 @@ h1 {
 
 .manual-image {
     position: absolute;
-    top: 5px;
+    top: 1px;
     left: 25px;
     width: 600px;
     height: 750px;
@@ -1311,7 +1311,7 @@ h1 {
 
 .manual-image img {
     width: 600px;
-    height: 700px;
+    height: 745px;
     object-fit: cover;
 }
 
@@ -1319,7 +1319,7 @@ h1 {
     position: relative;
     z-index: 2;
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .manual-content h1 {
