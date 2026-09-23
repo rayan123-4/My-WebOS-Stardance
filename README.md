@@ -31,7 +31,9 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 7. A Scrollable side icon bar, to sort out all my apps.
 8. A Manual app, to learn what features this OS has and where to find them.
 9. Added a secret feature and a ding sound when its activated.
-10. Made a calculator app.
+10. Tiger snake game app, that you can play and change you skin.
+11. A calculator app, for simple math.
+12. A paint canvas with an undo button, to draw your own Tiger or anything else.
 
 ## Credits:
 
@@ -91,5 +93,5 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 7. Data from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
 8. Tutorial for Snake game - https://youtu.be/Je0B3nHhKmM?si=DQiSr36gDDSM3Psj
 9. Number 1 best tutorial for JavaScript calculater: https://youtu.be/KM8PIiqq97c?si=74JOiETd0lBZZytu
-10. Paint canvas tutorial - https://youtu.be/TYiFhk9hKy0?si=imWCNUuhktyDkJ2m
+10. Paint canvas tutorial - https://youtu.be/TYiFhk9hKy0?si=imWCNUuhktyDkJ2m and https://youtu.be/wCwKkT1P7vY?si=DZ3kGUfejhcSx-B-
 
