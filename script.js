@@ -27,6 +27,7 @@ function dragElement(element) {
 
   // }
 
+  // Makes sure that the only thing thats draggable is the header drag image.
   var headerImg = element.querySelector("img[src*='Images/stardance.avif']");
   if (headerImg) {
     headerImg.onmousedown = startDragging;
@@ -63,21 +64,26 @@ function dragElement(element) {
     initialX = e.clientX;
     initialY = e.clientY;
 
+    // Setting the boundaries for the window so it cannot go too far up or down or left or right.
     var newTop = element.offsetTop - currentY;
     var newLeft = element.offsetLeft - currentX;
 
+    // TOP
     if (newTop < 50) {
       newTop = 50;
     }
 
+    // BOTTOM
     if (newTop > window.innerHeight - 60) {
       newTop = window.innerHeight - 60;
     }
 
+    // LEFT
     if (newLeft < 0) {
       newLeft = 0;
     }
 
+    // RIGHT
     if (newLeft > window.innerWidth - 100) {
       newLeft = newLeft = window.innerWidth - 100;
     }
@@ -434,6 +440,7 @@ function openWindow(element) {
   }
 }
 
+// Allow handle to be selected.
 function handleWindowTap(element) {
   biggestIndex++;  // Increment biggestIndex by 1
   element.style.zIndex = biggestIndex;
@@ -451,12 +458,15 @@ var roarButton2 = document.querySelector("#roarsoundbutton2");
 var roarButton3 = document.querySelector("#roarsoundbutton3");
 var roarButton4 = document.querySelector("#roarsoundbutton4");
 
-
 // Making the button be clicked and a roar sound appears:
-
 if (roarButton1) {
 
   roarButton1.addEventListener("click", function () {
+    // To make the roars play one at a time and not all at once.
+    if (window.audioStopper) {
+      window.audioStopper.pause();
+      window.audioStopper.currentTime = 0;
+  }
 
     var audio = new Audio("audio/bengal-tiger-sound-effects_31BebgSW.mp3");
     window.audioStopper = audio;
@@ -469,6 +479,10 @@ if (roarButton1) {
 if (roarButton2) {
 
   roarButton2.addEventListener("click", function () {
+    if (window.audioStopper) {
+      window.audioStopper.pause();
+      window.audioStopper.currentTime = 0;
+  }
 
     var audio = new Audio("audio/sumatran-tiger-sound-effects_A2KQoZrL.mp3");
     window.audioStopper = audio;
@@ -481,6 +495,10 @@ if (roarButton2) {
 if (roarButton3) {
 
   roarButton3.addEventListener("click", function () {
+    if (window.audioStopper) {
+      window.audioStopper.pause();
+      window.audioStopper.currentTime = 0;
+  }
 
     var audio = new Audio("audio/siberian-tiger-sound-effects-mp4_QyCzfm0Z.mp3");
     window.audioStopper = audio;
@@ -493,6 +511,10 @@ if (roarButton3) {
 if (roarButton4) {
 
   roarButton4.addEventListener("click", function () {
+    if (window.audioStopper) {
+      window.audioStopper.pause();
+      window.audioStopper.currentTime = 0;
+  }
 
     var audio = new Audio("audio/south-china-tiger-sound-effects_h2y6hZYS.mp3");
     window.audioStopper = audio;
@@ -565,7 +587,7 @@ const disableDarkmode = () => {
 
 if (darkmode === "active") enableDarkmode()
 
-// Is also an if statement, but smaller:
+// Is also like an if statement, but smaller:
 themeSwitch.addEventListener("click", () => {
   darkmode = localStorage.getItem('darkmode')
   darkmode !== "active" ? enableDarkmode() : disableDarkmode()
@@ -573,6 +595,8 @@ themeSwitch.addEventListener("click", () => {
 
 
 // Trying to make a real weather app this time: 
+
+// Api key and url
 const apiKey = "88d0ea56b63f4f9188a65331261109";
 const apiUrl = "https://api.weatherapi.com/v1/current.json";
 
@@ -589,6 +613,7 @@ async function checkWeather(city) {
 
   try {
 
+    // Making the api show results.
     const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
     const data = await response.json();
 
@@ -596,6 +621,7 @@ async function checkWeather(city) {
       throw new Error(data.error?.message || "Weather request failed.");
     }
 
+    // The extracting the data from the api to the specific functions
     document.querySelector(".real-city").textContent = data.location.name;
     document.querySelector(".real-temp").textContent = Math.round(data.current.temp_c) + "°c";
     document.querySelector(".real-humidity").textContent = data.current.humidity + "%";
@@ -718,6 +744,7 @@ function gameStart(){
   nextTick();
 };
 
+// The number at the bottom is the speed of the snake.
 function nextTick(){
   if(running) {
     setTimeout(() => {
@@ -764,7 +791,8 @@ function moveSnake(){
       score += 1;
       scoreText.textContent = score;
 
-      if (score === 1) {
+      // The achievement alert.
+      if (score === 2) {
         shownAlert0 = true;
         scoreAlert0.style.display = "block";
         setTimeout(() => { scoreAlert0.style.display = "none"; }, 2000);
@@ -811,6 +839,7 @@ function setSnakeSkin(selectedSkin) {
   }
 }
 
+// The snake body
 function drawSnake(){
   ctx.strokeStyle = "rgba(0, 0, 0, 0.2)"; 
 
@@ -913,6 +942,7 @@ function displayGameOver(){
   running = false;
 };
 
+// Reset game function
 function resetGame(){
   score = 0;
   xVelocity = unitSize;
@@ -985,6 +1015,7 @@ for (let i = 0; i < buttonValues.length; i++) {
               let numA = Number(A);
               let numB = Number(B);
 
+              // Calculations
               if (operator == "÷") {
                 display.value = numA/numB;
               }
@@ -1079,6 +1110,8 @@ paintBoard.addEventListener("mouseup", (e) => {
   artIndex += 1;
 }
 });
+
+// Event listeners
 paintBoard.addEventListener("mouseout", () => {isDrawing = false});
 paintBoard.addEventListener("mousemove", draw);
 paintBoard.style.touchAction = "none";
