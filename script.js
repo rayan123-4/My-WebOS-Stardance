@@ -40,6 +40,8 @@ function dragElement(element) {
 
     e.preventDefault();
 
+    element.style.transform = "none";
+
     initialX = e.clientX;
     initialY = e.clientY;
 
@@ -61,8 +63,27 @@ function dragElement(element) {
     initialX = e.clientX;
     initialY = e.clientY;
 
-    element.style.top = (element.offsetTop - currentY) + "px";
-    element.style.left = (element.offsetLeft - currentX) + "px";
+    var newTop = element.offsetTop - currentY;
+    var newLeft = element.offsetLeft - currentX;
+
+    if (newTop < 50) {
+      newTop = 50;
+    }
+
+    if (newTop > window.innerHeight - 60) {
+      newTop = window.innerHeight - 60;
+    }
+
+    if (newLeft < 0) {
+      newLeft = 0;
+    }
+
+    if (newLeft > window.innerWidth - 100) {
+      newLeft = newLeft = window.innerWidth - 100;
+    }
+
+    element.style.top = newTop + "px";
+    element.style.left = newLeft + "px";
 
   }
 

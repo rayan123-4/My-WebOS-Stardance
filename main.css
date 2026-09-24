@@ -1242,8 +1242,9 @@ h1 {
     border-radius: 16px;
     width: 100px;
     top: 100px;
-    height: 600px;
-    max-height: 600px;
+    height: auto;
+    bottom: 40px;
+    max-height: none;
     padding-top: 0px;
     padding-left: 0;
     overflow: hidden;
