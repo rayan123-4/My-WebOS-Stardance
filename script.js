@@ -41,7 +41,10 @@ function dragElement(element) {
 
     e.preventDefault();
 
-    element.style.transform = "none";
+
+
+    // Making sure window doesnt move randomly
+
 
     initialX = e.clientX;
     initialY = e.clientY;
@@ -65,12 +68,12 @@ function dragElement(element) {
     initialY = e.clientY;
 
     // Setting the boundaries for the window so it cannot go too far up or down or left or right.
-    var newTop = element.offsetTop - currentY;
+    var newTop = element.offsetTop -   currentY;
     var newLeft = element.offsetLeft - currentX;
 
     // TOP
-    if (newTop < 50) {
-      newTop = 50;
+    if (newTop < 50 + (element.offsetHeight / 2)) {
+      newTop = 50 + (element.offsetHeight / 2);
     }
 
     // BOTTOM
@@ -79,8 +82,8 @@ function dragElement(element) {
     }
 
     // LEFT
-    if (newLeft < 0) {
-      newLeft = 0;
+    if (newLeft < 0 + (element.offsetWidth / 2)) {
+      newLeft = 0 + (element.offsetWidth / 2);
     }
 
     // RIGHT
@@ -296,7 +299,7 @@ if (tigerMapIcon) {
 }
 
 // For fun fact weather window drag:
-dragElement(document.querySelector("#tigermapwindow"));
+dragElement(document.querySelector("#WeatherWindow"));
 
 var WeatherWindow = document.querySelector("#WeatherWindow");
 var WeatherIcon = document.querySelector("#weatherIcon");
