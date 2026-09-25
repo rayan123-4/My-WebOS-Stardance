@@ -1165,3 +1165,20 @@ function undo_last() {
   }
 }
 
+// Multiple link button:
+
+var linkWindow = document.querySelector("#rayanLinkWindow");
+var linkBtn = document.querySelector("#linkBtn");
+var linkWindowClose = document.querySelector("#link-close");
+
+if (linkBtn) {
+  linkBtn.addEventListener("click", function () {
+    openWindow(linkWindow);
+  });
+}
+
+if (linkWindowClose) {
+  linkWindowClose.addEventListener("click", function () {
+    closeWindow(linkWindow);
+  });
+}

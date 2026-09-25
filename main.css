@@ -307,6 +307,8 @@ body {
 .RayanOS-link {
     color: var(--color-ui-white); 
     text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 
@@ -1429,16 +1431,16 @@ h1 {
 }
 
 .alert-list div {
-     color: var(--color--text--dark);
-     font-size: 35px;
-     font-weight: bold;
-     display: none;
-     height: auto;
-     width: auto;
-     background-color: var(--color-panel-background);
-     border-radius: 12px;
-     filter: blur(0);
-     animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+   color: var(--color--text--dark);
+   font-size: 35px;
+   font-weight: bold;
+   display: none;
+   height: auto;
+   width: auto;
+   background-color: var(--color-panel-background);
+   border-radius: 12px;
+   filter: blur(0);
+   animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
 }
 
 @keyframes alertPop {
@@ -1542,58 +1544,104 @@ h1 {
 
 /* Paint window:*/
 .paint-window {
-display: none;
-border: solid;
-border-color: var(--color-window-border);
-width: 430px;
-height: 620px;
-border-radius: 16px;
-padding: 25px;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-flex-direction: column;
-backdrop-filter: blur(4px);
-background-color: var(--color-glass-background);
-z-index: 10;
+    display: none;
+    border: solid;
+    border-color: var(--color-window-border);
+    width: 430px;
+    height: 620px;
+    border-radius: 16px;
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    background-color: var(--color-glass-background);
+    z-index: 10;
 }
 
 .paint-content {
-border: solid;
-border-radius: 16px;
-padding: 16px;
-margin-top: 22px;
-background-color: var(--color-panel-background);
-height: 570px;
-width: 400px;
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-z-index: 5;
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 22px;
+    background-color: var(--color-panel-background);
+    height: 570px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
 }
 
 #paintBoard {
-border: 1px solid ;
-border-color: var(--paint-border);
-background-color: var(--paint-board);
-cursor: crosshair;
-display: block;
+    border: 1px solid ;
+    border-color: var(--paint-border);
+    background-color: var(--paint-board);
+    cursor: crosshair;
+    display: block;
 }
 
 #paintToolBar {
-margin: 10px;
+    margin: 10px;
 }
 
 .paint-body {
-font-family: Arial, Helvetica, sans-serif;
-background-color: var(--paint-body);
-display: flex;
-flex-direction: column;
-align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--paint-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .paint-content h1 {
     margin-top: 0;
+}
+
+/* Stardance and github link window*/
+.rayan-Link-Window {
+    display: none;
+    border: solid;
+    border-color: var(--color-window-border);
+    width: 120px;
+    height: 50px;
+    border-radius: 16px;
+    padding: 25px;
+    position: absolute;
+    top: 80px;
+    right: 150px;
+    backdrop-filter: blur(4px);
+    background-color: var(--color-glass-background);
+    z-index: 1;
+}
+
+.rayan-Links {
+    border: solid;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 22px;
+    background-color: var(--color-panel-background);
+    height: 30px;
+    width: 120px;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#link-close {
+    top: 4px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 5px;
+}
+
+.hackClubLink {
+    font-size: 10px;
 }
