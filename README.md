@@ -4,7 +4,7 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 - This project is made for the **WebOS** mission in **Stardance.**
 - https://stardance.hackclub.com/ is the largest free STEM, nonprofit program by https://hackclub.com/
 
-<img width="1365" height="656" alt="Screenshot 2026-09-04 22 18 04" src="https://github.com/user-attachments/assets/1e55198c-9a01-4071-a1f9-59b679dc8a09" />
+<img width="1365" height="767" alt="Screenshot 2026-09-26 16 09 03" src="https://github.com/user-attachments/assets/821bd435-6c37-4417-bb2b-6a8824ee28bb" />
 
 # How I made it:
 - It's a simple **WebOS** that I have made using the **Jams official guide** (https://jams.hackclub.com/batch/webOS).
