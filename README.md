@@ -2,6 +2,7 @@
 This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javascript**.
 - The website is themed on **Tigers** and has many cool features.
 - This project is made for the **WebOS** mission in **Stardance.**
+- https://stardance.hackclub.com/ is the largest free STEM, nonprofit program by https://hackclub.com/
 
 <img width="1365" height="656" alt="Screenshot 2026-09-04 22 18 04" src="https://github.com/user-attachments/assets/1e55198c-9a01-4071-a1f9-59b679dc8a09" />
 
