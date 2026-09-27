@@ -71,14 +71,19 @@ function dragElement(element) {
     initialY = e.clientY;
 
     // Setting the boundaries for the window so it cannot go too far up or down or left or right.
-    var newTop = element.offsetTop -   currentY;
+    var newTop = element.offsetTop - currentY;
     var newLeft = element.offsetLeft - currentX;
 
-    // TOP
-    if (newTop < 50 + (element.offsetHeight / 2)) {
+    // TOP (specifcally for the Weather windows)
+    if (element.id === "WeatherWindow" || element.id === "RealWeatherWindow") {
+      if (newTop < 0) {
+        newTop = 0;
+      }
+    }
+    // TOP NORMAL
+    else if (newTop < 50 + (element.offsetHeight / 2)) {
       newTop = 50 + (element.offsetHeight / 2);
     }
-
     // BOTTOM
     if (newTop > window.innerHeight - 60) {
       newTop = window.innerHeight - 60;
@@ -93,6 +98,7 @@ function dragElement(element) {
     if (newLeft > window.innerWidth - 100) {
       newLeft = newLeft = window.innerWidth - 100;
     }
+
 
     element.style.top = newTop + "px";
     element.style.left = newLeft + "px";
@@ -1189,82 +1195,82 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 // Making the app icons stay hover light if they open:
 
 // List of icons:
-var iconList = document.querySelectorAll(
-  ".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon"
-);
+    var iconList = document.querySelectorAll(
+      ".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon"
+      );
 
 // List of the images:
-var windowMapping = {
-  "tiger-gallery": "#gallerywindow",
-  "roar-Icon": "#roarwindow",
-  "tiger-map-icon": "#tigermapwindow",
-  "settings-Icon": "#settingswindow",
-  "information-icon": "#TigerInformation",
-  "real-weather-icon": "#RealWeatherWindow",
-  "weather-icon": "#WeatherWindow",
-  "manual-icon": "#ManualWindow",
-  "snake-icon": "#snakeGameWindow",
-  "calc-Icon": "#calcWindow",
-  "paint-Icon": "#paintWindow"
-};
+    var windowMapping = {
+      "tiger-gallery": "#gallerywindow",
+      "roar-Icon": "#roarwindow",
+      "tiger-map-icon": "#tigermapwindow",
+      "settings-Icon": "#settingswindow",
+      "information-icon": "#TigerInformation",
+      "real-weather-icon": "#RealWeatherWindow",
+      "weather-icon": "#WeatherWindow",
+      "manual-icon": "#ManualWindow",
+      "snake-icon": "#snakeGameWindow",
+      "calc-Icon": "#calcWindow",
+      "paint-Icon": "#paintWindow"
+    };
 
-function updateIconHoverDisplay() {
+    function updateIconHoverDisplay() {
 
   // Go through every desktop icon:
-  for (var icon of iconList) {
+      for (var icon of iconList) {
 
-    var isCurrentAppOpen = false;
+        var isCurrentAppOpen = false;
 
     // Look through the window mapping:
-    for (var iconClass in windowMapping) {
+        for (var iconClass in windowMapping) {
 
       // Check if this icon belongs to this window:
-      if (icon.classList.contains(iconClass)) {
+          if (icon.classList.contains(iconClass)) {
 
-        var windowId = windowMapping[iconClass];
-        var appWindow = document.querySelector(windowId);
+            var windowId = windowMapping[iconClass];
+            var appWindow = document.querySelector(windowId);
 
         // Check if the window exists and is open:
-        if (appWindow) {
-          var actualDisplay = window.getComputedStyle(appWindow).display;
+            if (appWindow) {
+              var actualDisplay = window.getComputedStyle(appWindow).display;
 
-          if (actualDisplay === "flex") {
-            isCurrentAppOpen = true;
+              if (actualDisplay === "flex") {
+                isCurrentAppOpen = true;
+              }
+            }
           }
+        }
+
+    // App is open OR mouse is hovering over icon:
+        if (isCurrentAppOpen || icon.matches(":hover")) {
+          icon.style.filter = "drop-shadow(0 0 10px white)";
+          icon.style.transform = "scale(1.1)";
+        }
+
+    // Nothing happening
+        else {
+          icon.style.filter = "";
+          icon.style.transform = "";
         }
       }
     }
 
-    // App is open OR mouse is hovering over icon:
-    if (isCurrentAppOpen || icon.matches(":hover")) {
-      icon.style.filter = "drop-shadow(0 0 10px white)";
-      icon.style.transform = "scale(1.1)";
-    }
-
-    // Nothing happening
-    else {
-      icon.style.filter = "";
-      icon.style.transform = "";
-    }
-  }
-}
-
 // Keeps checking so it updates live:
-setInterval(updateIconHoverDisplay, 100);
+    setInterval(updateIconHoverDisplay, 100);
 
 // To make if you tap a window it gets positioned to the front:
-let highestZIndex = 500;
+    let highestZIndex = 500;
 
 // List of my windows in the constant 'windows'
-document.querySelectorAll(windows
-  ).forEach(windowBehindFunction);
+    document.querySelectorAll(windows
+      ).forEach(windowBehindFunction);
 
-function windowBehindFunction(windowBehind) {
+    function windowBehindFunction(windowBehind) {
 
-  if (windowBehind) {
-    windowBehind.addEventListener("click", function () {
-      highestZIndex++;
-      windowBehind.style.zIndex = highestZIndex;
-    });
-  }
-}
+      if (windowBehind) {
+        windowBehind.addEventListener("click", function () {
+          highestZIndex++;
+          windowBehind.style.zIndex = highestZIndex;
+        });
+      }
+    }
