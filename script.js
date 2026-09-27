@@ -414,7 +414,7 @@ var biggestIndex = 1;
 function addWindowTapHandling(element) {
   element.addEventListener("mousedown", () =>
     handleWindowTap(element)
-  )
+    )
 }
 
 
@@ -469,7 +469,7 @@ if (roarButton1) {
     if (window.audioStopper) {
       window.audioStopper.pause();
       window.audioStopper.currentTime = 0;
-  }
+    }
 
     var audio = new Audio("audio/bengal-tiger-sound-effects_31BebgSW.mp3");
     window.audioStopper = audio;
@@ -485,7 +485,7 @@ if (roarButton2) {
     if (window.audioStopper) {
       window.audioStopper.pause();
       window.audioStopper.currentTime = 0;
-  }
+    }
 
     var audio = new Audio("audio/sumatran-tiger-sound-effects_A2KQoZrL.mp3");
     window.audioStopper = audio;
@@ -501,7 +501,7 @@ if (roarButton3) {
     if (window.audioStopper) {
       window.audioStopper.pause();
       window.audioStopper.currentTime = 0;
-  }
+    }
 
     var audio = new Audio("audio/siberian-tiger-sound-effects-mp4_QyCzfm0Z.mp3");
     window.audioStopper = audio;
@@ -517,7 +517,7 @@ if (roarButton4) {
     if (window.audioStopper) {
       window.audioStopper.pause();
       window.audioStopper.currentTime = 0;
-  }
+    }
 
     var audio = new Audio("audio/south-china-tiger-sound-effects_h2y6hZYS.mp3");
     window.audioStopper = audio;
@@ -547,455 +547,455 @@ const enableDarkBackground = () => {
 }
 
 if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
-if (selectedBackground === "Images/darkTheme.jpg") enableDarkBackground()
+  if (selectedBackground === "Images/darkTheme.jpg") enableDarkBackground()
 
 // Adding the new event listener for light theme:
-if (lightTheme) {
+    if (lightTheme) {
 
-  lightTheme.addEventListener("click", () => {
+      lightTheme.addEventListener("click", () => {
 
-    enableLightBackground()
+        enableLightBackground()
 
-  });
-}
+      });
+    }
 
 
 // Adding the new event listener for dark theme:
-if (darkTheme) {
+    if (darkTheme) {
 
-  darkTheme.addEventListener("click", () => {
+      darkTheme.addEventListener("click", () => {
 
-    enableDarkBackground()
+        enableDarkBackground()
 
-  });
+      });
 
-}
+    }
 
 
 // For dark mode color change:
-let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementById('ColorThemeSwitch')
+    let darkmode = localStorage.getItem('darkmode')
+    const themeSwitch = document.getElementById('ColorThemeSwitch')
 
 // To enable dark mode:
-const enableDarkmode = () => {
-  document.body.classList.add('darkmode')
-  localStorage.setItem('darkmode', 'active')
-}
+    const enableDarkmode = () => {
+      document.body.classList.add('darkmode')
+      localStorage.setItem('darkmode', 'active')
+    }
 
 // To disable dark mode:
-const disableDarkmode = () => {
-  document.body.classList.remove('darkmode')
-  localStorage.setItem('darkmode', 'null')
-}
+    const disableDarkmode = () => {
+      document.body.classList.remove('darkmode')
+      localStorage.setItem('darkmode', 'null')
+    }
 
-if (darkmode === "active") enableDarkmode()
+    if (darkmode === "active") enableDarkmode()
 
 // Is also like an if statement, but smaller:
-themeSwitch.addEventListener("click", () => {
-  darkmode = localStorage.getItem('darkmode')
-  darkmode !== "active" ? enableDarkmode() : disableDarkmode()
-})
+      themeSwitch.addEventListener("click", () => {
+        darkmode = localStorage.getItem('darkmode')
+        darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+      })
 
 
 // Trying to make a real weather app this time: 
 
 // Api key and url
-const apiKey = "88d0ea56b63f4f9188a65331261109";
-const apiUrl = "https://api.weatherapi.com/v1/current.json";
+    const apiKey = "88d0ea56b63f4f9188a65331261109";
+    const apiUrl = "https://api.weatherapi.com/v1/current.json";
 
-const searchBox = document.querySelector("#city-input");
-const searchBtn = document.querySelector("#search-button");
-const weatherEmoji = document.querySelector(".real-weather-image");
+    const searchBox = document.querySelector("#city-input");
+    const searchBtn = document.querySelector("#search-button");
+    const weatherEmoji = document.querySelector(".real-weather-image");
 
 
-async function checkWeather(city) {
-  if (!city.trim()) {
-    alert("Please enter a city name.");
-    return;
-  }
-
-  try {
-
-    // Making the api show results.
-    const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.error?.message || "Weather request failed.");
-    }
-
-    // The extracting the data from the api to the specific functions
-    document.querySelector(".real-city").textContent = data.location.name;
-    document.querySelector(".real-temp").textContent = Math.round(data.current.temp_c) + "°c";
-    document.querySelector(".real-humidity").textContent = data.current.humidity + "%";
-    document.querySelector(".real-wind").textContent = data.current.wind_kph + " km/h";
-
-const defaultEmoji = document.querySelector(".default-weather-image");
-
-    if (weatherEmoji) {
-
-      weatherEmoji.src = "https:" + data.current.condition.icon;
-
-      weatherEmoji.style.display = "block"
-
-      if (defaultEmoji)  {
-        defaultEmoji.style.display = "none";
+    async function checkWeather(city) {
+      if (!city.trim()) {
+        alert("Please enter a city name.");
+        return;
       }
 
+      try {
+
+    // Making the api show results.
+        const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error?.message || "Weather request failed.");
+        }
+
+    // The extracting the data from the api to the specific functions
+        document.querySelector(".real-city").textContent = data.location.name;
+        document.querySelector(".real-temp").textContent = Math.round(data.current.temp_c) + "°c";
+        document.querySelector(".real-humidity").textContent = data.current.humidity + "%";
+        document.querySelector(".real-wind").textContent = data.current.wind_kph + " km/h";
+
+        const defaultEmoji = document.querySelector(".default-weather-image");
+
+        if (weatherEmoji) {
+
+          weatherEmoji.src = "https:" + data.current.condition.icon;
+
+          weatherEmoji.style.display = "block"
+
+          if (defaultEmoji)  {
+            defaultEmoji.style.display = "none";
+          }
+
+        }
+        document.querySelector(".real-weather").style.display = "grid";
+      } catch (error) {
+        alert(error.message);
+      }
     }
-    document.querySelector(".real-weather").style.display = "grid";
-  } catch (error) {
-    alert(error.message);
-  }
-}
 
-searchBtn.addEventListener("click", () => {
-  checkWeather(searchBox.value);
-});
+    searchBtn.addEventListener("click", () => {
+      checkWeather(searchBox.value);
+    });
 
-searchBox.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    checkWeather(searchBox.value);
-  }
-});
+    searchBox.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        checkWeather(searchBox.value);
+      }
+    });
 
 
   // Secret stardance trio button in bottom right corner:
-  var secretButton  = document.querySelector("#stardanceButton");
+    var secretButton  = document.querySelector("#stardanceButton");
 
-  if (secretButton) {
-    secretButton.addEventListener("click", function () {
+    if (secretButton) {
+      secretButton.addEventListener("click", function () {
 
-      var secretAudio = new Audio("audio/secretDing.mp3");
-    secretAudio.play();
+        var secretAudio = new Audio("audio/secretDing.mp3");
+        secretAudio.play();
 
       // Shows a message from the browser:
-      alert("🔓 TIGER OS SECRET FEATURE UNLOCKED!");
+        alert("🔓 TIGER OS SECRET FEATURE UNLOCKED!");
 
-      var allSecretImages = document.querySelectorAll(".stardance-Trio")
+        var allSecretImages = document.querySelectorAll(".stardance-Trio")
 
-      allSecretImages.forEach(function (image) {
-        image.style.display = "block";
+        allSecretImages.forEach(function (image) {
+          image.style.display = "block";
+        });
+
       });
-
-    });
-  }
+    }
 
 // Making the Tiger Snake game:
-const gameBoard = document.querySelector("#gameBoard");
-const ctx = gameBoard.getContext("2d");
-const scoreText = document.querySelector("#scoreText");
-const resetBtn = document.querySelector("#gameResetBtn");
-const gameWidth = gameBoard.width;
-const gameHeight = gameBoard.height;
-const boardBackground = "green";
-const snakeColor = "orange";
-const snakeBorder = "black";
-const foodColor = "red";
-const unitSize = 25;
-const solidSkinBtn = document.querySelector("#solidSkinBtn");
-const stripeSkinBtn = document.querySelector("#stripeSkinBtn");
-const highScoreText = document.querySelector("#highScoreText");
-const scoreAlert0 = document.querySelector("#scoreAlert0");
-const scoreAlert1 = document.querySelector("#scoreAlert1");
-const scoreAlert2 = document.querySelector("#scoreAlert2");
-const scoreAlert3 = document.querySelector("#scoreAlert3");
+    const gameBoard = document.querySelector("#gameBoard");
+    const ctx = gameBoard.getContext("2d");
+    const scoreText = document.querySelector("#scoreText");
+    const resetBtn = document.querySelector("#gameResetBtn");
+    const gameWidth = gameBoard.width;
+    const gameHeight = gameBoard.height;
+    const boardBackground = "green";
+    const snakeColor = "orange";
+    const snakeBorder = "black";
+    const foodColor = "red";
+    const unitSize = 25;
+    const solidSkinBtn = document.querySelector("#solidSkinBtn");
+    const stripeSkinBtn = document.querySelector("#stripeSkinBtn");
+    const highScoreText = document.querySelector("#highScoreText");
+    const scoreAlert0 = document.querySelector("#scoreAlert0");
+    const scoreAlert1 = document.querySelector("#scoreAlert1");
+    const scoreAlert2 = document.querySelector("#scoreAlert2");
+    const scoreAlert3 = document.querySelector("#scoreAlert3");
 
-let running = false;
-let xVelocity = unitSize;
-let yVelocity = 0;
-let foodX;
-let foodY;
-let score = 0;
-let currentSkin = "stripes";
-let highScore = localStorage.getItem("highScoreText") || 0;
-let shownAlert0 = false;
+    let running = false;
+    let xVelocity = unitSize;
+    let yVelocity = 0;
+    let foodX;
+    let foodY;
+    let score = 0;
+    let currentSkin = "stripes";
+    let highScore = localStorage.getItem("highScoreText") || 0;
+    let shownAlert0 = false;
 
 // Setting snake positon
-let snake = [
-  {x:unitSize * 4, y:0},
-  {x:unitSize * 3, y:0},
-  {x:unitSize * 2, y:0},
-  {x:unitSize, y:0},
-  {x:0, y:0}
-];
+    let snake = [
+      {x:unitSize * 4, y:0},
+      {x:unitSize * 3, y:0},
+      {x:unitSize * 2, y:0},
+      {x:unitSize, y:0},
+      {x:0, y:0}
+    ];
 
-window.addEventListener("keydown", changeDirection);
-resetBtn.addEventListener("click", resetGame);
+    window.addEventListener("keydown", changeDirection);
+    resetBtn.addEventListener("click", resetGame);
 
-if (solidSkinBtn) {
-  solidSkinBtn.addEventListener("click", () => setSnakeSkin("orange"));
-}
+    if (solidSkinBtn) {
+      solidSkinBtn.addEventListener("click", () => setSnakeSkin("orange"));
+    }
 
-if (stripeSkinBtn) {
-  stripeSkinBtn.addEventListener("click", () => setSnakeSkin("stripes"));
-}
+    if (stripeSkinBtn) {
+      stripeSkinBtn.addEventListener("click", () => setSnakeSkin("stripes"));
+    }
 
-gameStart();
+    gameStart();
 
-function gameStart(){
-  running = true;
-  scoreText.textContent = score;
-
-  const highScoreElement = document.querySelector("#highScoreText");
-  if (highScoreElement) {
-    highScoreElement.textContent = highScore;
-  }
-
-  createFood();
-  drawFood();
-  nextTick();
-};
-
-// The number at the bottom is the speed of the snake.
-function nextTick(){
-  if(running) {
-    setTimeout(() => {
-      clearBoard();
-        drawFood();
-        moveSnake();
-        drawSnake();
-        checkGameOver();
-        nextTick();
-    }, 150)
-  }
-  else {
-    displayGameOver();
-  }
-};
-
-function clearBoard(){
-  ctx.fillStyle = boardBackground;
-  ctx.fillRect(0, 0, gameWidth, gameHeight);
-};
-
-function createFood(){
-  function randomFood(min, max){
-    const randNum = Math.round((Math.random() * (max - min) + min) / unitSize) * unitSize;
-    return randNum;
-  }
-  foodX = randomFood(0,gameWidth - unitSize);
-  foodY = randomFood(0,gameHeight - unitSize);
-};
-
-function drawFood(){
-  ctx.font = `${unitSize}px serif`;
-  ctx.textAlign = "left";
-  ctx.textBaseline = "top";
-  ctx.fillText("🥩", foodX, foodY)
-};
-
-function moveSnake(){
-  const snakeHead = {x: snake[0].x + xVelocity, y: snake[0].y + yVelocity};
-
-    snake.unshift(snakeHead);
-    // If food is eaten:
-    if(snake[0].x === foodX && snake[0].y === foodY){
-      score += 1;
+    function gameStart(){
+      running = true;
       scoreText.textContent = score;
 
-      // The achievement alert.
-      if (score === 2) {
-        shownAlert0 = true;
-        scoreAlert0.style.display = "block";
-        setTimeout(() => { scoreAlert0.style.display = "none"; }, 2000);
-     }
-
-      if (score === 10) {
-        scoreAlert1.style.display = "block";
-        setTimeout(() => { scoreAlert1.style.display = "none"; }, 2000);
-     }
-
-      if (score === 20) {
-        scoreAlert2.style.display = "block";
-        setTimeout(() => { scoreAlert2.style.display = "none"; }, 2000);
-     }
-
-     if (score === 30) {
-        scoreAlert3.style.display = "block";
-        setTimeout(() => { scoreAlert3.style.display = "none"; }, 2000);
-     }
-
-      highScore = score >= highScore ? score : highScore;
-      localStorage.setItem("highScoreText", highScore);
-
-      const highScoreElement = document.querySelector("#highScoreText")
+      const highScoreElement = document.querySelector("#highScoreText");
       if (highScoreElement) {
         highScoreElement.textContent = highScore;
       }
 
-
       createFood();
-    }
-    else{
-      snake.pop();
-    }
-};
+      drawFood();
+      nextTick();
+    };
 
-function setSnakeSkin(selectedSkin) {
-  currentSkin = selectedSkin;
+// The number at the bottom is the speed of the snake.
+    function nextTick(){
+      if(running) {
+        setTimeout(() => {
+          clearBoard();
+          drawFood();
+          moveSnake();
+          drawSnake();
+          checkGameOver();
+          nextTick();
+        }, 150)
+      }
+      else {
+        displayGameOver();
+      }
+    };
 
-  if (!running) {
-    clearBoard();
-    drawFood();
-    drawSnake();
-  }
-}
+    function clearBoard(){
+      ctx.fillStyle = boardBackground;
+      ctx.fillRect(0, 0, gameWidth, gameHeight);
+    };
 
-// The snake body
-function drawSnake(){
-  ctx.strokeStyle = "rgba(0, 0, 0, 0.2)"; 
+    function createFood(){
+      function randomFood(min, max){
+        const randNum = Math.round((Math.random() * (max - min) + min) / unitSize) * unitSize;
+        return randNum;
+      }
+      foodX = randomFood(0,gameWidth - unitSize);
+      foodY = randomFood(0,gameHeight - unitSize);
+    };
 
-  snake.forEach((snakePart, index) => {
-    if(index === 0) {
-      ctx.fillStyle = "#e67e22";
-      ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
-     ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
-
+    function drawFood(){
       ctx.font = `${unitSize}px serif`;
       ctx.textAlign = "left";
       ctx.textBaseline = "top";
-      ctx.fillText("🐯", snakePart.x, snakePart.y, unitSize, unitSize)
-    } else {
-      if (currentSkin === "orange") {
-        ctx.fillStyle = "#e67e22";
-      } else {
+      ctx.fillText("🥩", foodX, foodY)
+    };
 
-      if(index % 2 == 0) {
-        ctx.fillStyle = "#e67e22";
-      } else {
-        ctx.fillStyle = "#111810";
+    function moveSnake(){
+      const snakeHead = {x: snake[0].x + xVelocity, y: snake[0].y + yVelocity};
+
+      snake.unshift(snakeHead);
+    // If food is eaten:
+      if(snake[0].x === foodX && snake[0].y === foodY){
+        score += 1;
+        scoreText.textContent = score;
+
+      // The achievement alert.
+        if (score === 2) {
+          shownAlert0 = true;
+          scoreAlert0.style.display = "block";
+          setTimeout(() => { scoreAlert0.style.display = "none"; }, 2000);
+        }
+
+        if (score === 10) {
+          scoreAlert1.style.display = "block";
+          setTimeout(() => { scoreAlert1.style.display = "none"; }, 2000);
+        }
+
+        if (score === 20) {
+          scoreAlert2.style.display = "block";
+          setTimeout(() => { scoreAlert2.style.display = "none"; }, 2000);
+        }
+
+        if (score === 30) {
+          scoreAlert3.style.display = "block";
+          setTimeout(() => { scoreAlert3.style.display = "none"; }, 2000);
+        }
+
+        highScore = score >= highScore ? score : highScore;
+        localStorage.setItem("highScoreText", highScore);
+
+        const highScoreElement = document.querySelector("#highScoreText")
+        if (highScoreElement) {
+          highScoreElement.textContent = highScore;
+        }
+
+
+        createFood();
+      }
+      else{
+        snake.pop();
+      }
+    };
+
+    function setSnakeSkin(selectedSkin) {
+      currentSkin = selectedSkin;
+
+      if (!running) {
+        clearBoard();
+        drawFood();
+        drawSnake();
       }
     }
-      ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
-     ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
-    }
-  })
-};
 
-function changeDirection(event){
-  const gameKeyPressed = event.keyCode;
-  const LEFTkey = 37;
-  const UPkey = 38;
-  const RIGHTkey = 39;
-  const DOWNkey = 40;
+// The snake body
+    function drawSnake(){
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.2)";
 
-  const goingLeft = (xVelocity == -unitSize);
-  const goingUp = (yVelocity == -unitSize);
-  const goingRight = (xVelocity == unitSize);
-  const goingDown = (yVelocity == unitSize);
+      snake.forEach((snakePart, index) => {
+        if(index === 0) {
+          ctx.fillStyle = "#e67e22";
+          ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
+          ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
+
+          ctx.font = `${unitSize}px serif`;
+          ctx.textAlign = "left";
+          ctx.textBaseline = "top";
+          ctx.fillText("🐯", snakePart.x, snakePart.y, unitSize, unitSize)
+        } else {
+          if (currentSkin === "orange") {
+            ctx.fillStyle = "#e67e22";
+          } else {
+
+            if(index % 2 == 0) {
+              ctx.fillStyle = "#e67e22";
+            } else {
+              ctx.fillStyle = "#111810";
+            }
+          }
+          ctx.fillRect(snakePart.x, snakePart.y, unitSize, unitSize);
+          ctx.strokeRect(snakePart.x, snakePart.y, unitSize, unitSize);
+        }
+      })
+    };
+
+    function changeDirection(event){
+      const gameKeyPressed = event.keyCode;
+      const LEFTkey = 37;
+      const UPkey = 38;
+      const RIGHTkey = 39;
+      const DOWNkey = 40;
+
+      const goingLeft = (xVelocity == -unitSize);
+      const goingUp = (yVelocity == -unitSize);
+      const goingRight = (xVelocity == unitSize);
+      const goingDown = (yVelocity == unitSize);
 
 
-  switch(true){
+      switch(true){
       case(gameKeyPressed == LEFTkey && !goingRight):
-          xVelocity = -unitSize;
-          yVelocity = 0;
-          break;
+        xVelocity = -unitSize;
+        yVelocity = 0;
+        break;
 
       case(gameKeyPressed == UPkey && !goingDown):
-          xVelocity = 0;
-          yVelocity = -unitSize;
-          break;
+        xVelocity = 0;
+        yVelocity = -unitSize;
+        break;
 
       case(gameKeyPressed == RIGHTkey && !goingLeft):
-          xVelocity = unitSize;
-          yVelocity = 0;
-          break;
-      
+        xVelocity = unitSize;
+        yVelocity = 0;
+        break;
+
       case(gameKeyPressed == DOWNkey && !goingUp):
-          xVelocity = 0;
-          yVelocity = unitSize; 
-          break;
-  }
+        xVelocity = 0;
+        yVelocity = unitSize;
+        break;
+      }
 
-};
+    };
 
-function checkGameOver(){
-    switch(true) {
-        case (snake[0].x < 0):
+    function checkGameOver(){
+      switch(true) {
+      case (snake[0].x < 0):
+        running = false;
+        break;
+
+      case (snake[0].x >= gameWidth):
+        running = false;
+        break;
+
+      case (snake[0].y < 0):
+        running = false;
+        break;
+
+      case (snake[0].y >= gameHeight):
+        running = false;
+        break;
+      }
+      for(let i = 1; i < snake.length; i+=1){
+        if(snake[i].x == snake[0].x && snake[i].y == snake[0].y ){
           running = false;
-          break;
+        }
 
-        case (snake[0].x >= gameWidth):
-          running = false;
-          break;
+      }
 
-        case (snake[0].y < 0):
-          running = false;
-          break;
+    };
 
-        case (snake[0].y >= gameHeight):
-          running = false;
-          break;
-  }
-  for(let i = 1; i < snake.length; i+=1){
-    if(snake[i].x == snake[0].x && snake[i].y == snake[0].y ){
+    function displayGameOver(){
+      ctx.font = "50px MV Boli";
+      ctx.fillStyle = "black";
+      ctx.textAlign = "center";
+      ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2)
       running = false;
-    }
-
-  }
-
-};
-
-function displayGameOver(){
-  ctx.font = "50px MV Boli";
-  ctx.fillStyle = "black";
-  ctx.textAlign = "center";
-  ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2)
-  running = false;
-};
+    };
 
 // Reset game function
-function resetGame(){
-  score = 0;
-  xVelocity = unitSize;
-  yVelocity = 0;
-  running = true;
-  hasShownAlert0 = false;
+    function resetGame(){
+      score = 0;
+      xVelocity = unitSize;
+      yVelocity = 0;
+      running = true;
+      hasShownAlert0 = false;
 
-  snake = [
-  {x:unitSize * 4, y:0},
-  {x:unitSize * 3, y:0},
-  {x:unitSize * 2, y:0},
-  {x:unitSize, y:0},
-  {x:0, y:0}
-];
-gameStart();
+      snake = [
+        {x:unitSize * 4, y:0},
+        {x:unitSize * 3, y:0},
+        {x:unitSize * 2, y:0},
+        {x:unitSize, y:0},
+        {x:0, y:0}
+      ];
+      gameStart();
 
-};
+    };
 
 //Calculator:
-const buttonValues = [
-    "AC", "+/-", "%", "÷",
-    "7", "8", "9", "×",
-    "4", "5", "6", "-",
-    "1", "2", "3", "+",
-    "0", ".", "="
-];
-const rightSymbols = ["÷", "×", "-", "+", "="];
-const topSymbols = ["AC", "+/-", "%"];
+    const buttonValues = [
+      "AC", "+/-", "%", "÷",
+      "7", "8", "9", "×",
+      "4", "5", "6", "-",
+      "1", "2", "3", "+",
+      "0", ".", "="
+    ];
+    const rightSymbols = ["÷", "×", "-", "+", "="];
+    const topSymbols = ["AC", "+/-", "%"];
 
-const display = document.getElementById("display");
+    const display = document.getElementById("display");
 
 //A+B, A×B, A-B, A÷B
-let A = 0;
-let operator = null;
-let B = null;
+    let A = 0;
+    let operator = null;
+    let B = null;
 
-function clearAll() {
-  A = null;
-  operator = null;
-  B = null;
-}
+    function clearAll() {
+      A = null;
+      operator = null;
+      B = null;
+    }
 
-for (let i = 0; i < buttonValues.length; i++) {
-  let value = buttonValues[i];
-  let button = document.createElement("button");
-  button.innerText = value;
+    for (let i = 0; i < buttonValues.length; i++) {
+      let value = buttonValues[i];
+      let button = document.createElement("button");
+      button.innerText = value;
 
     //styling button colors
-  if (value == "0") {
-    button.style.width = "180px";
+      if (value == "0") {
+        button.style.width = "180px";
         button.style.gridColumn = "span 2"; //take up 2 columns
       }
       else if (rightSymbols.includes(value)) {
@@ -1035,14 +1035,14 @@ for (let i = 0; i < buttonValues.length; i++) {
             }
           }
           else {
-                 if (operator == null && display.value != "") {
-                   A = display.value;
+           if (operator == null && display.value != "") {
+             A = display.value;
                    operator = value; //÷ × - +
                    display.value += value;
                  }
 
-              }
-            }
+               }
+             }
         else if (topSymbols.includes(value)) { //AC +/- %
           if (value == "AC") {
             clearAll();
@@ -1084,101 +1084,160 @@ for (let i = 0; i < buttonValues.length; i++) {
     }
 
 // Paint canvas window:
-const paintBoard = document.getElementById("paintBoard");
-const paintContext = paintBoard.getContext("2d");
+    const paintBoard = document.getElementById("paintBoard");
+    const paintContext = paintBoard.getContext("2d");
 
-let restore_art = [];
-let artIndex = -1;
-let isDrawing = false;
-const colorPicker = document.getElementById("color-picker");
-const brushSize = document.getElementById("brush-size");
-const clearButton = document.getElementById("paint-clear-button");
-const fillButton = document.getElementById("paint-fill-button");
-const undoButton = document.getElementById("paint-undo-button");
+    let restore_art = [];
+    let artIndex = -1;
+    let isDrawing = false;
+    const colorPicker = document.getElementById("color-picker");
+    const brushSize = document.getElementById("brush-size");
+    const clearButton = document.getElementById("paint-clear-button");
+    const fillButton = document.getElementById("paint-fill-button");
+    const undoButton = document.getElementById("paint-undo-button");
 
 
 // drawing function:
-paintBoard.addEventListener("mousedown", (e) => {
-  isDrawing = true
+    paintBoard.addEventListener("mousedown", (e) => {
+      isDrawing = true
 
-  paintContext.beginPath();
-  paintContext.moveTo(e.offsetX, e.offsetY);
+      paintContext.beginPath();
+      paintContext.moveTo(e.offsetX, e.offsetY);
 
-});
-paintBoard.addEventListener("mouseup", (e) => {
-  isDrawing = false;
-  paintContext.beginPath();
-  if ( e.type != 'mouseout') {
-  restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
-  artIndex += 1;
-}
-});
+    });
+    paintBoard.addEventListener("mouseup", (e) => {
+      isDrawing = false;
+      paintContext.beginPath();
+      if ( e.type != 'mouseout') {
+        restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
+        artIndex += 1;
+      }
+    });
 
 // Event listeners
-paintBoard.addEventListener("mouseout", () => {isDrawing = false});
-paintBoard.addEventListener("mousemove", draw);
-paintBoard.style.touchAction = "none";
+    paintBoard.addEventListener("mouseout", () => {isDrawing = false});
+    paintBoard.addEventListener("mousemove", draw);
+    paintBoard.style.touchAction = "none";
 
-clearButton.addEventListener("click", clearCanvas);
-fillButton.addEventListener("click", fillCanvas);
+    clearButton.addEventListener("click", clearCanvas);
+    fillButton.addEventListener("click", fillCanvas);
 
-if (undoButton) {
-  undoButton.addEventListener("click", undo_last);
-}
+    if (undoButton) {
+      undoButton.addEventListener("click", undo_last);
+    }
 
-function draw(e) {
-  if (!isDrawing) return;
+    function draw(e) {
+      if (!isDrawing) return;
 
-  paintContext.lineWidth = brushSize.value;
-  paintContext.lineCap = "round";
-  paintContext.strokeStyle = colorPicker.value;
+      paintContext.lineWidth = brushSize.value;
+      paintContext.lineCap = "round";
+      paintContext.strokeStyle = colorPicker.value;
 
-  paintContext.lineTo(e.offsetX, e.offsetY);
-  paintContext.stroke();
-  paintContext.moveTo(e.offsetX, e.offsetY);
-}
+      paintContext.lineTo(e.offsetX, e.offsetY);
+      paintContext.stroke();
+      paintContext.moveTo(e.offsetX, e.offsetY);
+    }
 
-function clearCanvas() {
-  paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
-  restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
-  artIndex += 1;
-}
+    function clearCanvas() {
+      paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
+      restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
+      artIndex += 1;
+    }
 
-function fillCanvas() {
-  paintContext.fillStyle = colorPicker.value;
-  paintContext.fillRect(0, 0, paintBoard.width, paintBoard.height);
-  restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
-  artIndex += 1;
-}
+    function fillCanvas() {
+      paintContext.fillStyle = colorPicker.value;
+      paintContext.fillRect(0, 0, paintBoard.width, paintBoard.height);
+      restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
+      artIndex += 1;
+    }
 
 
 // Undo button:
-function undo_last() {
-  if ( artIndex <= 0 ) {
-    paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
-    restore_art = [];
-    artIndex = -1;
-  } else {
-    restore_art.pop();
-    artIndex -= 1;
-    paintContext.putImageData(restore_art[artIndex], 0, 0);
-  }
-}
+    function undo_last() {
+      if ( artIndex <= 0 ) {
+        paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
+        restore_art = [];
+        artIndex = -1;
+      } else {
+        restore_art.pop();
+        artIndex -= 1;
+        paintContext.putImageData(restore_art[artIndex], 0, 0);
+      }
+    }
 
 // Multiple link button:
 
-var linkWindow = document.querySelector("#rayanLinkWindow");
-var linkBtn = document.querySelector("#linkBtn");
-var linkWindowClose = document.querySelector("#link-close");
+    var linkWindow = document.querySelector("#rayanLinkWindow");
+    var linkBtn = document.querySelector("#linkBtn");
+    var linkWindowClose = document.querySelector("#link-close");
 
-if (linkBtn) {
-  linkBtn.addEventListener("click", function () {
-    openWindow(linkWindow);
-  });
-}
+    if (linkBtn) {
+      linkBtn.addEventListener("click", function () {
+        openWindow(linkWindow);
+      });
+    }
 
-if (linkWindowClose) {
-  linkWindowClose.addEventListener("click", function () {
-    closeWindow(linkWindow);
-  });
-}
+    if (linkWindowClose) {
+      linkWindowClose.addEventListener("click", function () {
+        closeWindow(linkWindow);
+      });
+    }
+
+// Making the app icons stay hover light if they open:
+    var iconList = document.querySelectorAll(
+      ".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon"
+      );
+
+    var windowMapping = {
+      "tiger-gallery": "#gallerywindow",
+      "roar-Icon": "#roarwindow",
+      "tiger-map-icon": "#tigermapwindow",
+      "settings-Icon": "#settingswindow",
+      "information-icon": "#TigerInformation",
+      "real-weather-icon": "#RealWeatherWindow",
+      "weather-icon": "#WeatherWindow",
+      "manual-icon": "#ManualWindow",
+      "snake-icon": "#snakeGameWindow",
+      "calc-Icon": "#calcWindow",
+      "paint-Icon": "#paintWindow"
+    };
+
+    function updateIconHoverDisplay() {
+
+// FIRST LOOP: Go through every desktop icon:
+      for (var icon of iconList) {
+
+        var isCurrentAppOpen = false;
+
+ // SECOND LOOP: Look through windows to see if open:
+        for (var iconClass in windowMapping) {
+
+  // if the window is open
+          if (icon.classList.contains(iconClass)) {
+            var windowId = windowMapping[iconClass];
+            var appWindow = document.querySelector(windowId);
+
+            if (appWindow && appWindow.style.display == "flex") {
+              isCurrentAppOpen = true;
+            }
+
+          }
+        }
+
+        // if the window is open:
+        if (isCurrentAppOpen) {
+          icon.style.filter = "drop-shadow(0 0 10px white) scale(1.1)";
+        }
+         // if user is hovering
+        else if (icon.matches(":hover")) {
+          icon.style.filter = "drop-shadow(0 0 10px white) scale(1.1)";
+        }
+          // if user is doing nothing
+        else {
+          icon.style.filter = "none";
+        }
+      }
+    }
+// Keeps running loop so it updates live:
+    setInterval(updateIconHoverDisplay, 100);
+
