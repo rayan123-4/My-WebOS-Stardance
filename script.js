@@ -1,5 +1,8 @@
+// ALL WINDOWS:
+let windows = (".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window, .rayan-Link-Window")
+
 // Code for making the DIV element draggable:
-document.querySelectorAll(".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window").forEach(dragElement);
+document.querySelectorAll(windows).forEach(dragElement);
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -1248,3 +1251,20 @@ function updateIconHoverDisplay() {
 
 // Keeps checking so it updates live:
 setInterval(updateIconHoverDisplay, 100);
+
+// To make if you tap a window it gets positioned to the front:
+let highestZIndex = 500;
+
+// List of my windows in the constant 'windows'
+document.querySelectorAll(windows
+  ).forEach(windowBehindFunction);
+
+function windowBehindFunction(windowBehind) {
+
+  if (windowBehind) {
+    windowBehind.addEventListener("click", function () {
+      highestZIndex++;
+      windowBehind.style.zIndex = highestZIndex;
+    });
+  }
+}
