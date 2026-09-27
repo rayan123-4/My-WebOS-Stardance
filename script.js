@@ -1184,60 +1184,67 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     }
 
 // Making the app icons stay hover light if they open:
-    var iconList = document.querySelectorAll(
-      ".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon"
-      );
 
-    var windowMapping = {
-      "tiger-gallery": "#gallerywindow",
-      "roar-Icon": "#roarwindow",
-      "tiger-map-icon": "#tigermapwindow",
-      "settings-Icon": "#settingswindow",
-      "information-icon": "#TigerInformation",
-      "real-weather-icon": "#RealWeatherWindow",
-      "weather-icon": "#WeatherWindow",
-      "manual-icon": "#ManualWindow",
-      "snake-icon": "#snakeGameWindow",
-      "calc-Icon": "#calcWindow",
-      "paint-Icon": "#paintWindow"
-    };
+// List of icons:
+var iconList = document.querySelectorAll(
+  ".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon"
+);
 
-    function updateIconHoverDisplay() {
+// List of the images:
+var windowMapping = {
+  "tiger-gallery": "#gallerywindow",
+  "roar-Icon": "#roarwindow",
+  "tiger-map-icon": "#tigermapwindow",
+  "settings-Icon": "#settingswindow",
+  "information-icon": "#TigerInformation",
+  "real-weather-icon": "#RealWeatherWindow",
+  "weather-icon": "#WeatherWindow",
+  "manual-icon": "#ManualWindow",
+  "snake-icon": "#snakeGameWindow",
+  "calc-Icon": "#calcWindow",
+  "paint-Icon": "#paintWindow"
+};
 
-// FIRST LOOP: Go through every desktop icon:
-      for (var icon of iconList) {
+function updateIconHoverDisplay() {
 
-        var isCurrentAppOpen = false;
+  // Go through every desktop icon:
+  for (var icon of iconList) {
 
- // SECOND LOOP: Look through windows to see if open:
-        for (var iconClass in windowMapping) {
+    var isCurrentAppOpen = false;
 
-  // if the window is open
-          if (icon.classList.contains(iconClass)) {
-            var windowId = windowMapping[iconClass];
-            var appWindow = document.querySelector(windowId);
+    // Look through the window mapping:
+    for (var iconClass in windowMapping) {
 
-            if (appWindow && appWindow.style.display == "flex") {
-              isCurrentAppOpen = true;
-            }
+      // Check if this icon belongs to this window:
+      if (icon.classList.contains(iconClass)) {
 
+        var windowId = windowMapping[iconClass];
+        var appWindow = document.querySelector(windowId);
+
+        // Check if the window exists and is open:
+        if (appWindow) {
+          var actualDisplay = window.getComputedStyle(appWindow).display;
+
+          if (actualDisplay === "flex") {
+            isCurrentAppOpen = true;
           }
-        }
-
-        // if the window is open:
-        if (isCurrentAppOpen) {
-          icon.style.filter = "drop-shadow(0 0 10px white) scale(1.1)";
-        }
-         // if user is hovering
-        else if (icon.matches(":hover")) {
-          icon.style.filter = "drop-shadow(0 0 10px white) scale(1.1)";
-        }
-          // if user is doing nothing
-        else {
-          icon.style.filter = "none";
         }
       }
     }
-// Keeps running loop so it updates live:
-    setInterval(updateIconHoverDisplay, 100);
 
+    // App is open OR mouse is hovering over icon:
+    if (isCurrentAppOpen || icon.matches(":hover")) {
+      icon.style.filter = "drop-shadow(0 0 10px white)";
+      icon.style.transform = "scale(1.1)";
+    }
+
+    // Nothing happening
+    else {
+      icon.style.filter = "";
+      icon.style.transform = "";
+    }
+  }
+}
+
+// Keeps checking so it updates live:
+setInterval(updateIconHoverDisplay, 100);
