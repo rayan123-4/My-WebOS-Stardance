@@ -2,39 +2,48 @@
 This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javascript**.
 - The website is themed on **Tigers** and has many cool features.
 - This project is made for the **WebOS** mission in **Stardance.**
-- https://stardance.hackclub.com/ is the largest free STEM, nonprofit program by https://hackclub.com/
+- https://stardance.hackclub.com/ is the largest free STEM event of the 2026 summer.
+- It's a nonprofit program by https://hackclub.com/
 
 <img width="1365" height="767" alt="Screenshot 2026-09-26 16 09 03" src="https://github.com/user-attachments/assets/821bd435-6c37-4417-bb2b-6a8824ee28bb" />
 
 # How I made it:
 - It's a simple **WebOS** that I have made using the **Jams official guide** (https://jams.hackclub.com/batch/webOS).
 - This project was made through **Github Codespaces.**
-- It includes an image gallery, (with Tiger images) a Tiger sound effect app, and a welcome screen.
+- I watched many different tutorials and worked very hard.
 - Here is the live website link for anyone to try out: **https://stardancetigeros.site/**
-- I used also **W3Schools tutorials** for some extra help.
+- I used also **W3Schools tutorials** for some extra help, when I started out making the webOS.
 
-## To look at the source code:
+## To clone the repository:
 ```bash
 git clone https://github.com/rayan123-4/My-WebOS-Stardance
 ```
 ## AI note:
-- I used **AI** a bit when I got very stuck on an error and couldn't fix it. I also used it to learn **sometimes** how to make new things(eg:setting up an API for the first time), though still I did most of the hard work. I also used it for some light debugging, if I was completely stuck and wasn't going anywhere.
+- I used **AI** a bit when I got very stuck on an error and couldn't fix it. I also used it to learn **sometimes** how to make new things(eg:setting up an API for the first time), though still **I did most of the hard work**. I also used it for some light debugging, **if I was completely stuck** and wasn't going anywhere.
   
 - Most of the help I got was from the **official guide**, **W3Schools tutorials**, and my **prior knowledge**.
+## Before 1st Ship:
+1. A **live updating time** at the top right corner.
+2. A **welcome window**, that starts up when the site opens.
+3. A **tiger gallery app**, that shows images of tigers.
+4. A **Roar sound button app**, with multiple different tiger species roar sounds.
+5. The **drag, close and open** features to the windows.
 
 ## Updates after 1st Ship:
-1. A startup banner animation.
-2. A settings app, with a background switcher and a light/dark theme switcher.
-3. A map app, that shows different Tiger species habitats.
-4. An information app, that has a lot of information about tigers.
-5. A Fun fact, app that shows a cool fun fact about a place with a lot of tigers.
-6. A Weather API app, that you can search a city in the world and it will show the current weather there.
-7. A Scrollable side icon bar, to sort out all my apps.
-8. A Manual app, to learn what features this OS has and where to find them.
-9. Added a secret feature and a ding sound when its activated.
-10. Tiger snake game app, that you can play and change you skin.
-11. A calculator app, for simple math.
-12. A paint canvas with an undo button, to draw your own Tiger or anything else.
+1. A **startup banner** animation.
+2. A **settings app**, with a background switcher and a light/dark theme switcher.
+3. A **map app**, that shows different Tiger species habitats.
+4. An **information app**, that has a lot of information about tigers.
+5. A **Fun fact app**, that shows a cool fun fact about a place with a lot of tigers.
+6. A **Weather API app**, that you can search a city in the world and it will show the current weather there.
+7. A Scrollable side **icon bar**, to sort out all my apps.
+8. A **Manual app**, to learn what features this OS has and where to find them.
+9. Added a **secret feature** and a ding sound when its activated.
+10. **Tiger snake game app**, that you can play and change you skin.
+11. A **calculator app**, for simple math.
+12. A **paint canvas app** with an undo button, to draw your own Tiger or anything else.
+13. A **link window**, that shows links to my stardance and github accounts.
+14. Other **fixes and adjustments** to windows and features to make them better.
 
 ## Credits:
 
@@ -67,7 +76,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 22. Tiger information image4 - https://peapix.com/bing/35612
 23. Weather icon - https://www.flaticon.com/free-icon/rain_6142570
 24. Weather sun image - https://www.flaticon.com/free-icon/hot-temperature_9421276?term=hot+sun&related_id=9421276
-25. Humidity - https://www.flaticon.com/free-icon/humidity_8923689?term=humidity&page=1&position=1&origin=search&related_id=8923689
+25. Humidity  - https://www.flaticon.com/free-icon/humidity_8923689?term=humidity&page=1&position=1&origin=search&related_id=8923689
 26. Wind - https://www.flaticon.com/free-icon/wind_5024369?term=wind&page=1&position=2&origin=search&related_id=5024369
 27. Manual icon - https://www.flaticon.com/free-icon/user-manual_10000766
 28. Brown paper image in manual - https://www.vecteezy.com/png/54574046-a-close-up-of-a-wrinkled-torn-piece-of-brown-cardboard-paper
@@ -89,9 +98,9 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 2. Making text for start banner and other custom images - https://www.canva.com/
 3. Audio file cutter - https://clideo.com/cut-audio
 4. Tutorial for light/dark theme - https://youtu.be/_gKEUYarehE?si=AgS2rTlwhXKqBQA0
-5. And of course we cannot forget - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
+5. Tutoral for WebOS and resource - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
 6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
-7. Data from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
+7. Data Api from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
 8. Tutorial for Snake game - https://youtu.be/Je0B3nHhKmM?si=DQiSr36gDDSM3Psj
 9. Number 1 best tutorial for JavaScript calculater: https://youtu.be/KM8PIiqq97c?si=74JOiETd0lBZZytu
 10. Paint canvas tutorial - https://youtu.be/TYiFhk9hKy0?si=imWCNUuhktyDkJ2m and https://youtu.be/wCwKkT1P7vY?si=DZ3kGUfejhcSx-B-
