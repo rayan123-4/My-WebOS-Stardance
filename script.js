@@ -195,6 +195,39 @@ var galleryWindowClose = document.querySelector("#galleryclose");
 if (galleryIcon) {
   galleryIcon.addEventListener("click", function () {
     openWindow(galleryWindow);
+
+    // For the sound, flash, camera image, and gallery images
+    var cameraFlash = document.querySelector("#cameraFlash");
+    var cameraClick = new Audio("audio/cameraClick.mp3");
+    var cameraDisplay = document.querySelector("#cameraDisplay");
+    var photoViewContent = document.querySelector("#photoViewContent");
+
+    // Camera image reset and flash and gallery content
+    cameraDisplay.style.display = "flex";
+    photoViewContent.style.display = "none";
+    cameraFlash.classList.remove("fade-out");
+
+
+
+
+    // Flash after the camera image
+    setTimeout(function() {
+      cameraDisplay.style.display = "none";
+      photoViewContent.style.display = "grid";
+    // Plays the sound and pop flash image
+    cameraFlash.style.display = "block";
+    cameraClick.play();
+    }, 450);
+
+   // Fade out of the flash
+    setTimeout(function() {
+      cameraFlash.classList.add("fade-out");
+    }, 800);
+
+    // Makes sound stop after time
+    setTimeout(function() {
+      cameraFlash.style.display = "none";
+    }, 2100)
   });
 }
 
@@ -1243,7 +1276,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
     // App is open OR mouse is hovering over icon:
         if (isCurrentAppOpen || icon.matches(":hover")) {
-          icon.style.filter = "drop-shadow(0 0 10px white)";
+          icon.style.filter = "drop-shadow(0 0 10px #ff7700)";
           icon.style.transform = "scale(1.1)";
         }
 

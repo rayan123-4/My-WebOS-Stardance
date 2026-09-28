@@ -385,7 +385,15 @@
         <img src="Images/stardance.avif" id="gallerywindow-header" class="welcome-page-header">
         <p id="galleryclose" class="close-button">X</p>
 
-        <div class="gallery-images">
+        <div class="gallerySpace" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 12px; margin-top: 32px;">
+
+        <img id="cameraFlash" src="Images/whiteFlash.png" class="camera-flash" alt="Flash Effect" style="display: none;">
+
+        <div id="cameraDisplay" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; min-height: 400px;"class="camera-display">
+                <img src="Images/camera.png" alt="Camera" class="camera-Image" style="width: 400px; height: auto;">
+            </div>
+
+        <div id="photoViewContent" class="gallery-images" style="display: none;">
             <h1 class="gallery-title"> Tiger Photo Gallery</h1>
             <div class="gallery-photo-grid">
                 <img src="Images/Tiger1.jpeg" alt="Tiger1">
