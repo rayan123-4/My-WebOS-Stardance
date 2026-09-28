@@ -86,6 +86,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 32. Snake game Icon (Canva to customize it) - https://www.flaticon.com/free-icon/snake_8160941?term=snake&page=1&position=37&origin=search&related_id=8160941
 33. Calculator Icon - https://www.flaticon.com/free-icon/calculator_548251
 34. Paint canvas Icon - https://www.flaticon.com/free-icon/brush_15299746?term=canvas&page=1&position=22&origin=tag&related_id=15299746
+35. Camera image - https://www.magnific.com/free-psd/black-dslr-camera-with-lens_418464025.htm#fromView=keyword&page=1&position=1&uuid=de1dd188-5dd8-4b3a-9dff-95802f41bfe0&track=ais_hybrid&query=Camera
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
