@@ -13,6 +13,13 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 - I watched many different tutorials and worked very hard.
 - Here is the live website link for anyone to try out: **https://stardancetigeros.site/**
 - I used also **W3Schools tutorials** for some extra help, when I started out making the webOS.
+- The most challenging thing for me was doing the JavaScript, since JavaScript is my least confident language out of the three, but I learnt and figured things out.
+- Styling the CSS was also hard, trying to get the images to be aligned and the grid.
+- The HTML was simple, however the only problem I found were the occasional variable typo.
+- I enjoyed making this WebOS and it has helped me learn a lot about how to make hard things, and I hope I can make more projects like this in the future.
+
+## How to run the WebOS?
+All you need to do is click the demo link here and you will be on the website: **https://stardancetigeros.site/**
 
 ## To clone the repository:
 ```bash
@@ -22,14 +29,14 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 - I used **AI** a bit when I got very stuck on an error and couldn't fix it. I also used it to learn **sometimes** how to make new things(eg:setting up an API for the first time), though still **I did most of the hard work**. I also used it for some light debugging, **if I was completely stuck** and wasn't going anywhere.
   
 - Most of the help I got was from the **official guide**, **W3Schools tutorials**, and my **prior knowledge**.
-## Before 1st Ship:
+## Before the 1st Ship:
 1. A **live updating time** at the top right corner.
 2. A **welcome window**, that starts up when the site opens.
 3. A **tiger gallery app**, that shows images of tigers.
 4. A **Roar sound button app**, with multiple different tiger species roar sounds.
 5. The **drag, close and open** features to the windows.
 
-## Updates after 1st Ship:
+## Updates after the 1st Ship:
 1. A **startup banner** animation.
 2. A **settings app**, with a background switcher and a light/dark theme switcher.
 3. A **map app**, that shows different Tiger species habitats.
@@ -44,6 +51,17 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 12. A **paint canvas app** with an undo button, to draw your own Tiger or anything else.
 13. A **link window**, that shows links to my stardance and github accounts.
 14. Other **fixes and adjustments** to windows and features to make them better.
+
+## Updates after the 2nd Ship:
+I took into consideration a lot of the feedback I got and I used it to further improve my WebOS
+1. I fixed some of the designing of the website, making it look extra nice and clean.
+   (Using CSS to fix the layouts of the windows and stuff using things like margin, padding, width, height.)
+2. Added some colors that match the theme color palette.
+   (Using linear-gradient and other stuff to nice colors.)
+3. Fixed some of the image sizing's, and made the window less like a PowerPoint and more like a high quality WebOS Website.
+   (Using things like overflow-y: auto; and box-sizing: border box; and other border and text sizes.
+4. Added a camera animation, where when you open the gallery window, a camera pops up with a click sound and a flash and then fades into the images.
+   (Using CSS for the camera and flashes, and Javascript for the timing and if statements, to make the camera, flash and click happen at a specific time.)
 
 ## Credits:
 
