@@ -12,6 +12,7 @@
     --paint-board: #fff;
     --paint-border: #000;
     --paint-body: whitesmoke;
+    --minimize-color: #FFCE1B;
 }
 
 body {
@@ -34,9 +35,11 @@ body {
     --color-color-text-dark: #fff;
     --color-window-border: #000;
     --icon-bar: rgba(256, 256, 256, 0.125);
+    --close-color: #FF0038;
     --paint-board: #000;
     --paint-border: #fff;
     --paint-body: smoke;
+    --minimize-color: #FDFD96;
 }
 
 /* Background stuff: */
@@ -962,7 +965,27 @@ h1 {
     justify-content: center;
     text-align: center;
     padding: 0;
+    font-weight: 1000;
 }   
+
+.minimize-button {
+    position: absolute;
+    top: 9px;
+    right: 60px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: var(--color-ui-white);
+    margin: 0;
+    background-color: var(--minimize-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    font-weight: 1000;
+}
 
 .open-button {
     cursor: pointer;

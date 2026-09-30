@@ -125,6 +125,7 @@ var welcomeScreenOpen = document.querySelector("#welcomeopen")
 // Adding event listeners to the open and close button:
 function closeWindow(element) {
   element.style.display = "none";
+  element.classList.remove("minimized");
 }
 
 welcomeScreenClose.addEventListener("click", function () {
@@ -1267,7 +1268,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
             if (appWindow) {
               var actualDisplay = window.getComputedStyle(appWindow).display;
 
-              if (actualDisplay === "flex") {
+              if (actualDisplay === "flex" || appWindow.classList.contains("minimized")) {
                 isCurrentAppOpen = true;
               }
             }
@@ -1307,3 +1308,23 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
         });
       }
     }
+
+// TigerOS Minimizer Button
+
+document.querySelectorAll(".minimize-button").forEach(function(button) {
+  // event listener for the minize button
+  button.addEventListener("click", function(e) {
+
+    // Stop the click from affecting the window
+    e.stopPropagation();
+
+    // Finding the window button for the specific window
+    const windowMinimize = button.closest(windows);
+
+    // Minimize the window
+    if (windowMinimize) {
+      windowMinimize.style.display = "none"
+      windowMinimize.classList.add("minimized");
+        }
+  });
+});
