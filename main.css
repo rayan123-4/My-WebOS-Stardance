@@ -839,6 +839,15 @@ h1 {
 
 }
 
+.tiger-map-content a {
+    color: black;
+}
+
+.tiger-map-content a:hover {
+    color: blue;
+}
+
+
 /* Welcome window: */
 .welcome-page-header {
     position: absolute;
