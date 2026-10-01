@@ -55,11 +55,11 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 ## Updates after the 2nd Ship:
 **I took into consideration a lot of the feedback I got and I used it to further improve my WebOS**
 1. I fixed some of the designing of the website, making it look extra nice and clean.
-- **(Using CSS to fix the layouts of the windows and stuff using things like margin, padding, width, height.)**
-2. Added some colors that match the theme color palette.
-- **(Using linear-gradient and other stuff to nice colors.)**
+- **(Using CSS to fix the layouts of the windows, and images using functions like margin, padding, width, height.)**
+2. Added some colors that match the theme color palette. I made sure that the text to color ratio, wasn't too one sided so that the text is clearly visible.
+- **(Using linear-gradient and adjusting colors to match the theme.)**
 3. Fixed some of the image sizing's, and made the window less like a PowerPoint and more like a high quality WebOS Website.
-- **(Using things like overflow-y: auto; and box-sizing: border box; and other border and text sizes.)**
+- **(Using functions like overflow-y: auto; and box-sizing: border box; and other border and text sizes.)**
 4. Added a camera animation, where when you open the gallery window, a camera pops up with a click sound and a flash and then fades into the images.
 - **(Using CSS for the camera and flashes, and Javascript for the timeout functions and if statements, to make the camera animation, flash and click happen at a specific time.)**
 
@@ -116,7 +116,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 **Other:**
 1. Background remover - https://www.adobe.com/products/firefly/features/remove-background.html
 2. Making text for start banner and other custom images - https://www.canva.com/
-3. Audio file cutter - https://clideo.com/cut-audio
+3. Audio file cutter - https://clideo.com/cut-audio and https://online-video-cutter.com/
 4. Tutorial for light/dark theme - https://youtu.be/_gKEUYarehE?si=AgS2rTlwhXKqBQA0
 5. Tutoral for WebOS and resource - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
 6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
