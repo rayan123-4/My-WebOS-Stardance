@@ -195,6 +195,7 @@ var galleryWindowClose = document.querySelector("#galleryclose");
 
 let camera = false
 
+// Same thing for every window, if icon hears a click open window.
 if (galleryIcon) {
   galleryIcon.addEventListener("click", function () {
     openWindow(galleryWindow);
