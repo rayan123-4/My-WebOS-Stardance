@@ -1283,6 +1283,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
               if (actualDisplay === "flex" || appWindow.classList.contains("minimized")) {
                 isCurrentAppOpen = true;
+                windows.style.zIndex = "499";
               }
             }
           }
