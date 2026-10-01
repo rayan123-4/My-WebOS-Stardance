@@ -2,7 +2,7 @@
 :root {
     --color-ui-white: #fff;
     --color-text-dark: #000;
-    --color-panel-background: linear-gradient(to bottom, rgb(252, 239, 204) 0%, rgb(255, 184, 107) 50%, rgba(255, 134, 39, 0.95) 100%);
+    --color-panel-background: linear-gradient(to bottom, rgb(252, 239, 190) 0%, rgb(255, 184, 107) 50%, rgb(255, 124,19) 100%);
     --color-glass-background: rgba(0, 0, 0, 0.25);
     --color-subtle-border: rgba(255, 255, 255, 0.2);
     --color-color-text-dark: #000;
@@ -13,6 +13,7 @@
     --paint-border: #000;
     --paint-body: whitesmoke;
     --minimize-color: #FFCE1B;
+    --content-border: black;
 }
 
 body {
@@ -30,16 +31,11 @@ body {
     --color-ui-white: #fff;
     --color-text-dark: #fff;
     --color-panel-background: #1B1B1B;
-    --color-glass-background: rgba(0, 0, 0, 0.25);
-    --color-subtle-border: rgba(255, 255, 255, 0.2);
     --color-color-text-dark: #fff;
-    --color-window-border: #000;
-    --icon-bar: rgba(256, 256, 256, 0.125);
-    --close-color: #FF0038;
     --paint-board: #000;
     --paint-border: #fff;
     --paint-body: smoke;
-    --minimize-color: #FDFD96;
+    --content-border: orange;
 }
 
 /* Background stuff: */
@@ -284,7 +280,7 @@ body {
 }
 
 .settings-content {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
@@ -635,7 +631,7 @@ h1 {
 .Tiger-Information-content {
     max-height: 480px;
     overflow-y: auto;
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
@@ -688,7 +684,7 @@ h1 {
 }
 
 .gallery-images {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 0px;
@@ -763,7 +759,7 @@ h1 {
 }
 
 .title-roar-window {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
@@ -798,7 +794,7 @@ h1 {
 
 /* Tiger map window: */
 .tiger-map-content {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
@@ -861,7 +857,7 @@ h1 {
 }
 
 .title-image {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     background: var(--color-panel-background);
@@ -1070,7 +1066,7 @@ h1 {
 }
 
 .weather {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
@@ -1201,7 +1197,7 @@ h1 {
 }
 
 .real-weather {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
@@ -1342,7 +1338,7 @@ h1 {
 /* Instruction Manual window: */
 .manual-content {
     position: relative;
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 0 24px 24px 24px;
     margin-top: 32px;
@@ -1448,7 +1444,7 @@ h1 {
     justify-content: flex-start;
     position: absolute;
     top: 30px;
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 12px;
     background: var(--color-panel-background);
     color: var(--color-color-text-dark);
@@ -1550,11 +1546,11 @@ h1 {
 
 /* Tiger calculater window:*/
 .calc-container {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 32px;
-    background: var(--color-panel-background);
+    background: #1C1C1C;
     height: 550px;
     width: 400px;
     display: flex;
@@ -1656,7 +1652,7 @@ h1 {
 
 
 .paint-content {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 22px;
@@ -1713,7 +1709,7 @@ h1 {
 }
 
 .rayan-Links {
-    border: 2px solid black;
+    border: 2px solid var(--content-border);
     border-radius: 16px;
     padding: 16px;
     margin-top: 22px;
