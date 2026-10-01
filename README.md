@@ -61,7 +61,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 3. Fixed some of the image sizing's, and made the window less like a PowerPoint and more like a high quality WebOS Website.
 - **(Using things like overflow-y: auto; and box-sizing: border box; and other border and text sizes.)**
 4. Added a camera animation, where when you open the gallery window, a camera pops up with a click sound and a flash and then fades into the images.
-- **(Using CSS for the camera and flashes, and Javascript for the timing and if statements, to make the camera, flash and click happen at a specific time.)**
+- **(Using CSS for the camera and flashes, and Javascript for the timeout functions and if statements, to make the camera animation, flash and click happen at a specific time.)**
 
 ## Credits:
 
