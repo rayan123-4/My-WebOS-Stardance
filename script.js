@@ -193,9 +193,19 @@ var galleryWindow = document.querySelector("#gallerywindow");
 var galleryIcon = document.querySelector("#tigergallery");
 var galleryWindowClose = document.querySelector("#galleryclose");
 
+let camera = false
+
 if (galleryIcon) {
   galleryIcon.addEventListener("click", function () {
     openWindow(galleryWindow);
+
+    // If the camera animation has happend, stop here
+    if (camera === true) {
+      return;
+    }
+
+
+       camera = true
 
     // For the sound, flash, camera image, and gallery images
     var cameraFlash = document.querySelector("#cameraFlash");
@@ -205,13 +215,12 @@ if (galleryIcon) {
 
     // Camera image reset and flash and gallery content
     cameraDisplay.style.display = "flex";
+    // Hide gallery photo
     photoViewContent.style.display = "none";
     cameraFlash.classList.remove("fade-out");
 
 
-
-
-    // Flash after the camera image
+    // Flash after 450ms
     setTimeout(function() {
       cameraDisplay.style.display = "none";
       photoViewContent.style.display = "grid";
@@ -225,16 +234,19 @@ if (galleryIcon) {
       cameraFlash.classList.add("fade-out");
     }, 800);
 
-    // Makes sound stop after time
+    // Hide flash completely
     setTimeout(function() {
       cameraFlash.style.display = "none";
-    }, 2100)
-  });
+    }, 2100);
+   });
 }
+
+
 
 if (galleryWindowClose) {
   galleryWindowClose.addEventListener("click", function () {
     closeWindow(galleryWindow);
+    camera = false
   });
 }
 
