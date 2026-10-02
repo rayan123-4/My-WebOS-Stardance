@@ -13,10 +13,13 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 - I watched many different tutorials and worked very hard.
 - Here is the live website link for anyone to try out: **https://stardancetigeros.site/**
 - I used also **W3Schools tutorials** for some extra help, when I started out making the webOS.
-- The most challenging thing for me was doing the JavaScript, since JavaScript is my least confident language out of the three, but I learnt and figured things out.
-- Styling the CSS was also hard, trying to get the images to be aligned and the grid.
-- The HTML was simple, however the only problem I found were the occasional variable typo.
-- I enjoyed making this WebOS and it has helped me learn a lot about how to make hard things, and I hope I can make more projects like this in the future.
+
+## What was hard and what have I gained from building this project:
+- The most challenging thing for me was doing the JavaScript, since JavaScript is my least confident language out of the three, but I learnt and figured things out. I had too learn a lot about Javascript and things like the syntax, but I think I can definitely say that I have learnt soo much compared to before this project.
+- Styling the CSS was also very hard, trying to get the images to be aligned and the grid. CSS wasn't challenging like how Javascript was, it was like, it works, but it doesn't work/look how I would like it too be.
+- The HTML was simple, however the only problem I found were the occasional variable typo or an open parenthesis.
+- Building this project has helped me learn more about syntax errors, how to debug, trial and error, and just improve my general knowledge of coding. It has also helped me learn functions that are helpful in other langauges, such as Python.
+- I enjoyed making this WebOS and it has helped me learn a lot about how to make hard things with code, and I hope I can make more projects like this in the future.
 
 ## How to run the WebOS?
 All you need to do is click the demo link here and you will be on the website: **https://stardancetigeros.site/**
