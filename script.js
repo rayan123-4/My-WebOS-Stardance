@@ -1212,6 +1212,7 @@ let B = null;
     const clearButton = document.getElementById("paint-clear-button");
     const fillButton = document.getElementById("paint-fill-button");
     const undoButton = document.getElementById("paint-undo-button");
+    const downloadButton = document.getElementById("paint-download-button");
 
 
 // if mouse is drawing, function:
@@ -1290,7 +1291,7 @@ let B = null;
       const imageLink = document.createElement("a")
       // Name of the file and file type
       imageLink.download = `tigerDrawing-${Date.now()}.png`;
-      imageLink.href = board.toDataURL("image/png");
+      imageLink.href = paintBoard.toDataURL("image/png");
       imageLink.click();
     }
 
