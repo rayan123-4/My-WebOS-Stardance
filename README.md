@@ -65,6 +65,8 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 - **(Using functions like overflow-y: auto; and box-sizing: border box; and other border and text sizes.)**
 4. Added a camera animation, where when you open the gallery window, a camera pops up with a click sound and a flash and then fades into the images.
 - **(Using CSS for the camera and flashes, and Javascript for the timeout functions and if statements, to make the camera animation, flash and click happen at a specific time.)**
+5. Added a download button to the paint window, so that people can download their drawings as a PNG file.
+- **(I did this in Javascript using DataURL and some other functions, to trigger a browser download as a PNG file when the download button is pressed.)**
 
 ## Credits:
 
