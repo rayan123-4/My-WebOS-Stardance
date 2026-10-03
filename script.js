@@ -1140,9 +1140,11 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     }
 
 // Paint canvas window:
+    // Constant
     const paintBoard = document.getElementById("paintBoard");
     const paintContext = paintBoard.getContext("2d");
 
+    // Let variables
     let restore_art = [];
     let artIndex = -1;
     let isDrawing = false;
@@ -1153,7 +1155,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     const undoButton = document.getElementById("paint-undo-button");
 
 
-// drawing function:
+// if mouse is drawing, function:
     paintBoard.addEventListener("mousedown", (e) => {
       isDrawing = true
 
@@ -1161,6 +1163,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       paintContext.moveTo(e.offsetX, e.offsetY);
 
     });
+    // If the mouse is not drawing
     paintBoard.addEventListener("mouseup", (e) => {
       isDrawing = false;
       paintContext.beginPath();
@@ -1170,36 +1173,44 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       }
     });
 
-// Event listeners
+// Event listeners for drawing
     paintBoard.addEventListener("mouseout", () => {isDrawing = false});
     paintBoard.addEventListener("mousemove", draw);
     paintBoard.style.touchAction = "none";
 
+    // Event listeners for the fill, clear, download buttons
     clearButton.addEventListener("click", clearCanvas);
     fillButton.addEventListener("click", fillCanvas);
+    downloadButton.addEventListener("click", downloadImage);
 
+    // Event listener for the undo button
     if (undoButton) {
       undoButton.addEventListener("click", undo_last);
     }
 
+     // The drawing function to make the pen draw, connected tot he even listener for draw
     function draw(e) {
       if (!isDrawing) return;
 
+      // Brush color, size and shape
       paintContext.lineWidth = brushSize.value;
       paintContext.lineCap = "round";
       paintContext.strokeStyle = colorPicker.value;
 
+      // Movement of the pen
       paintContext.lineTo(e.offsetX, e.offsetY);
       paintContext.stroke();
       paintContext.moveTo(e.offsetX, e.offsetY);
     }
 
+    // For clearing the canvas
     function clearCanvas() {
       paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
       restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
       artIndex += 1;
     }
 
+    // For filling the canvas with a color
     function fillCanvas() {
       paintContext.fillStyle = colorPicker.value;
       paintContext.fillRect(0, 0, paintBoard.width, paintBoard.height);
@@ -1207,8 +1218,19 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       artIndex += 1;
     }
 
+    // Function to download the image to the users computer:
+    // When the button is clicked the image is downloaded and saved and the file name down below
+    function downloadImage() {
+      // Link tag constant
+      const imageLink = document.createElement("a")
+      // Name of the file and file type
+      imageLink.download = `tigerDrawing-${Date.now()}.png`;
+      imageLink.href = board.toDataURL("image/png");
+      imageLink.click();
+    }
 
-// Undo button:
+
+// Undo button, to undo the last edit:
     function undo_last() {
       if ( artIndex <= 0 ) {
         paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
@@ -1221,7 +1243,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       }
     }
 
-// Multiple link button:
+// Multiple link button for the link winddw:
 
     var linkWindow = document.querySelector("#rayanLinkWindow");
     var linkBtn = document.querySelector("#linkBtn");
