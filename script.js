@@ -1,8 +1,15 @@
+// TIGEROS JAVASCRIPT:
+// It handles movable windows, drag, close, open, app buttons, themes,
+// weather api's, the tiger snake game, calculator, painting, and other major and small ui features.
+
 // ALL WINDOWS:
 let windows = (".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window, .rayan-Link-Window")
 
 // Code for making the DIV element draggable:
 document.querySelectorAll(windows).forEach(dragElement);
+
+// Reused one drag system for all windows
+// This system tracks mouse movement and turns that movement into changes to the windows position
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -23,6 +30,8 @@ function dragElement(element) {
     document.getElementById(element.id + "-header").onmousedown = startDragging;
 
   }
+  // I chose to remove this because I felt like it makes the purpose of a dragging button useless.
+  // And also most interfaces dont use this, which I took into account when making this change.
     //else {
 
   //   // if not from the header then from anywhere else in the window:
@@ -31,6 +40,8 @@ function dragElement(element) {
   // }
 
   // Makes sure that the only thing thats draggable is the header drag image.
+  // Only the stardance starling image is draggable, so not the whole window.
+  // I have specifically done this if you look a few comments up you will see why.
   var headerImg = element.querySelector("img[src*='Images/stardance.avif']");
   if (headerImg) {
     headerImg.onmousedown = startDragging;
@@ -64,6 +75,7 @@ function dragElement(element) {
 
     e.preventDefault();
 
+    // Compare the new mouse position with the previous one.
     currentX = initialX - e.clientX;
     currentY = initialY - e.clientY;
 
@@ -71,10 +83,13 @@ function dragElement(element) {
     initialY = e.clientY;
 
     // Setting the boundaries for the window so it cannot go too far up or down or left or right.
+    // And Calculating the next position first so the boundaries can be appliied before the element moves.
     var newTop = element.offsetTop - currentY;
     var newLeft = element.offsetLeft - currentX;
 
-    // TOP (specifcally for the Weather windows)
+    // TOP (specifcally for the Weather windows).
+    // This is so the windows can sit more higher instead, because I didnt use translate
+    // in the css for the position, so their boundaries if I didn't do this would be different in a bad way.
     if (element.id === "WeatherWindow" || element.id === "RealWeatherWindow") {
       if (newTop < 0) {
         newTop = 0;
@@ -108,6 +123,7 @@ function dragElement(element) {
   // Function to stop dragging the element when the mouse button is released:
   function stopDragging() {
 
+    // Dragging is finished, so remove temporary mouse track handles
     document.onmouseup = null;
     document.onmousemove = null;
 
@@ -123,6 +139,8 @@ var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
 
 // Adding event listeners to the open and close button:
+// Closing only hides the existening element, so when its opened its not fully re created.
+// If you wanna test this theory go the paint app, make a painting then close the window.
 function closeWindow(element) {
   element.style.display = "none";
   element.classList.remove("minimized");
@@ -143,6 +161,7 @@ welcomeScreenOpen.addEventListener("click", function () {
 
 
 // Code for making the date/time:
+// The clock uses the browser time and is updated live below.
 function updateTime() {
 
   var currentTime = new Date().toLocaleString();
@@ -156,6 +175,7 @@ function updateTime() {
 // Making time update:
 updateTime();
 
+// One update per second keeps clock live.
 setInterval(updateTime, 1000);
 
 // Storing the icon:
@@ -175,6 +195,7 @@ function deselectIcon(element) {
 
 // For deselecting icon:
 // If it's not selected, but deselects it if it is already selected.
+// Selecting one icon first clears the previous selection.
 function handleIconTap(element) {
   if (selectedIcon === element) {
     deselectIcon(element)
@@ -196,6 +217,8 @@ var galleryWindowClose = document.querySelector("#galleryclose");
 let camera = false
 
 // Same thing for every window, if icon hears a click open window.
+// When opened the camera transition is displayed.
+// If window is minimized then the animation cannot happen again.
 if (galleryIcon) {
   galleryIcon.addEventListener("click", function () {
     openWindow(galleryWindow);
@@ -205,8 +228,8 @@ if (galleryIcon) {
       return;
     }
 
-
-       camera = true
+       // Record that animation has happened, so that it does not happen again when icon is tapped.
+    camera = true
 
     // For the sound, flash, camera image, and gallery images
     var cameraFlash = document.querySelector("#cameraFlash");
@@ -221,25 +244,26 @@ if (galleryIcon) {
     cameraFlash.classList.remove("fade-out");
 
 
-    // Flash after 450ms
+    // Flash after 450ms.
+    // Wait for the animation before going to the gallery images.
     setTimeout(function() {
       cameraDisplay.style.display = "none";
       photoViewContent.style.display = "grid";
     // Plays the sound and pop flash image
-    cameraFlash.style.display = "block";
-    cameraClick.play();
+      cameraFlash.style.display = "block";
+      cameraClick.play();
     }, 450);
 
-   // Fade out of the flash
+   // Fade out of the flash.
     setTimeout(function() {
       cameraFlash.classList.add("fade-out");
     }, 800);
 
-    // Hide flash completely
+    // Hide flash completely.
     setTimeout(function() {
       cameraFlash.style.display = "none";
     }, 2100);
-   });
+  });
 }
 
 
@@ -247,6 +271,7 @@ if (galleryIcon) {
 if (galleryWindowClose) {
   galleryWindowClose.addEventListener("click", function () {
     closeWindow(galleryWindow);
+    // Closing the gallery resets the state, so the animation can happen again when window is opened.
     camera = false
   });
 }
@@ -523,6 +548,8 @@ if (roarButton1) {
   roarButton1.addEventListener("click", function () {
     // To make the roars play one at a time and not all at once.
     if (window.audioStopper) {
+      // Stores the current roar so that if another roar is playing the one stored stops,
+      // before starting the new roar.
       window.audioStopper.pause();
       window.audioStopper.currentTime = 0;
     }
@@ -586,6 +613,8 @@ if (roarButton4) {
 
 
 // To save the background when you close the tab:
+// Save the selected background in localStorage.
+// This means that the background is still the same as the user left it, when refresh or returning to the page.
 let selectedBackground = localStorage.getItem('selectedBackground')
 const lightTheme = document.querySelector("#lightBackground");
 const darkTheme = document.querySelector("#darkBackground");
@@ -593,12 +622,14 @@ const darkTheme = document.querySelector("#darkBackground");
 // To enable the light background:
 const enableLightBackground = () => {
   document.body.style.backgroundImage = "url('Images/lightTheme.jpg')";
+  // Interface remmebers, since localStorage.
   localStorage.setItem('selectedBackground', 'Images/lightTheme.jpg')
 }
 
 // To enable the dark background:
 const enableDarkBackground = () => {
   document.body.style.backgroundImage = "url('Images/darkTheme.jpg')";
+  // Interface remmebers, since localStorage.
   localStorage.setItem('selectedBackground', 'Images/darkTheme.jpg')
 }
 
@@ -654,8 +685,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
 
 // Trying to make a real weather app this time: 
-
-// Api key and url
+// Api key and url.
+// REAL WEATHER APP: used for current weather searches.
     const apiKey = "88d0ea56b63f4f9188a65331261109";
     const apiUrl = "https://api.weatherapi.com/v1/current.json";
 
@@ -664,6 +695,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     const weatherEmoji = document.querySelector(".real-weather-image");
 
 
+    // Waiting for the api's response, check for failers, and then return data to update the weather window
     async function checkWeather(city) {
       if (!city.trim()) {
         alert("Please enter a city name.");
@@ -672,7 +704,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
       try {
 
-    // Making the api show results.
+        // Making the api show results:
+        // Makes sure the code is correct, no spaces, or special characters.
         const response = await fetch(`${apiUrl}?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=no`);
         const data = await response.json();
 
@@ -680,7 +713,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
           throw new Error(data.error?.message || "Weather request failed.");
         }
 
-    // The extracting the data from the api to the specific functions
+        // Api returns returns a lot of data so only extracting the specific ones that we want.
         document.querySelector(".real-city").textContent = data.location.name;
         document.querySelector(".real-temp").textContent = Math.round(data.current.temp_c) + "°c";
         document.querySelector(".real-humidity").textContent = data.current.humidity + "%";
@@ -705,6 +738,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       }
     }
 
+    // Search can use enter and the displayed button. Two listeners below.
     searchBtn.addEventListener("click", () => {
       checkWeather(searchBox.value);
     });
@@ -716,7 +750,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     });
 
 
-  // Secret stardance trio button in bottom right corner:
+    // Secret stardance trio button in bottom right corner:
+    // This is secret so its not with the normal app icons.
     var secretButton  = document.querySelector("#stardanceButton");
 
     if (secretButton) {
@@ -738,36 +773,38 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     }
 
 // Making the Tiger Snake game:
-    const gameBoard = document.querySelector("#gameBoard");
-    const ctx = gameBoard.getContext("2d");
-    const scoreText = document.querySelector("#scoreText");
-    const resetBtn = document.querySelector("#gameResetBtn");
-    const gameWidth = gameBoard.width;
-    const gameHeight = gameBoard.height;
-    const boardBackground = "green";
-    const snakeColor = "orange";
-    const snakeBorder = "black";
-    const foodColor = "red";
-    const unitSize = 25;
-    const solidSkinBtn = document.querySelector("#solidSkinBtn");
-    const stripeSkinBtn = document.querySelector("#stripeSkinBtn");
-    const highScoreText = document.querySelector("#highScoreText");
-    const scoreAlert0 = document.querySelector("#scoreAlert0");
-    const scoreAlert1 = document.querySelector("#scoreAlert1");
-    const scoreAlert2 = document.querySelector("#scoreAlert2");
-    const scoreAlert3 = document.querySelector("#scoreAlert3");
+// The canvas is the play area, and the variables display the game state between ticks.
+const gameBoard = document.querySelector("#gameBoard");
+const ctx = gameBoard.getContext("2d");
+const scoreText = document.querySelector("#scoreText");
+const resetBtn = document.querySelector("#gameResetBtn");
+const gameWidth = gameBoard.width;
+const gameHeight = gameBoard.height;
+const boardBackground = "green";
+const snakeColor = "orange";
+const snakeBorder = "black";
+const foodColor = "red";
+const unitSize = 25;
+const solidSkinBtn = document.querySelector("#solidSkinBtn");
+const stripeSkinBtn = document.querySelector("#stripeSkinBtn");
+const highScoreText = document.querySelector("#highScoreText");
+const scoreAlert0 = document.querySelector("#scoreAlert0");
+const scoreAlert1 = document.querySelector("#scoreAlert1");
+const scoreAlert2 = document.querySelector("#scoreAlert2");
+const scoreAlert3 = document.querySelector("#scoreAlert3");
 
-    let running = false;
-    let xVelocity = unitSize;
-    let yVelocity = 0;
-    let foodX;
-    let foodY;
-    let score = 0;
-    let currentSkin = "stripes";
-    let highScore = localStorage.getItem("highScoreText") || 0;
-    let shownAlert0 = false;
+let running = false;
+let xVelocity = unitSize;
+let yVelocity = 0;
+let foodX;
+let foodY;
+let score = 0;
+let currentSkin = "stripes";
+let highScore = localStorage.getItem("highScoreText") || 0;
+let shownAlert0 = false;
 
 // Setting snake positon
+// Storing each snake part as a (x, y) position.
     let snake = [
       {x:unitSize * 4, y:0},
       {x:unitSize * 3, y:0},
@@ -803,8 +840,9 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       nextTick();
     };
 
-// The number at the bottom is the speed of the snake.
+    // The number at the bottom is the speed of the snake.
     function nextTick(){
+      // Redraws the board, moves the snake, check for game over, and schedules the next tick.
       if(running) {
         setTimeout(() => {
           clearBoard();
@@ -826,6 +864,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     };
 
     function createFood(){
+      // Food generated on same grid as snake, making food not appear between snake position.
       function randomFood(min, max){
         const randNum = Math.round((Math.random() * (max - min) + min) / unitSize) * unitSize;
         return randNum;
@@ -842,10 +881,13 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     };
 
     function moveSnake(){
+      // Add a new head position on every move
+      // If food not eaten, remove the tail so length stays the same.
       const snakeHead = {x: snake[0].x + xVelocity, y: snake[0].y + yVelocity};
 
       snake.unshift(snakeHead);
     // If food is eaten:
+    // Give new tail length.
       if(snake[0].x === foodX && snake[0].y === foodY){
         score += 1;
         scoreText.textContent = score;
@@ -873,6 +915,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
         }
 
         highScore = score >= highScore ? score : highScore;
+        // Keep whichever score is the highest and then save it locally.
+        // Interface remmebers, since localStorage.
         localStorage.setItem("highScoreText", highScore);
 
         const highScoreElement = document.querySelector("#highScoreText")
@@ -889,6 +933,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     };
 
     function setSnakeSkin(selectedSkin) {
+      // Changes drawing style only, everything else stays same, so the game is not pay to win.
       currentSkin = selectedSkin;
 
       if (!running) {
@@ -899,6 +944,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     }
 
 // The snake body
+    // Draws head seperatly so it can have emoji tiger face
+    // Draw body with the selected skin.
     function drawSnake(){
       ctx.strokeStyle = "rgba(0, 0, 0, 0.2)";
 
@@ -930,6 +977,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     };
 
     function changeDirection(event){
+      // Convert arrow keys into velocity changes to prevent reversal into snake body.
       const gameKeyPressed = event.keyCode;
       const LEFTkey = 37;
       const UPkey = 38;
@@ -941,7 +989,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       const goingRight = (xVelocity == unitSize);
       const goingDown = (yVelocity == unitSize);
 
-
+      // Make it easy to check the pressed key and direction.
       switch(true){
       case(gameKeyPressed == LEFTkey && !goingRight):
         xVelocity = -unitSize;
@@ -967,6 +1015,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     };
 
     function checkGameOver(){
+      // If you try leave the canvas (hitting a wall) then its game over.
+      // Or the snake touches it's body.
       switch(true) {
       case (snake[0].x < 0):
         running = false;
@@ -984,6 +1034,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
         running = false;
         break;
       }
+      // Check at index 1, because index 0 is the head.
       for(let i = 1; i < snake.length; i+=1){
         if(snake[i].x == snake[0].x && snake[i].y == snake[0].y ){
           running = false;
@@ -1001,7 +1052,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       running = false;
     };
 
-// Reset game function
+// Reset game function.
+    // Reset the score without deleting highscore and reset the current position.
     function resetGame(){
       score = 0;
       xVelocity = unitSize;
@@ -1020,23 +1072,26 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
     };
 
-//Calculator:
-    const buttonValues = [
-      "AC", "+/-", "%", "÷",
-      "7", "8", "9", "×",
-      "4", "5", "6", "-",
-      "1", "2", "3", "+",
-      "0", ".", "="
-    ];
-    const rightSymbols = ["÷", "×", "-", "+", "="];
-    const topSymbols = ["AC", "+/-", "%"];
+ //Calculator:
+// The array containing all of the buttons the calculator has.
+const buttonValues = [
+  "AC", "+/-", "%", "÷",
+  "7", "8", "9", "×",
+  "4", "5", "6", "-",
+  "1", "2", "3", "+",
+  "0", ".", "="
+];
 
-    const display = document.getElementById("display");
+const rightSymbols = ["÷", "×", "-", "+", "="];
+const topSymbols = ["AC", "+/-", "%"];
 
-//A+B, A×B, A-B, A÷B
-    let A = 0;
-    let operator = null;
-    let B = null;
+const display = document.getElementById("display");
+
+// A+B, A×B, A-B, A÷B
+// First number = A, selected operator (x, +, -, ...), and the second number = B.
+let A = 0;
+let operator = null;
+let B = null;
 
     function clearAll() {
       A = null;
@@ -1062,13 +1117,15 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
         button.style.color = "#1C1C1C";
       }
 
-    //process button clicks
+      // Process button clicks
       button.addEventListener("click", function() {
+        // Calculate the result when "=" is pressed.
         if (rightSymbols.includes(value)) {
           if (value == "=") {
             if (A != null && operator != null) {
               let currentCalcDisplay = display.value;
               let operatorIndex = currentCalcDisplay.indexOf(operator);
+              // If the display has both numbers and the operator, so the second number is after the operator
               B = currentCalcDisplay.slice(operatorIndex + 1);
 
               let numA = Number(A);
@@ -1119,7 +1176,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
               }
         else { //digits or .
           if (value == ".") {
-                //don't add multiple decimal places
+                // Check number before adding ".", so that there is not multiple decimal points.
             let currentCalcInput = operator ? display.value.split(operator)[1] : display.value;
             if (currentCalcInput != "" && !currentCalcInput.includes(".")) {
               display.value += value;
@@ -1141,6 +1198,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
 // Paint canvas window:
     // Constant
+    // The canvas holding the drawing.
+    // And the content such as the buttons, undo, download...
     const paintBoard = document.getElementById("paintBoard");
     const paintContext = paintBoard.getContext("2d");
 
@@ -1157,6 +1216,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
 // if mouse is drawing, function:
     paintBoard.addEventListener("mousedown", (e) => {
+      // Begin the stroke where the mouse is pressed.
+      // Then the mouse events continue in the direction.
       isDrawing = true
 
       paintContext.beginPath();
@@ -1167,6 +1228,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     paintBoard.addEventListener("mouseup", (e) => {
       isDrawing = false;
       paintContext.beginPath();
+      // When stroke is finished, save the canvas.
       if ( e.type != 'mouseout') {
         restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
         artIndex += 1;
@@ -1188,7 +1250,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       undoButton.addEventListener("click", undo_last);
     }
 
-     // The drawing function to make the pen draw, connected tot he even listener for draw
+     // The drawing function to make the pen draw, connected to the event listener for draw.
+    // Continue the current brush stroke by drawing from the previous point to the new mouse position.
     function draw(e) {
       if (!isDrawing) return;
 
@@ -1203,15 +1266,17 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       paintContext.moveTo(e.offsetX, e.offsetY);
     }
 
-    // For clearing the canvas
+    // For clearing the canvas.
     function clearCanvas() {
+      // Also saved to the undo history, so that it's not perminant.
       paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
       restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
       artIndex += 1;
     }
 
-    // For filling the canvas with a color
+    // For filling the canvas with a color.
     function fillCanvas() {
+      // Fill canvas with the selected color. Also saved to the undo history.
       paintContext.fillStyle = colorPicker.value;
       paintContext.fillRect(0, 0, paintBoard.width, paintBoard.height);
       restore_art.push(paintContext.getImageData(0, 0, paintBoard.width, paintBoard.height));
@@ -1219,7 +1284,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     }
 
     // Function to download the image to the users computer:
-    // When the button is clicked the image is downloaded and saved and the file name down below
+    // Conver the canvas to a PNG and trigger a browser download.
     function downloadImage() {
       // Link tag constant
       const imageLink = document.createElement("a")
@@ -1230,7 +1295,9 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     }
 
 
-// Undo button, to undo the last edit:
+    // Undo button, to undo the last edit:
+    // Everything the user does is saved in the undo history ,
+    // so that when the undo button is pressed, the user can return the previous state of the canvas.
     function undo_last() {
       if ( artIndex <= 0 ) {
         paintContext.clearRect(0, 0, paintBoard.width, paintBoard.height);
@@ -1270,6 +1337,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
 // List of the images:
     var windowMapping = {
+      // This links each icon to it's corrisponding window.
+      // So that it can manage every window with the code below.
       "tiger-gallery": "#gallerywindow",
       "roar-Icon": "#roarwindow",
       "tiger-map-icon": "#tigermapwindow",
@@ -1285,7 +1354,9 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
     function updateIconHoverDisplay() {
 
-  // Go through every desktop icon:
+      // Makes the icons in sync with the corrisponding window
+      // So that it can be highlighted, when opened or hovered over.
+      // Go through every desktop icon:
       for (var icon of iconList) {
 
         var isCurrentAppOpen = false;
@@ -1337,6 +1408,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
     function windowBehindFunction(windowBehind) {
 
+      // If window is behind and gets pressed then move to highest z index (the front).
       if (windowBehind) {
         windowBehind.addEventListener("click", function () {
           highestZIndex++;
@@ -1345,22 +1417,23 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       }
     }
 
-// TigerOS Minimizer Button
-
-document.querySelectorAll(".minimize-button").forEach(function(button) {
+    // TigerOS Minimizer Button
+    // Makes all minimize buttons on all windows work the same.
+    // So that it finds whatever windows minimize button is pressed.
+    document.querySelectorAll(".minimize-button").forEach(function(button) {
   // event listener for the minize button
-  button.addEventListener("click", function(e) {
+      button.addEventListener("click", function(e) {
 
     // Stop the click from affecting the window
-    e.stopPropagation();
+        e.stopPropagation();
 
-    // Finding the window button for the specific window
-    const windowMinimize = button.closest(windows);
+    // Finding the window button for the specific window, before hiding it.
+        const windowMinimize = button.closest(windows);
 
     // Minimize the window
-    if (windowMinimize) {
-      windowMinimize.style.display = "none"
-      windowMinimize.classList.add("minimized");
+        if (windowMinimize) {
+          windowMinimize.style.display = "none"
+          windowMinimize.classList.add("minimized");
         }
-  });
-});
+      });
+    });
