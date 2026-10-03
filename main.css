@@ -1679,6 +1679,16 @@ h1 {
     margin: 10px;
 }
 
+#paintToolBar button {
+    background-color: white;
+    transition: background-color 0.2s ease;
+}
+
+#paintToolBar button:hover {
+    transform: scale(1.05);
+    background-color: lightgrey; ;
+}
+
 .paint-body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--paint-body);
