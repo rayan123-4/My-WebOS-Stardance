@@ -8,13 +8,14 @@
     --color-subtle-border: rgba(255, 255, 255, 0.2);
     --color-color-text-dark: #000;
     --color-window-border: #000;
-    --icon-bar: rgba(256, 256, 256, 0.125);
+    --icon-bar: rgba(255, 255, 255, 0.125);
     --close-color: #FF0038;
     --paint-board: #fff;
     --paint-border: #000;
     --paint-body: whitesmoke;
     --minimize-color: #FFCE1B;
     --content-border: black;
+    --text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -26,6 +27,7 @@ body {
     color: var(--color-text-dark);
     overflow: hidden;
     font-family: sans-serif;
+    text-shadow: var(--text-shadow);
 }
 
 .darkmode {
@@ -35,8 +37,9 @@ body {
     --color-color-text-dark: #fff;
     --paint-board: #000;
     --paint-border: #fff;
-    --paint-body: smoke;
+    --paint-body: whitesmoke;
     --content-border: orange;
+    --text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.55);
 }
 
 /* Background stuff: */
@@ -320,6 +323,12 @@ body {
 h1 {
     font-style: italic;
     font-weight: 700;
+    text-shadow: var(--text-shadow);
+}
+
+h2,
+h3 {
+    text-shadow: var(--text-shadow);
 }
 
 /* App icons: */
@@ -544,58 +553,17 @@ h1 {
 }
 
 /* App Icon Hover: */
-.roar-Icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
+.tiger-gallery:hover,
+.roar-Icon:hover,
+.tiger-map-icon:hover,
+.settings-Icon:hover,
+.information-icon:hover,
+.real-weather-icon:hover,
+.weather-icon:hover,
+.manual-icon:hover,
+.snake-icon:hover,
+.calc-Icon:hover,
 .paint-Icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);}
-
-
-.calc-Icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
-.snake-icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
-.real-weather-icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
-.tiger-map-icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
-.settings-Icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
-.manual-icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
-
-.tiger-gallery:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
-.information-icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
-}
-
-.weather-icon:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px #ff7700);
 }
@@ -608,6 +576,30 @@ h1 {
 
 .roar-sound-button:hover {
     transform: scale(1.1);
+}
+
+.close-button:hover,
+.minimize-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 0 10px var(--color-ui-white));
+}
+
+/* Window content */
+.settings-content,
+.Tiger-Information-content,
+.gallery-images,
+.title-roar-window,
+.tiger-map-content,
+.title-image,
+.weather,
+.real-weather,
+.manual-content,
+.snake-game-container,
+.calc-container,
+.paint-content,
+.rayan-Links {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15),inset 0 1px rgba(255, 255, 255, 0.25);
 }
 
 /* Tiger information window: */
@@ -857,6 +849,11 @@ h1 {
     margin: 0px;
 }
 
+.welcome-page-header:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 20px white);
+}
+
 .title-image {
     border: 2px solid var(--content-border);
     border-radius: 16px;
@@ -963,7 +960,6 @@ h1 {
     cursor: pointer;
     color: var(--color-ui-white);
     margin: 0;
-    filter: drop-shadow(0 0 10px var(--color-ui-white));
     background-color: var(--close-color);
     border-radius: 8px;
     display: flex;
@@ -1010,6 +1006,7 @@ h1 {
     margin: 16px;
     width: 250px;
     height: 50px;
+    border: 1px solid var(--color-subtle-border);
 }
 
 
@@ -1027,6 +1024,7 @@ h1 {
     gap: 32px;
     border-radius: 16px;
     margin: 16px;
+    border: 1px solid var(--color-subtle-border);
 }
 
 #welcomepage, 
@@ -1334,6 +1332,7 @@ h1 {
 .calc-Icon,
 .paint-Icon {
     position: absolute;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Instruction Manual window: */
@@ -1452,6 +1451,7 @@ h1 {
     margin-top: 20px;
     padding: 8px; 
     width: 530px;
+    transition: transform 0.5s ease;
 }
 
 #scoreText {
@@ -1496,6 +1496,10 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.snake-game-container button:hover {
+    transform: scale(1.05);
 }
 
 .high-Score-Row {
