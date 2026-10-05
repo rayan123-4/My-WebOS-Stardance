@@ -1337,13 +1337,10 @@ h3 {
 }
 
 .text-Icon-List {
-    display: block;
     position: fixed;
     left: 50px;
     top: 10px;
-    background: var(--color-panel-background);
     border-radius: 4px;
-    border: 2px solid var(--content-border);
     padding: 4px 8px;
     z-index: 12;
     white-space: nowrap;
@@ -1356,7 +1353,7 @@ h3 {
     margin: 10px;
     padding: 4px 8px;
     background: var(--color-panel-background);
-    border-radius: 4px;
+    border-radius: 12px;
     border: 2px solid var(--content-border);
     white-space: nowrap;
 }
