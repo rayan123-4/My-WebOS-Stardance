@@ -1337,7 +1337,7 @@ h3 {
 }
 
 .text-Icon-List {
-    display: none;
+    display: block;
     position: fixed;
     left: 50px;
     top: 10px;
@@ -1349,93 +1349,106 @@ h3 {
     white-space: nowrap;
 }
 
-.icon-text-gallery {
-    top: 20px;
+.text-Icon-List p {
+    display: none;
+    position: fixed;
+    left: 90px;
+    margin: 10px;
+    padding: 4px 8px;
+    background: var(--color-panel-background);
+    border-radius: 4px;
+    border: 2px solid var(--content-border);
+    white-space: nowrap;
 }
 
-.icon-text-roar {
+.icon-text-gallery {
     top: 120px;
 }
 
-.icon-text-map {
+.icon-text-roar {
     top: 220px;
 }
 
-.icon-text-settings {
+.icon-text-map {
     top: 320px;
 }
 
-.icon-text-info {
+.icon-text-settings {
     top: 420px;
 }
 
-.icon-text-fact {
+.icon-text-info {
     top: 520px;
 }
 
-.icon-text-weather {
+.icon-text-fact {
     top: 620px;
 }
 
-.icon-text-manual {
+.icon-text-weather {
     top: 720px;
 }
 
-.icon-text-game {
+.icon-text-manual {
     top: 820px;
 }
 
-.icon-text-calc {
+.icon-text-game {
     top: 920px;
 }
 
-.icon-text-canvas {
+.icon-text-calc {
     top: 1020px;
+}
+
+.icon-text-canvas {
+    top: 1120px;
 }
 
 /* Divider*/
 
-.icon-text-gallery:hover {
+
+body:has(.tiger-gallery:hover) .icon-text-gallery {
     display: flex;
 }
 
-.icon-text-roar:hover {
+body:has(.roar-Icon:hover) .icon-text-roar {
     display: flex;
 }
 
-.icon-text-map:hover {
+body:has(.tiger-map-icon:hover) .icon-text-map {
     display: flex;
 }
 
-.icon-text-settings:hover {
+body:has(.settings-Icon:hover) .icon-text-settings {
     display: flex;
 }
 
-.icon-text-info:hover {
+body:has(.information-icon:hover) .icon-text-info {
     display: flex;
 }
 
-.icon-text-fact:hover {
+body:has(.weather-icon:hover) .icon-text-fact {
     display: flex;
 }
 
-.icon-text-weather:hover {
+body:has(.real-weather-icon:hover) .icon-text-weather {
     display: flex;
 }
 
-.icon-text-manual:hover {
+body:has(.manual-icon:hover) .icon-text-manual {
     display: flex;
 }
 
-.icon-text-game:hover {
+body:has(.snake-icon:hover) .icon-text-game {
     display: flex;
 }
 
-.icon-text-calc:hover {
+body:has(.calc-Icon:hover) .icon-text-calc {
     display: flex;
 }
 
-.icon-text-canvas:hover {
+body:has(.paint-Icon:hover) .icon-text-canvas {
     display: flex;
 }
 

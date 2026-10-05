@@ -1436,3 +1436,43 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
         }
       });
     });
+
+// Code for the text over the icon:
+    const iconTextOverlay = {
+    "tiger-gallery": ".icon-text-gallery",
+    "roar-Icon": ".icon-text-roar",
+    "tiger-map-icon": ".icon-text-map",
+    "settings-Icon": ".icon-text-settings",
+    "information-icon": ".icon-text-info",
+    "weather-icon": ".icon-text-fact",
+    "real-weather-icon": ".icon-text-weather",
+    "manual-icon": ".icon-text-manual",
+    "snake-icon": ".icon-text-game",
+    "calc-Icon": ".icon-text-calc",
+    "paint-Icon": ".icon-text-canvas"
+};
+
+iconList.forEach(function(icon) {
+
+  for (const iconClass in iconTextOverlay) {
+
+    if (icon.classList.contains(iconClass)) {
+
+      const text = document.querySelector(iconTextOverlay[iconClass]);
+
+      icon.addEventListener("mouseenter", function() {
+        const iconPosition = icon.getBoundingClientRect();
+
+        text.style.left = (iconPosition.right + 10) + "px";
+        text.style.top = (iconPosition.top + 10) + "px";
+        text.style.display = "flex";
+      });
+
+      icon.addEventListener("mouseleave", function() {
+      text.style.display = "none";
+      });
+       break;
+    }
+  }
+
+});
