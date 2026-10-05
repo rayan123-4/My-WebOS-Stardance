@@ -1,6 +1,4 @@
 // TIGEROS JAVASCRIPT:
-// It handles movable windows, drag, close, open, app buttons, themes,
-// weather api's, the tiger snake game, calculator, painting, and other major and small ui features.
 
 // ALL WINDOWS:
 let windows = (".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window, .rayan-Link-Window")
@@ -9,7 +7,7 @@ let windows = (".window-box, .gallery-window, .roar-window, .tiger-map-window, .
 document.querySelectorAll(windows).forEach(dragElement);
 
 // Reused one drag system for all windows
-// This system tracks mouse movement and turns that movement into changes to the windows position
+// This Function tracks mouse movement so the windows can move.
 
 // Function for making the window drag:
 function dragElement(element) {
@@ -1252,7 +1250,7 @@ let B = null;
     }
 
      // The drawing function to make the pen draw, connected to the event listener for draw.
-    // Continue the current brush stroke by drawing from the previous point to the new mouse position.
+    // Continue the current brush stroke by drawing.
     function draw(e) {
       if (!isDrawing) return;
 
