@@ -1308,14 +1308,15 @@ h3 {
     max-height: none;
     padding-top: 0px;
     padding-left: 0;
-    overflow: hidden;
+    overflow-y: auto;
     backdrop-filter: blur(5px);
-    z-index: -1;
+    z-index: 1;
 }
 
 .icon-list {
     position: relative;
     overflow-y: auto;
+    overflow-x: visible;
     height: 100%;
     width: 100%;
 }
@@ -1333,6 +1334,109 @@ h3 {
 .paint-Icon {
     position: absolute;
     transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.text-Icon-List {
+    display: none;
+    position: fixed;
+    left: 50px;
+    top: 10px;
+    background: var(--color-panel-background);
+    border-radius: 4px;
+    border: 2px solid var(--content-border);
+    padding: 4px 8px;
+    z-index: 12;
+    white-space: nowrap;
+}
+
+.icon-text-gallery {
+    top: 20px;
+}
+
+.icon-text-roar {
+    top: 120px;
+}
+
+.icon-text-map {
+    top: 220px;
+}
+
+.icon-text-settings {
+    top: 320px;
+}
+
+.icon-text-info {
+    top: 420px;
+}
+
+.icon-text-fact {
+    top: 520px;
+}
+
+.icon-text-weather {
+    top: 620px;
+}
+
+.icon-text-manual {
+    top: 720px;
+}
+
+.icon-text-game {
+    top: 820px;
+}
+
+.icon-text-calc {
+    top: 920px;
+}
+
+.icon-text-canvas {
+    top: 1020px;
+}
+
+/* Divider*/
+
+.icon-text-gallery:hover {
+    display: flex;
+}
+
+.icon-text-roar:hover {
+    display: flex;
+}
+
+.icon-text-map:hover {
+    display: flex;
+}
+
+.icon-text-settings:hover {
+    display: flex;
+}
+
+.icon-text-info:hover {
+    display: flex;
+}
+
+.icon-text-fact:hover {
+    display: flex;
+}
+
+.icon-text-weather:hover {
+    display: flex;
+}
+
+.icon-text-manual:hover {
+    display: flex;
+}
+
+.icon-text-game:hover {
+    display: flex;
+}
+
+.icon-text-calc:hover {
+    display: flex;
+}
+
+.icon-text-canvas:hover {
+    display: flex;
 }
 
 /* Instruction Manual window: */
@@ -1402,7 +1506,7 @@ h3 {
     line-height: 1.6;
     color: #050505;
     font-weight: 550;
-     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 .manual-content h1 {
@@ -1523,16 +1627,16 @@ h3 {
 }
 
 .alert-list div {
-   color: var(--color--text--dark);
-   font-size: 35px;
-   font-weight: bold;
-   display: none;
-   height: auto;
-   width: auto;
-   background: var(--color-panel-background);
-   border-radius: 12px;
-   filter: blur(0);
-   animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ color: var(--color--text--dark);
+ font-size: 35px;
+ font-weight: bold;
+ display: none;
+ height: auto;
+ width: auto;
+ background: var(--color-panel-background);
+ border-radius: 12px;
+ filter: blur(0);
+ animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes alertPop {

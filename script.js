@@ -772,34 +772,34 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 
 // Making the Tiger Snake game:
 // The canvas is the play area, and the variables display the game state between ticks.
-const gameBoard = document.querySelector("#gameBoard");
-const ctx = gameBoard.getContext("2d");
-const scoreText = document.querySelector("#scoreText");
-const resetBtn = document.querySelector("#gameResetBtn");
-const gameWidth = gameBoard.width;
-const gameHeight = gameBoard.height;
-const boardBackground = "green";
-const snakeColor = "orange";
-const snakeBorder = "black";
-const foodColor = "red";
-const unitSize = 25;
-const solidSkinBtn = document.querySelector("#solidSkinBtn");
-const stripeSkinBtn = document.querySelector("#stripeSkinBtn");
-const highScoreText = document.querySelector("#highScoreText");
-const scoreAlert0 = document.querySelector("#scoreAlert0");
-const scoreAlert1 = document.querySelector("#scoreAlert1");
-const scoreAlert2 = document.querySelector("#scoreAlert2");
-const scoreAlert3 = document.querySelector("#scoreAlert3");
+    const gameBoard = document.querySelector("#gameBoard");
+    const ctx = gameBoard.getContext("2d");
+    const scoreText = document.querySelector("#scoreText");
+    const resetBtn = document.querySelector("#gameResetBtn");
+    const gameWidth = gameBoard.width;
+    const gameHeight = gameBoard.height;
+    const boardBackground = "green";
+    const snakeColor = "orange";
+    const snakeBorder = "black";
+    const foodColor = "red";
+    const unitSize = 25;
+    const solidSkinBtn = document.querySelector("#solidSkinBtn");
+    const stripeSkinBtn = document.querySelector("#stripeSkinBtn");
+    const highScoreText = document.querySelector("#highScoreText");
+    const scoreAlert0 = document.querySelector("#scoreAlert0");
+    const scoreAlert1 = document.querySelector("#scoreAlert1");
+    const scoreAlert2 = document.querySelector("#scoreAlert2");
+    const scoreAlert3 = document.querySelector("#scoreAlert3");
 
-let running = false;
-let xVelocity = unitSize;
-let yVelocity = 0;
-let foodX;
-let foodY;
-let score = 0;
-let currentSkin = "stripes";
-let highScore = localStorage.getItem("highScoreText") || 0;
-let shownAlert0 = false;
+    let running = false;
+    let xVelocity = unitSize;
+    let yVelocity = 0;
+    let foodX;
+    let foodY;
+    let score = 0;
+    let currentSkin = "stripes";
+    let highScore = localStorage.getItem("highScoreText") || 0;
+    let shownAlert0 = false;
 
 // Setting snake positon
 // Storing each snake part as a (x, y) position.
@@ -1072,24 +1072,24 @@ let shownAlert0 = false;
 
  //Calculator:
 // The array containing all of the buttons the calculator has.
-const buttonValues = [
-  "AC", "+/-", "%", "÷",
-  "7", "8", "9", "×",
-  "4", "5", "6", "-",
-  "1", "2", "3", "+",
-  "0", ".", "="
-];
+    const buttonValues = [
+      "AC", "+/-", "%", "÷",
+      "7", "8", "9", "×",
+      "4", "5", "6", "-",
+      "1", "2", "3", "+",
+      "0", ".", "="
+    ];
 
-const rightSymbols = ["÷", "×", "-", "+", "="];
-const topSymbols = ["AC", "+/-", "%"];
+    const rightSymbols = ["÷", "×", "-", "+", "="];
+    const topSymbols = ["AC", "+/-", "%"];
 
-const display = document.getElementById("display");
+    const display = document.getElementById("display");
 
 // A+B, A×B, A-B, A÷B
 // First number = A, selected operator (x, +, -, ...), and the second number = B.
-let A = 0;
-let operator = null;
-let B = null;
+    let A = 0;
+    let operator = null;
+    let B = null;
 
     function clearAll() {
       A = null;

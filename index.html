@@ -22,405 +22,419 @@
             <a href="https://stardance.hackclub.com/@Rayan123-4/projects" style="color: #663399" target="_blank">Stardance <span class="hackClubLink">(Hack Club)</span></a>
             <a href="https://github.com/rayan123-4" target="_blank" style="color: blue;">Github</a>
         </div>
-        </div>
+    </div>
     <div id="paintWindow" class="paint-window">
         <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt="Stardance pop up trio">
         <img src="Images/stardance.avif" class="welcome-page-header" id="Paintwindow-header">
         <button class="minimize-button">—</button>
         <p class="close-button" id="PaintWindow-close">X</p>
         <div class="paint-content">
-            <div class="paint-body style="border-radius: 12px">
-    <div id="paintToolBar">
-        <h1>Draw your own Tiger!</h1>
-        <input type="color" id="color-picker" value="#000000">
-        <input type="range" id="brush-size" min="1" max="50">
-        <button id="paint-clear-button">Clear</button>
-        <button id="paint-fill-button">Fill</button>
-        <button id="paint-undo-button">Undo</button>
-        <button id="paint-download-button">Download</button>
+            <div class="paint-body" style="border-radius: 12px">
+                <div id="paintToolBar">
+                    <h1>Draw your own Tiger!</h1>
+                    <input type="color" id="color-picker" value="#000000">
+                    <input type="range" id="brush-size" min="1" max="50">
+                    <button id="paint-clear-button">Clear</button>
+                    <button id="paint-fill-button">Fill</button>
+                    <button id="paint-undo-button">Undo</button>
+                    <button id="paint-download-button">Download</button>
+                </div>
+                <canvas id="paintBoard" width="428" height="495" style="border-radius: 12px"></canvas>
+            </div>
+        </div>
     </div>
-    <canvas id="paintBoard" width="420" height="470"></canvas>
-</div>
-</div>
-</div>
 
 
     <div id="calcWindow" class="calc-Window">
-    <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt="Stardance pop up trio">
-    <img src="Images/stardance.avif" class="welcome-page-header" id="Calcwindow-header">
-    <button class="minimize-button">—</button>
-    <p class="close-button" id="CalcWindow-close">X</p>
-    <div class="calc-container">
-        <div id="calculator">
-        <input type=text id="display" readonly>
+        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt="Stardance pop up trio">
+        <img src="Images/stardance.avif" class="welcome-page-header" id="Calcwindow-header">
+        <button class="minimize-button">—</button>
+        <p class="close-button" id="CalcWindow-close">X</p>
+        <div class="calc-container">
+            <div id="calculator">
+                <input type=text id="display" readonly>
 
-        <div id="buttons"></div>
+                <div id="buttons"></div>
+            </div>
+        </div>
     </div>
-    </div>
-</div>
 
 
     <div class="alert-list">
-    <div id="scoreAlert0">🐯: &quot;I need more food!&quot;</div>
-    <div id="scoreAlert1">🐯: &quot;Have you played this game before?&quot;</div>
-    <div id="scoreAlert2">🐯: &quot;That's Impressive, thank you!&quot;</div>
-    <div id="scoreAlert3">🐯: &quot;I think I'm starting to get full&quot;</div>
-</div>
+        <div id="scoreAlert0">🐯: &quot;I need more food!&quot;</div>
+        <div id="scoreAlert1">🐯: &quot;Have you played this game before?&quot;</div>
+        <div id="scoreAlert2">🐯: &quot;That's Impressive, thank you!&quot;</div>
+        <div id="scoreAlert3">🐯: &quot;I think I'm starting to get full&quot;</div>
+    </div>
     <div id="snakeGameWindow" class="snake-Game-Window">
         <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt="Stardance pop up trio">
         <img src="Images/stardance.avif" class="welcome-page-header" id="Snakewindow-header">
         <button class="minimize-button">—</button>
         <p class="close-button" id="SnakeWindow-close">X</p>
-    <div id="snakeGameContainer" class="snake-game-container">
-        <canvas id="gameBoard" width="500" height="500"></canvas>
-        <div class="game-Btns">
-        <div id="scoreText">0</div>
-        <button id="gameResetBtn">Reset</button>
-         <button id="solidSkinBtn" class="skin-btn">🍊 Orange Color Body</button>
-         <button id="stripeSkinBtn" class="skin-btn">🐯 Tiger Striped Body</button>
+        <div id="snakeGameContainer" class="snake-game-container">
+            <canvas id="gameBoard" width="500" height="500"></canvas>
+            <div class="game-Btns">
+                <div id="scoreText">0</div>
+                <button id="gameResetBtn">Reset</button>
+                <button id="solidSkinBtn" class="skin-btn">🍊 Orange Color Body</button>
+                <button id="stripeSkinBtn" class="skin-btn">🐯 Tiger Striped Body</button>
+            </div>
+            <div class="high-Score-Row">
+             <p class="high-Score-Text">HighScore:</p>
+             <div id="highScoreText">High Score: 0</div>
+         </div>
+
      </div>
-       <div class="high-Score-Row">
-     <p class="high-Score-Text">HighScore:</p>
-     <div id="highScoreText">High Score: 0</div>
  </div>
-   
-    </div>
+
+ <div id="stardanceButton">
+    <img src="Images/stardanceTrio.avif" class="stardance-Button" alt="stardance button">
 </div>
 
-    <div id="stardanceButton">
-        <img src="Images/stardanceTrio.avif" class="stardance-Button" alt="stardance button">
-    </div>
-
-    <div id="ManualWindow" class="manual-window">
+<div id="ManualWindow" class="manual-window">
     <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt="Stardance pop up trio">
-        <img src="Images/stardance.avif" class="welcome-page-header" id="Manualwindow-header">
-        <button class="minimize-button">—</button>
-        <p class="close-button" id="Manualwindow-close">X</p>
-        <div class="manual-content">
-            <div class="manual-image">
+    <img src="Images/stardance.avif" class="welcome-page-header" id="Manualwindow-header">
+    <button class="minimize-button">—</button>
+    <p class="close-button" id="Manualwindow-close">X</p>
+    <div class="manual-content">
+        <div class="manual-image">
             <img src="Images/manual-paper.png" alt=" Paper behind text in manual app">
         </div>
-            <h1>Welcome to the TigerOS Manual</h1>
-            <p>What features/experiences does this OS have to offer?</p>
-            <p>1. Check out the tiger gallery and look at all the cool tiger photos, in the <b>Gallery app</b>.</p>
-            <p>2. Explore the different tiger species sound, to see their simularities and differences, in the <b>Sound
-                Button app.</b></p>
-            <p>3. Take a look at the tiger species habitat map, to see where different tigers live and where some
-                extinct tigers used to roam around, in the <b>Map app</b>.</p>
+        <h1>Welcome to the TigerOS Manual</h1>
+        <p>What features/experiences does this OS have to offer?</p>
+        <p>1. Check out the tiger gallery and look at all the cool tiger photos, in the <b>Gallery app</b>.</p>
+        <p>2. Explore the different tiger species sound, to see their simularities and differences, in the <b>Sound
+        Button app.</b></p>
+        <p>3. Take a look at the tiger species habitat map, to see where different tigers live and where some
+            extinct tigers used to roam around, in the <b>Map app</b>.</p>
             <p>4. Customize your experience in the <b>Settings app</b>, where you can switch between dark mode and light mode,
-                and even change the background image.</p>
+            and even change the background image.</p>
             <p>5. Indulge in some information about tigers and learn a new thing or two, in the <b>Information app</b>.</p>
             <p>6. Learn a cool new fact about the hottest recorded day, in the most tiger populated place in India, in
                 the <b>Fun Fact app</b>.</p>
-            <p>7. Explore the temperatures of different places all across the world, at this exact moment, in the <b>Weather
+                <p>7. Explore the temperatures of different places all across the world, at this exact moment, in the <b>Weather
                 app.</b></p>
                 <p>8. Stay right where you are and keep on reading in the <b>Manual app.</b></p>
                 <p>9. Play a fun game of Tiger Snake. Controls are arrow keys and to play again just press the reset button. Also if you want to change the color of the snake tap the skin buttons in the <b>Tiger Snake app.</b></p>
                 <p>10. Need help with your homework? Answer all your questions like 1+1 in the <b>Calculator app.</b></p>
                 <p>11. Draw your own Tiger masterpiece, to be put up in a musuem in the <b>Paint Canvas app.</b></p>
                 <p>12. Find the <b>secret hidden feature</b> inside this OS, hint its obvious, and you may have already found it.
-        </div>
-    </div>
-    <div id="RealWeatherWindow" class="real-weather-window">
-        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
-        <img src="Images/stardance.avif" class="welcome-page-header" id="RealWeatherwindow-header">
-        <button class="minimize-button">—</button>
-        <p class="close-button" id="Real-Weatherwindow-close">X</p>
-        <div class="real-weather">
-            <div class="weather-search">
-                <input type="text" id="city-input" placeholder="Enter city name" spellcheck="false">
-                <button id="search-button">Search</button>
-            </div>
-            <h1 class="real-weather-title">Current weather:</h1>
-            <img class="real-weather-image" alt="real-weather-image">
-            <img src="Images/default-real-weather.png" class="default-weather-image" alt="default-weather-image">
-            <h2 class="real-temp">29°c</h2>
-            <h3 class="real-city">London</h3>
-            <div class="weather-details">
-                <div class="real-col">
-                    <img src="Images/humidity.png" alt="Humidity">
-                    <div>
-                        <p class="real-humidity">10%</p>
-                        <p class="real-humid-wind-text">Humidity</p>
-                    </div>
-                </div>
-                <div class="real-col">
-                    <img src="Images/wind.png" alt="Wind speed">
-                    <div>
-                        <p class="real-wind">20 km/h</p>
-                        <p class="real-humid-wind-text">Wind Speed</p>
-                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="WeatherWindow" class="Weather-Window">
-        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
-        <img src="Images/stardance.avif" class="welcome-page-header" id="Weatherwindow-header">
-        <button class="minimize-button">—</button>
-        <p class="close-button" id="Weatherwindow-close">X</p>
-        <div class="weather">
-            <h1 class="weather-title">Hottest day in:</h1>
-            <img class="weather-main-image" src="Images/hot-temperature.png" alt="Hot temperature">
-            <h2 class="temp">49°c</h2>
-            <h3 class="city">Nowgaon, Madhya Pradesh</h3>
-            <p class="weather-note">(Highest Tiger population of any state in India)</p>
-            <p class="weather-date">10 June 2019</p>
-            <div class="weather-details">
-                <div class="col">
-                    <img src="Images/humidity.png" alt="Humidity">
-                    <div>
-                        <p class="humidity">10%</p>
-                        <p class="humid-wind-text">Humidity</p>
+            <div id="RealWeatherWindow" class="real-weather-window">
+                <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+                <img src="Images/stardance.avif" class="welcome-page-header" id="RealWeatherwindow-header">
+                <button class="minimize-button">—</button>
+                <p class="close-button" id="Real-Weatherwindow-close">X</p>
+                <div class="real-weather">
+                    <div class="weather-search">
+                        <input type="text" id="city-input" placeholder="Enter city name" spellcheck="false">
+                        <button id="search-button">Search</button>
                     </div>
-                </div>
-                <div class="col">
-                    <img src="Images/wind.png" alt="Wind speed">
-                    <div>
-                        <p class="wind">20 km/h</p>
-                        <p class="humid-wind-text">Wind Speed</p>
+                    <h1 class="real-weather-title">Current weather:</h1>
+                    <img class="real-weather-image" alt="real-weather-image">
+                    <img src="Images/default-real-weather.png" class="default-weather-image" alt="default-weather-image">
+                    <h2 class="real-temp">29°c</h2>
+                    <h3 class="real-city">London</h3>
+                    <div class="weather-details">
+                        <div class="real-col">
+                            <img src="Images/humidity.png" alt="Humidity">
+                            <div>
+                                <p class="real-humidity">10%</p>
+                                <p class="real-humid-wind-text">Humidity</p>
+                            </div>
+                        </div>
+                        <div class="real-col">
+                            <img src="Images/wind.png" alt="Wind speed">
+                            <div>
+                                <p class="real-wind">20 km/h</p>
+                                <p class="real-humid-wind-text">Wind Speed</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div id="TigerInformation" class="Tiger-Information">
-        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
-        <img src="Images/stardance.avif" class="welcome-page-header" id="TigerInformation-header">
-        <button class="minimize-button">—</button>
-        <p class="close-button" id="informationclose">X</p>
-        <div class="Tiger-Information-content">
-            <h1>Information about Tigers</h1>
-            <p>The Tiger, (Panthera tigris), the largest member of the cat family, rivaled only by the lion (Panthera
-                leo) in strength and ferocity; it is a famous apex predator (meaning without a natural predator or
-                enemy). Tigers are carnivores, primarily hunting large deer and wild boar. However, they are currently
-                classified as Endangered, facing severe threats from habitat fragmentation, human-wildlife conflict, and
-                poaching. Tiger habitats can stretch from the Russian Far East through parts of North Korea, China,
-                India, and Southeast Asia to the Indonesian island of Sumatra. The Siberian , or Amur tiger is the
-                largest, measuring up to 4 meters (13 feet) in total length and weighing up to 300 kg (660 pounds).
-                Tigers from the north are normally much bigger than those from the south, hense why the Siberian/Amur
-                tiger is the largest among them.</p>
-
-            <br>
-            <img src="Images/TypesOfTigers.jpg" alt="Tiger info image1" class="info-image1">
-            <br><br>
-
-            <p>Most tigers have a natural camouflage, featuring a striking combination of a reddish-orange jacket, with
-                jet-black stripes all across it, and crisp white underlayering. However sometimes tigers can have rare
-                traits that make them have slight changes in their colouring. Tigers are solitary, ambush predators
-                that live and hunt completely alone, throughout their adulthood. When they are cubs they will spend most
-                of their time together with the family until they get older and are ready to hunt for themselves. </p>
-
-            <br>
-            <img src="Images/TigerFamily.jpg" alt="Tiger info image2" class="info-image2">
-            <br><br>
-
-            <p>While standard tigers feature classic orange coats, rare genetic mutations can completely transform
-                their appearance, turning them white or even mostly black. A white tiger is caused by a genetic trait
-                called leucism, which strips away the orange and red pigments from the fur but leaves the dark stripes
-                intact. On the flip side, a black tiger is caused by pseudo-melanism, a mutation that makes the dark
-                stripes grow so thick and wide that they fuse together, almost completely covering up the orange
-                underneath. On incredibly rare occasions, a tiger can inherit both traits at the exact same time,
-                resulting in a striking, high-contrast black-and-white coat.</p>
-
-            <br>
-            <img src="Images/Tiger.Colors.png" alt="Tiger info image3" class="info-image3">
-            <br><br>
-
-            <p>They rely on environments with thick, dense cover—like tall golden grasslands, thick bushy jungles,
-                tropical rainforests, and dense swamps. Some tigers like the Siberian/Amur tiger have adapted to living
-                in the cold snow, with a thicker coat. These habitats are crucial because tigers do not hunt in packs
-                like wolves or lions, they hide in the vegetation to stalk and surprise their prey one-on-one, almost
-                like a housecat would. Tigers are very territorial, even pushing other tigers out of their area using
-                scent marks.</p>
-
-            <br>
-            <img src="Images/TigerCamo.jpg" alt="Tiger info image4" class="info-image4">
-            <br><br>
-
-            <p>Source - <a href="https://www.britannica.com/animal/tiger">https://www.britannica.com/animal/tiger</a>
-            </p>
-        </div>
-    </div>
-    <div id="startupoverlay" class="startup-overlay">
-        <div class="grass-background"></div>
-        <div class="Banner">
-            <img src="Images/Banner.png" class="intro-text" alt="TigerOS Text img">
-        </div>
-        <div class="Tiger-container">
-            <div class="TigerBanner">
-                <img src="Images/TigerBanner.png" class="Tiger-body" alt="Walking Tiger Graphic">
-            </div>
-        </div>
-    </div>
-
-    <div id="desktopapp" class="desktop-app">
-        <p id="welcomeopen" class="open-button">
-            TigerOS (Welcome Text Window)
-        </p>
-    </div>
-    <div class="top-bar">
-        <p class="RayanOS">
-            <button id="linkBtn" class="RayanOS-link">@Rayan123-4</button>
-        </p>
-        <p id="timeElement" class="date-time">
-            02/09/2026 9:17 PM
-        </p>
-    </div>
-    <div id="welcomepage" class="window-box">
-        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
-        <img src="Images/stardance.avif" id="welcomepage-header" class="welcome-page-header">
-        <button class="minimize-button">—</button>
-        <p id="welcomeclose" class="close-button">
-            X
-        </p>
-
-        <div id="title&image" class="title-image">
-            <h1 class="welcome-rayanOS"><i>Welcome to TigerOS!</i></h1>
-            <p>This OS is themed around tigers. You can explore through multiple different apps and experiences that you can find on this OS. <p>
-            <p>For more information about what you can find in this OS check the Manual app </p>
-            <img src="Images/WelcomeTiger.webp" alt="Tiger-Image" />
-        </div>
-
-    </div>
-    <div class="icon-bar">
-        <div class="icon-list">
-            <div id="paintIcon" class="paint-Icon">
-                <img src="Images/paint-Icon.png" alt="Paint canvas Icon">
-            </div>
-            <div id="calcIcon" class="calc-Icon">
-                <img src="Images/tigerCalculater.png" alt="Calculator Icon">    
-            </div>
-            <div id="informationicon" class="information-icon">
-                <img src="Images/tigerInformation.jpeg" alt="Information Icon" />
-            </div>
-            <div id="snakeIcon" class="snake-icon">
-                <img src="Images/snakeIcon.png" alt="Snake Game Icon" />
-            </div>
-            <div id="manualicon" class="manual-icon">
-                <img src="Images/user-manual.png" alt=" Manual Icon" />
-            </div>
-            <div id="weatherIcon" class="weather-icon">
-                <img src="Images/factweather-icon.png" alt="Weather Icon">
-            </div>
-            <div id="realweatherIcon" class="real-weather-icon">
-                <img src="Images/weather-icon.png" alt="Real Weather Icon">
-            </div>
-            <div id="settingsIcon" class="settings-Icon">
-                <img src="Images/SettingsIcon.png" alt="Settings Icon" />
-            </div>
-            <div id="tigergallery" class="tiger-gallery">
-                <img src="Images/GalleryIcon.png" alt="gallery-icon">
-            </div>
-            <div id="roarIcon" class="roar-Icon">
-                <img src="Images/Speaker_Icon.svg" alt="Tiger-roar">
-            </div>
-            <div id="tigermapicon" class="tiger-map-icon">
-                <img src="Images/MapIcon.png" alt="tiger map app">
-            </div>
-        </div>
-    </div>
-    <div id="settingswindow" class="settings-window">
-        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
-        <img src="Images/stardance.avif" class="welcome-page-header" id="settingswindow-header">
-        <button class="minimize-button">—</button>
-        <p class="close-button" id="settingswindow-close">X</p>
-        <div class="settings-content">
-            <h1> Settings</h1>
-            <p>Switch between light and dark mode</p>
-            <button id="ColorThemeSwitch">
-                <img src="Images/Darkmode.svg" height="24" width="24" alt="Dark mode icon">
-                <img src="Images/Lightmode.svg" height="24" width="24" alt="Light mode icon">
-            </button>
-
-            <p><strong>Pick a background image</strong></p>
-            <div id="backgroundswitcher" class="background-switcher">
-                <p><strong>🔥Warm</strong></p>
-                <img id="lightBackground" class="background-theme-image" src="Images/lightTheme.jpg" alt="Light theme">
-            </div>
-
-            <div id="backgroundswitcher" class="background-switcher">
-                <p><strong>❄Cool</strong></p>
-                <img id="darkBackground" class="background-theme-image" src="Images/darkTheme.jpg" alt="Dark theme">
-            </div>
-        </div>
-
-    </div>
-
-    <div id="tigermapwindow" class="tiger-map-window">
-        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
-        <img src="Images/stardance.avif" class="welcome-page-header" id="mapwindow-header">
-        <button class="minimize-button">—</button>
-        <p class="close-button" id="mapwindow-close">X</p>
-        <div class="tiger-map-content">
-            <h1 class="tiger-map-title">Tiger Species Habitat Map</h1>
-            <img class="tiger-map-image" src="Images/Tiger-mapWFFT.webp" alt="Tiger habitat map image">
-            <a href="https://www.wfft.org/" class="Credits from Image" target="_blank" style="text-decoration: underline; ">
-                <b>Image from Wildlife Friends Foundation Thailand (WFFT)</b>
-            </a>
-        </div>
-    </div>
-
-    <div id="roarwindow" class="roar-window">
-        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
-        <img src="Images/stardance.avif" class="welcome-page-header" id="roarwindow-header">
-        <button class="minimize-button">—</button>
-        <p class="close-button" id="roarwindow-close">X</p>
-        <div class="title-roar-window">
-            <h1 class="roar-title"> Tiger Roar Sound Effects</h1>
-            <div class="roar-list">
-                <div class="roar-item">
-                    <p>Bengal</p>
-                    <img id="roarsoundbutton1" class="roar-sound-button" src="Images/BengalTiger.png" alt="Bengal-roar">
-                </div>
-                <div class="roar-item">
-                    <p>Sumatran</p>
-                    <img id="roarsoundbutton2" class="roar-sound-button" src="Images/SumatranTiger.jpg"
-                        alt="Sumatran-roar">
-                </div>
-                <div class="roar-item">
-                    <p>Siberian/Amur</p>
-                    <img id="roarsoundbutton3" class="roar-sound-button" src="Images/SiberianTiger.jpg"
-                        alt="Siberian-roar">
-                </div>
-                <div class="roar-item">
-                    <p>South China</p>
-                    <img id="roarsoundbutton4" class="roar-sound-button" src="Images/SouthChinaTiger.jpg"
-                        alt="South China-roar">
+            <div id="WeatherWindow" class="Weather-Window">
+                <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+                <img src="Images/stardance.avif" class="welcome-page-header" id="Weatherwindow-header">
+                <button class="minimize-button">—</button>
+                <p class="close-button" id="Weatherwindow-close">X</p>
+                <div class="weather">
+                    <h1 class="weather-title">Hottest day in:</h1>
+                    <img class="weather-main-image" src="Images/hot-temperature.png" alt="Hot temperature">
+                    <h2 class="temp">49°c</h2>
+                    <h3 class="city">Nowgaon, Madhya Pradesh</h3>
+                    <p class="weather-note">(Highest Tiger population of any state in India)</p>
+                    <p class="weather-date">10 June 2019</p>
+                    <div class="weather-details">
+                        <div class="col">
+                            <img src="Images/humidity.png" alt="Humidity">
+                            <div>
+                                <p class="humidity">10%</p>
+                                <p class="humid-wind-text">Humidity</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="Images/wind.png" alt="Wind speed">
+                            <div>
+                                <p class="wind">20 km/h</p>
+                                <p class="humid-wind-text">Wind Speed</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div id="gallerywindow" class="gallery-window">
-        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
-        <img src="Images/stardance.avif" id="gallerywindow-header" class="welcome-page-header">
-        <button class="minimize-button">—</button>
-        <p id="galleryclose" class="close-button">X</p>
+            <div id="TigerInformation" class="Tiger-Information">
+                <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+                <img src="Images/stardance.avif" class="welcome-page-header" id="TigerInformation-header">
+                <button class="minimize-button">—</button>
+                <p class="close-button" id="informationclose">X</p>
+                <div class="Tiger-Information-content">
+                    <h1>Information about Tigers</h1>
+                    <p>The Tiger, (Panthera tigris), the largest member of the cat family, rivaled only by the lion (Panthera
+                        leo) in strength and ferocity; it is a famous apex predator (meaning without a natural predator or
+                        enemy). Tigers are carnivores, primarily hunting large deer and wild boar. However, they are currently
+                        classified as Endangered, facing severe threats from habitat fragmentation, human-wildlife conflict, and
+                        poaching. Tiger habitats can stretch from the Russian Far East through parts of North Korea, China,
+                        India, and Southeast Asia to the Indonesian island of Sumatra. The Siberian , or Amur tiger is the
+                        largest, measuring up to 4 meters (13 feet) in total length and weighing up to 300 kg (660 pounds).
+                        Tigers from the north are normally much bigger than those from the south, hense why the Siberian/Amur
+                    tiger is the largest among them.</p>
 
-        <div class="gallerySpace" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 12px; margin-top: 32px;">
+                    <br>
+                    <img src="Images/TypesOfTigers.jpg" alt="Tiger info image1" class="info-image1">
+                    <br><br>
 
-        <img id="cameraFlash" src="Images/whiteFlash.png" class="camera-flash" alt="Flash Effect" style="display: none;">
+                    <p>Most tigers have a natural camouflage, featuring a striking combination of a reddish-orange jacket, with
+                        jet-black stripes all across it, and crisp white underlayering. However sometimes tigers can have rare
+                        traits that make them have slight changes in their colouring. Tigers are solitary, ambush predators
+                        that live and hunt completely alone, throughout their adulthood. When they are cubs they will spend most
+                    of their time together with the family until they get older and are ready to hunt for themselves. </p>
 
-        <div id="cameraDisplay" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; min-height: 400px;"class="camera-display">
-                <img src="Images/camera.png" alt="Camera" class="camera-Image" style="width: 400px; height: auto;">
+                    <br>
+                    <img src="Images/TigerFamily.jpg" alt="Tiger info image2" class="info-image2">
+                    <br><br>
+
+                    <p>While standard tigers feature classic orange coats, rare genetic mutations can completely transform
+                        their appearance, turning them white or even mostly black. A white tiger is caused by a genetic trait
+                        called leucism, which strips away the orange and red pigments from the fur but leaves the dark stripes
+                        intact. On the flip side, a black tiger is caused by pseudo-melanism, a mutation that makes the dark
+                        stripes grow so thick and wide that they fuse together, almost completely covering up the orange
+                        underneath. On incredibly rare occasions, a tiger can inherit both traits at the exact same time,
+                    resulting in a striking, high-contrast black-and-white coat.</p>
+
+                    <br>
+                    <img src="Images/Tiger.Colors.png" alt="Tiger info image3" class="info-image3">
+                    <br><br>
+
+                    <p>They rely on environments with thick, dense cover—like tall golden grasslands, thick bushy jungles,
+                        tropical rainforests, and dense swamps. Some tigers like the Siberian/Amur tiger have adapted to living
+                        in the cold snow, with a thicker coat. These habitats are crucial because tigers do not hunt in packs
+                        like wolves or lions, they hide in the vegetation to stalk and surprise their prey one-on-one, almost
+                        like a housecat would. Tigers are very territorial, even pushing other tigers out of their area using
+                    scent marks.</p>
+
+                    <br>
+                    <img src="Images/TigerCamo.jpg" alt="Tiger info image4" class="info-image4">
+                    <br><br>
+
+                    <p>Source - <a href="https://www.britannica.com/animal/tiger">https://www.britannica.com/animal/tiger</a>
+                    </p>
+                </div>
+            </div>
+            <div id="startupoverlay" class="startup-overlay">
+                <div class="grass-background"></div>
+                <div class="Banner">
+                    <img src="Images/Banner.png" class="intro-text" alt="TigerOS Text img">
+                </div>
+                <div class="Tiger-container">
+                    <div class="TigerBanner">
+                        <img src="Images/TigerBanner.png" class="Tiger-body" alt="Walking Tiger Graphic">
+                    </div>
+                </div>
             </div>
 
-        <div id="photoViewContent" class="gallery-images" style="display: none;">
-            <h1 class="gallery-title"> Tiger Photo Gallery</h1>
-            <div class="gallery-photo-grid">
-                <img src="Images/Tiger1.jpeg" alt="Tiger1">
-                <img src="Images/Tiger2.JPG" alt="Tiger2">
-                <img src="Images/Tiger3.jpeg" alt="Tiger3">
-                <img src="Images/Tiger4.jpg" alt="Tiger4">
-                <img src="Images/Tiger5.webp" alt="Tiger5">
-                <img src="Images/Tiger6.webp" alt="Tiger6" class="Tiger-6">
-
+            <div id="desktopapp" class="desktop-app">
+                <p id="welcomeopen" class="open-button">
+                    TigerOS (Welcome Text Window)
+                </p>
             </div>
-        </div>
+            <div class="top-bar">
+                <p class="RayanOS">
+                    <button id="linkBtn" class="RayanOS-link">@Rayan123-4</button>
+                </p>
+                <p id="timeElement" class="date-time">
+                    02/09/2026 9:17 PM
+                </p>
+            </div>
+            <div id="welcomepage" class="window-box">
+                <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+                <img src="Images/stardance.avif" id="welcomepage-header" class="welcome-page-header">
+                <button class="minimize-button">—</button>
+                <p id="welcomeclose" class="close-button">
+                    X
+                </p>
 
-    </div>
-</body>
+                <div id="title&image" class="title-image">
+                    <h1 class="welcome-rayanOS"><i>Welcome to TigerOS!</i></h1>
+                    <p>This OS is themed around tigers. You can explore through multiple different apps and experiences that you can find on this OS. <p>
+                        <p>For more information about what you can find in this OS check the Manual app </p>
+                        <img src="Images/WelcomeTiger.webp" alt="Tiger-Image" />
+                    </div>
 
-</html>
+                </div>
+                <div class="icon-bar">
+                    <div class="icon-list">
+                        <div id="paintIcon" class="paint-Icon">
+                            <img src="Images/paint-Icon.png" class="icon-Img" alt="Paint canvas Icon">
+                        </div>
+                        <div id="calcIcon" class="calc-Icon">
+                            <img src="Images/tigerCalculater.png" class="icon-Img" alt="Calculator Icon">
+                        </div>
+                        <div id="informationicon" class="information-icon">
+                            <img src="Images/tigerInformation.jpeg" class="icon-Img" alt="Information Icon">
+                        </div>
+                        <div id="snakeIcon" class="snake-icon">
+                            <img src="Images/snakeIcon.png" class="icon-Img" alt="Snake Game Icon">
+                        </div>
+                        <div id="manualicon" class="manual-icon">
+                            <img src="Images/user-manual.png" class="icon-Img" alt="Manual Icon">
+                        </div>
+                        <div id="weatherIcon" class="weather-icon">
+                            <img src="Images/factweather-icon.png" class="icon-Img" alt="Weather Icon">
+                        </div>
+                        <div id="realweatherIcon" class="real-weather-icon">
+                            <img src="Images/weather-icon.png" class="icon-Img" alt="Real Weather Icon">
+                        </div>
+                        <div id="settingsIcon" class="settings-Icon">
+                            <img src="Images/SettingsIcon.png" class="icon-Img" alt="Settings Icon">
+                        </div>
+                        <div id="tigergallery" class="tiger-gallery">
+                            <img src="Images/GalleryIcon.png" class="icon-Img" alt="gallery-icon">
+                        </div>
+                        <div id="roarIcon" class="roar-Icon">
+                            <img src="Images/Speaker_Icon.svg" class="icon-Img" alt="Tiger-roar">
+                        </div>
+                        <div id="tigermapicon" class="tiger-map-icon">
+                            <img src="Images/MapIcon.png" class="icon-Img" alt="tiger map app">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-Icon-List">
+                    <p class="icon-text-gallery">Tiger Gallery</p>
+                    <p class="icon-text-roar">Tiger Roar Sound</p>
+                    <p class="icon-text-map">Tiger Map</p>
+                    <p class="icon-text-settings">Tiger Settings</p>
+                    <p class="icon-text-info">Tiger Information</p>
+                    <p class="icon-text-fact">Tiger Weather Fact</p>
+                    <p class="icon-text-weather">Tiger Weather</p>
+                    <p class="icon-text-manual">Tiger Manual</p>
+                    <p class="icon-text-game">Tiger Snake Game</p>
+                    <p class="icon-text-calc">Tiger Calculator</p>
+                    <p class="icon-text-canvas">Tiger Canvas</p>
+                </div>
+
+                <div id="settingswindow" class="settings-window">
+                    <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+                    <img src="Images/stardance.avif" class="welcome-page-header" id="settingswindow-header">
+                    <button class="minimize-button">—</button>
+                    <p class="close-button" id="settingswindow-close">X</p>
+                    <div class="settings-content">
+                        <h1> Settings</h1>
+                        <p>Switch between light and dark mode</p>
+                        <button id="ColorThemeSwitch">
+                            <img src="Images/Darkmode.svg" height="24" width="24" alt="Dark mode icon">
+                            <img src="Images/Lightmode.svg" height="24" width="24" alt="Light mode icon">
+                        </button>
+
+                        <p><strong>Pick a background image</strong></p>
+                        <div id="backgroundswitcher" class="background-switcher">
+                            <p><strong>🔥Warm</strong></p>
+                            <img id="lightBackground" class="background-theme-image" src="Images/lightTheme.jpg" alt="Light theme">
+                        </div>
+
+                        <div id="backgroundswitcher" class="background-switcher">
+                            <p><strong>❄Cool</strong></p>
+                            <img id="darkBackground" class="background-theme-image" src="Images/darkTheme.jpg" alt="Dark theme">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="tigermapwindow" class="tiger-map-window">
+                    <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+                    <img src="Images/stardance.avif" class="welcome-page-header" id="mapwindow-header">
+                    <button class="minimize-button">—</button>
+                    <p class="close-button" id="mapwindow-close">X</p>
+                    <div class="tiger-map-content">
+                        <h1 class="tiger-map-title">Tiger Species Habitat Map</h1>
+                        <img class="tiger-map-image" src="Images/Tiger-mapWFFT.webp" alt="Tiger habitat map image">
+                        <a href="https://www.wfft.org/" alt="Credits from Image" target="_blank" style="text-decoration: underline; ">
+                            <b>Image from Wildlife Friends Foundation Thailand (WFFT)</b>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="roarwindow" class="roar-window">
+                    <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+                    <img src="Images/stardance.avif" class="welcome-page-header" id="roarwindow-header">
+                    <button class="minimize-button">—</button>
+                    <p class="close-button" id="roarwindow-close">X</p>
+                    <div class="title-roar-window">
+                        <h1 class="roar-title"> Tiger Roar Sound Effects</h1>
+                        <div class="roar-list">
+                            <div class="roar-item">
+                                <p>Bengal</p>
+                                <img id="roarsoundbutton1" class="roar-sound-button" src="Images/BengalTiger.png" alt="Bengal-roar">
+                            </div>
+                            <div class="roar-item">
+                                <p>Sumatran</p>
+                                <img id="roarsoundbutton2" class="roar-sound-button" src="Images/SumatranTiger.jpg"
+                                alt="Sumatran-roar">
+                            </div>
+                            <div class="roar-item">
+                                <p>Siberian/Amur</p>
+                                <img id="roarsoundbutton3" class="roar-sound-button" src="Images/SiberianTiger.jpg"
+                                alt="Siberian-roar">
+                            </div>
+                            <div class="roar-item">
+                                <p>South China</p>
+                                <img id="roarsoundbutton4" class="roar-sound-button" src="Images/SouthChinaTiger.jpg"
+                                alt="South China-roar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallerywindow" class="gallery-window">
+                    <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+                    <img src="Images/stardance.avif" id="gallerywindow-header" class="welcome-page-header">
+                    <button class="minimize-button">—</button>
+                    <p id="galleryclose" class="close-button">X</p>
+
+                    <div class="gallerySpace" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 12px; margin-top: 32px;">
+
+                        <img id="cameraFlash" src="Images/whiteFlash.png" class="camera-flash" alt="Flash Effect" style="display: none;">
+
+                        <div id="cameraDisplay" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; min-height: 400px;"class="camera-display">
+                            <img src="Images/camera.png" alt="Camera" class="camera-Image" style="width: 400px; height: auto;">
+                        </div>
+
+                        <div id="photoViewContent" class="gallery-images" style="display: none;">
+                            <h1 class="gallery-title"> Tiger Photo Gallery</h1>
+                            <div class="gallery-photo-grid">
+                                <img src="Images/Tiger1.jpeg" alt="Tiger1">
+                                <img src="Images/Tiger2.JPG" alt="Tiger2">
+                                <img src="Images/Tiger3.jpeg" alt="Tiger3">
+                                <img src="Images/Tiger4.jpg" alt="Tiger4">
+                                <img src="Images/Tiger5.webp" alt="Tiger5">
+                                <img src="Images/Tiger6.webp" alt="Tiger6" class="Tiger-6">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </body>
+
+                </html>
