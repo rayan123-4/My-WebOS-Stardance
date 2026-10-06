@@ -1637,16 +1637,16 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
 }
 
 .alert-list div {
- color: var(--color--text--dark);
- font-size: 35px;
- font-weight: bold;
- display: none;
- height: auto;
- width: auto;
- background: var(--color-panel-background);
- border-radius: 12px;
- filter: blur(0);
- animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: var(--color--text--dark);
+    font-size: 35px;
+    font-weight: bold;
+    display: none;
+    height: auto;
+    width: auto;
+    background: var(--color-panel-background);
+    border-radius: 12px;
+    filter: blur(0);
+    animation: alertPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes alertPop {
