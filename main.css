@@ -299,6 +299,7 @@ body {
 /* Casual stuff */
 .date-time {
     margin-right: 0px;
+    font-weight: 700;
 }
 
 
@@ -307,6 +308,7 @@ body {
     color: var(--color-ui-white); 
     text-decoration: none;
 }
+
 
 .RayanOS-link {
     color: var(--color-ui-white); 
@@ -1836,6 +1838,28 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
     background-color: var(--color-glass-background);
     z-index: 1;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.rayan-Link-Window .minimize-button {
+    position: absolute;
+    top: 4px;
+    right: 35px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--color-ui-white);
+    margin: 0;
+    background-color: var(--minimize-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    font-weight: 1000;
+    font-size: 10px;
 }
 
 .rayan-Links {
