@@ -1314,6 +1314,8 @@ h3 {
     overflow-y: auto;
     backdrop-filter: blur(5px);
     z-index: 1;
+    border: 1px solid #ff7700;
+    box-shadow: 0 4px 12px #ff7700;
 }
 
 .icon-list {
