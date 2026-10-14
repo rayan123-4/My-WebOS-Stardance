@@ -16,6 +16,7 @@
     --minimize-color: #FFCE1B;
     --content-border: black;
     --text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    --vibrant-orange: #ff7700;
 }
 
 body {
@@ -35,10 +36,11 @@ body {
     --color-text-dark: #fff;
     --color-panel-background: #1B1B1B;
     --color-color-text-dark: #fff;
+    --color-window-border: #ff7700;
+    --content-border: #ff7700;
     --paint-board: #000;
     --paint-border: #fff;
     --paint-body: whitesmoke;
-    --content-border: orange;
     --text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.55);
 }
 
@@ -567,7 +569,7 @@ h3 {
 .calc-Icon:hover,
 .paint-Icon:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 10px #ff7700);
+    filter: drop-shadow(0 0 10px var(--color-window-border));
 }
 
 .stardance-Button:hover {
@@ -601,7 +603,7 @@ h3 {
 .calc-container,
 .paint-content,
 .rayan-Links {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15),inset 0 1px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 12px var(--content-border);
 }
 
 /* Tiger information window: */
@@ -1008,7 +1010,8 @@ h3 {
     margin: 16px;
     width: 270px;
     height: 50px;
-    border: 1px solid var(--color-subtle-border);
+    border: 1px solid var(--vibrant-orange);
+    box-shadow: 0 4px 12px var(--vibrant-orange);
 }
 
 
@@ -1026,7 +1029,8 @@ h3 {
     gap: 32px;
     border-radius: 16px;
     margin: 16px;
-    border: 1px solid var(--color-subtle-border);
+    border: 1px solid var(--vibrant-orange);
+    box-shadow: 0 4px 12px var(--vibrant-orange);
     height: 50px;
 }
 
@@ -1044,6 +1048,7 @@ h3 {
 #paintWindow,
 #rayanLinkWindow {
     animation: alertPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    box-shadow: 0 4px 12px var(--color-window-border);
 }
 
 
@@ -1314,8 +1319,8 @@ h3 {
     overflow-y: auto;
     backdrop-filter: blur(5px);
     z-index: 1;
-    border: 1px solid #ff7700;
-    box-shadow: 0 4px 12px #ff7700;
+    border: 1px solid var(--vibrant-orange);
+    box-shadow: 0 4px 12px var(--vibrant-orange);
 }
 
 .icon-list {
@@ -1361,6 +1366,7 @@ h3 {
     border-radius: 12px;
     border: 2px solid var(--content-border);
     white-space: nowrap;
+    box-shadow: 0 4px 12px var(--content-border);
 }
 
 .icon-text-gallery {
@@ -1468,6 +1474,7 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
     box-sizing: border-box;
     z-index: 3;
     overflow-x: hidden;
+    box-shadow: 0 4px 12px var(--content-border);
 }
 
 .manual-window {
@@ -1571,6 +1578,7 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
     padding: 8px; 
     width: 530px;
     transition: transform 0.5s ease;
+    box-shadow: 0 4px 12px var(--content-border);
 }
 
 #scoreText {
@@ -1682,6 +1690,7 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
     align-items: center;
     position: relative;
     z-index: 5;
+    box-shadow: 0 4px 12px var(--content-border);
 }
 
 .calc-Window {
@@ -1788,6 +1797,7 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
     align-items: center;
     position: relative;
     z-index: 5;
+    box-shadow: 0 4px 12px var(--content-border);
 }
 
 #paintBoard {
@@ -1878,6 +1888,7 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
     z-index: 2;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 12px var(--content-border);
 }
 
 #link-close {
