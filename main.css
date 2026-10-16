@@ -1810,6 +1810,7 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
 
 #paintToolBar {
     margin: 10px;
+    color: black;
 }
 
 #paintToolBar button {
