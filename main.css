@@ -1363,7 +1363,7 @@ h3 {
     margin: 10px;
     padding: 4px 8px;
     background: var(--color-panel-background);
-    border-radius: 12px;
+    border-radius: 6px;
     border: 2px solid var(--content-border);
     white-space: nowrap;
     box-shadow: 0 4px 12px var(--content-border);
