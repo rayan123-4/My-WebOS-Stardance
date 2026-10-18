@@ -325,9 +325,27 @@ body {
 
 
 h1 {
-    font-style: italic;
+    font: italic 41px "Fira Sans", serif
+}
+
+.window-box h1 {
+    font: italic 41px "Fira Sans", serif
+}
+
+#welcomepage h1,
+#snakeGameWindow h1,
+#ManualWindow h1,
+#RealWeatherWindow h1,
+#WeatherWindow h1,
+#TigerInformation h1,
+#settingswindow h1,
+#tigermapwindow h1,
+#roarwindow h1,
+#gallerywindow h1,
+#calcWindow h1,
+#paintWindow h1,
+#rayanLinkWindow h1 {
     font-weight: 700;
-    text-shadow: var(--text-shadow);
 }
 
 h2,
