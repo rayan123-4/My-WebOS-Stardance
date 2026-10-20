@@ -16,12 +16,15 @@
 
 <body>
     <div id="tigerChartWindow" class="tiger-Chart-Window">
+        <img src="Images/stardance.avif" class="welcome-page-header" id="Chartwindow-header">
         <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
         <button class="minimize-button">—</button>
-        <p class="close-button" id="link-close">X</p>
+        <p class="close-button" id="ChartWindow-close">X</p>
         <div id="chartContent" class="chart-Content">
+            <h1>Tiger chart (made using JavaScript)</h1>
+            <div class="chart-Canvas">
             <canvas id="myChart" style="width: 100%; max-width: 700px;"></canvas>
-
+        </div>
         </div>
     </div>
     <div id="rayanLinkWindow" class="rayan-Link-Window">
@@ -132,7 +135,8 @@
                 <p>9. Play a fun game of Tiger Snake. Controls are arrow keys and to play again just press the reset button. Also if you want to change the color of the snake tap the skin buttons in the <b>Tiger Snake app.</b></p>
                 <p>10. Need help with your homework? Answer all your questions like 1+1 in the <b>Calculator app.</b></p>
                 <p>11. Draw your own Tiger masterpiece, to be put up in a musuem in the <b>Paint Canvas app.</b></p>
-                <p>12. Find the <b>secret hidden feature</b> inside this OS, hint its obvious, and you may have already found it.
+                <p>12. Be a scientist and analyze the Tiger population data in the <b>Chart app</b></p>
+                <p>13. These are only many of the things you can find in TigerOS</p>
                 </div>
             </div>
             <div id="RealWeatherWindow" class="real-weather-window">
@@ -299,6 +303,9 @@
                 </div>
                 <div class="icon-bar">
                     <div class="icon-list">
+                        <div id="chartIcon" class="chart-Icon">
+                            <img src="Images/diagram.png" class="icon-Img" alt=" Chart window icon">
+                        </div>
                         <div id="paintIcon" class="paint-Icon">
                             <img src="Images/paint-Icon.png" class="icon-Img" alt="Paint canvas Icon">
                         </div>
@@ -347,6 +354,7 @@
                     <p class="icon-text-game">Tiger Snake Game</p>
                     <p class="icon-text-calc">Tiger Calculator</p>
                     <p class="icon-text-canvas">Tiger Canvas</p>
+                    <p class="icon-text-chart">Tiger Chart</p>
                 </div>
 
                 <div id="settingswindow" class="settings-window">

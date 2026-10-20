@@ -1,7 +1,7 @@
 // TIGEROS JAVASCRIPT:
 
 // ALL WINDOWS:
-let windows = (".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window, .rayan-Link-Window")
+let windows = (".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window, .rayan-Link-Window, .tiger-Chart-Window")
 
 // Code for making the DIV element draggable:
 document.querySelectorAll(windows).forEach(dragElement);
@@ -290,6 +290,26 @@ if (paintIcon) {
 if (paintWindowClose) {
   paintWindowClose.addEventListener("click", function () {
     closeWindow(paintWindow);
+  });
+}
+
+
+// for chart window drag:
+dragElement(document.querySelector("#tigerChartWindow"));
+
+var chartWindow = document.querySelector("#tigerChartWindow");
+var chartIcon = document.querySelector("#chartIcon");
+var chartWindowClose = document.querySelector("#ChartWindow-close");
+
+if (chartIcon) {
+  chartIcon.addEventListener("click", function () {
+    openWindow(chartWindow);
+  });
+}
+
+if (chartWindowClose) {
+  chartWindowClose.addEventListener("click", function () {
+    chartWindow(chartWindow);
   });
 }
 
@@ -1330,9 +1350,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 // Making the app icons stay hover light if they open:
 
 // List of icons:
-    var iconList = document.querySelectorAll(
-      ".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon"
-      );
+    var iconList = document.querySelectorAll(".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon, .chart-Icon");
 
 // List of the images:
     var windowMapping = {
@@ -1348,7 +1366,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       "manual-icon": "#ManualWindow",
       "snake-icon": "#snakeGameWindow",
       "calc-Icon": "#calcWindow",
-      "paint-Icon": "#paintWindow"
+      "paint-Icon": "#paintWindow",
+      "chart-Icon": "#tigerChartWindow"
     };
 
     function updateIconHoverDisplay() {
@@ -1449,7 +1468,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     "manual-icon": ".icon-text-manual",
     "snake-icon": ".icon-text-game",
     "calc-Icon": ".icon-text-calc",
-    "paint-Icon": ".icon-text-canvas"
+    "paint-Icon": ".icon-text-canvas",
+    "chart-Icon": ".icon-text-chart"
 };
 
 iconList.forEach(function(icon) {
@@ -1478,11 +1498,12 @@ iconList.forEach(function(icon) {
 });
 
 // Tiger chart code multiple lines:
-const myChart = new Chart("myChart", {
-  type:"line",
-  data: {},
-  options: {}
-});
+
+// const myChart = new Chart("myChart", {
+//   type:"line",
+//   data: {},
+//   options: {}
+// });
 
 const xValues = [2010, 2016, 2022];// ?
 
@@ -1505,6 +1526,12 @@ new Chart ("myChart", {
     }]
   },
   options:{
-    legend: {display: false}
+    legend: {display: false},
+    title: {
+    display: true,
+    text: "Wild Tiger Population Milestones (2010 - 2022)",
+    fontColor: "black",
+    fontSize: 16
   }
+}
 });
