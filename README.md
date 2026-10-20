@@ -67,9 +67,10 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 - **(Using CSS for the camera and flashes, and Javascript for the timeout functions and if statements, to make the camera animation, flash and click happen at a specific time.)**
 5. Added a download button to the paint window, so that people can download their drawings as a PNG file.
 - **(I did this in Javascript using DataURL and some other functions, to trigger a browser download as a PNG file when the download button is pressed.)**
-6. Just overall styling the whole website too look the best
-- **(Just using CSS and making the website really stand out)**
-7.
+6. Just overall styling the whole website too look the best.
+- **(Just using CSS and making the website really stand out.)**
+7. Added a Tiger Graph window that displays Tiger population timeline in the countries, India, Nepal, and Russia.
+- **(I did this using simple chart JavaScript, using datasets and x and y values to put the data in the graph code.)**
 
 ## Credits:
 
@@ -112,6 +113,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 32. Calculator Icon - https://www.flaticon.com/free-icon/calculator_548251
 33. Paint canvas Icon - https://www.flaticon.com/free-icon/brush_15299746?term=canvas&page=1&position=22&origin=tag&related_id=15299746
 34. Camera image - https://www.magnific.com/free-psd/black-dslr-camera-with-lens_418464025.htm#fromView=keyword&page=1&position=1&uuid=de1dd188-5dd8-4b3a-9dff-95802f41bfe0&track=ais_hybrid&query=Camera
+35. Chart icon - https://www.flaticon.com/free-icon/diagram_1018716?term=chart&page=1&position=1&origin=search&related_id=1018716
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
@@ -133,4 +135,5 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 9. Number 1 best tutorial for JavaScript calculater: https://youtu.be/KM8PIiqq97c?si=74JOiETd0lBZZytu
 10. Paint canvas tutorial - https://youtu.be/TYiFhk9hKy0?si=imWCNUuhktyDkJ2m and https://youtu.be/wCwKkT1P7vY?si=DZ3kGUfejhcSx-B-
 11. Graph Data - https://s2r.iucnredlist.org/sis2_attachments/attachments/533/261/5332619/11439E5B64000E59D5D3AA01CF5AE69A
+12. Chart tutorial - https://www.w3schools.com/ai/ai_chartjs.asp
 
