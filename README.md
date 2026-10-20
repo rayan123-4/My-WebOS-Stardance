@@ -67,9 +67,11 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 - **(Using CSS for the camera and flashes, and Javascript for the timeout functions and if statements, to make the camera animation, flash and click happen at a specific time.)**
 5. Added a download button to the paint window, so that people can download their drawings as a PNG file.
 - **(I did this in Javascript using DataURL and some other functions, to trigger a browser download as a PNG file when the download button is pressed.)**
-6. Just overall styling the whole website too look the best.
+6. Adding text overlay to all of the icons, when they are hovered, so people know what app they are for.
+- **(This was surpisingly hard as at first I just used CSS, but then realized that I can do this easily with JavaScript and Assing a specific text to a specific icon, so that they would stay sticked on when the icon bar was dragged. However I learnt a lot about problem solving.)**
+7. Just overall styling the whole website too look the best.
 - **(Just using CSS and making the website really stand out.)**
-7. Added a Tiger Graph window that displays Tiger population timeline in the countries, India, Nepal, and Russia.
+8. Added a Tiger Graph window that displays Tiger population timeline in the countries, India, Nepal, and Russia.
 - **(I did this using simple chart JavaScript, using datasets and x and y values to put the data in the graph code.)**
 
 ## Credits:
