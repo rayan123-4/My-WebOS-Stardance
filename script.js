@@ -309,7 +309,7 @@ if (chartIcon) {
 
 if (chartWindowClose) {
   chartWindowClose.addEventListener("click", function () {
-    chartWindow(chartWindow);
+    closeWindow(chartWindow);
   });
 }
 
@@ -1512,14 +1512,17 @@ new Chart ("myChart", {
   data: {
     labels: xValues,
     datasets: [{
+      label: "India",
       borderColor: "blue",
       data: [1706, 2226, 3167 ],// ?
       fill: false
     },{
+      label: "Russia",
       borderColor: "red",
       data: [360, 433, 750],// ?
       fill: false
     },{
+      label: "Nepal",
       borderColor: "green",
       data: [121, 198, 355],// ?
       fill: false
