@@ -67,6 +67,9 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 - **(Using CSS for the camera and flashes, and Javascript for the timeout functions and if statements, to make the camera animation, flash and click happen at a specific time.)**
 5. Added a download button to the paint window, so that people can download their drawings as a PNG file.
 - **(I did this in Javascript using DataURL and some other functions, to trigger a browser download as a PNG file when the download button is pressed.)**
+6. Just overall styling the whole website too look the best
+- **(Just using CSS and making the website really stand out)**
+7.
 
 ## Credits:
 
