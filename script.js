@@ -1476,3 +1476,35 @@ iconList.forEach(function(icon) {
   }
 
 });
+
+// Tiger chart code multiple lines:
+const myChart = new Chart("myChart", {
+  type:"line",
+  data: {},
+  options: {}
+});
+
+const xValues = [2010, 2016, 2022];// ?
+
+new Chart ("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      borderColor: "blue",
+      data: [1706, 2226, 3167 ],// ?
+      fill: false
+    },{
+      borderColor: "red",
+      data: [360, 433, 750],// ?
+      fill: false
+    },{
+      borderColor: "green",
+      data: [121, 198, 355],// ?
+      fill: false
+    }]
+  },
+  options:{
+    legend: {display: false}
+  }
+});

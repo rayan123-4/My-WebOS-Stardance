@@ -11,9 +11,19 @@
     <link rel="icon" type="image/png" href="Images/tiger-web-icon.png">
     <link rel="stylesheet" href="main.css">
     <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body>
+    <div id="tigerChartWindow" class="tiger-Chart-Window">
+        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+        <button class="minimize-button">—</button>
+        <p class="close-button" id="link-close">X</p>
+        <div id="chartContent" class="chart-Content">
+            <canvas id="myChart" style="width: 100%; max-width: 700px;"></canvas>
+
+        </div>
+    </div>
     <div id="rayanLinkWindow" class="rayan-Link-Window">
         <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
         <button class="minimize-button">—</button>
