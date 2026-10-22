@@ -1499,14 +1499,10 @@ iconList.forEach(function(icon) {
 
 // Tiger chart code multiple lines:
 
-// const myChart = new Chart("myChart", {
-//   type:"line",
-//   data: {},
-//   options: {}
-// });
 
 const xValues = [2010, 2016, 2022];// ?
 
+// Different lines all here for the graph and there values.
 new Chart ("myChart", {
   type: "line",
   data: {

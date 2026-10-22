@@ -10,11 +10,28 @@
     <title>TigerOS</title>
     <link rel="icon" type="image/png" href="Images/tiger-web-icon.png">
     <link rel="stylesheet" href="main.css">
+        <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+                    "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+                }
+			}
+		</script>
     <script src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script type="module" src="earth.js"></script>
 </head>
 
 <body>
+    <div id="earth-Window" class="earth-Window">
+        <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
+        <img src="Images/stardance.avif" class="welcome-page-header" id="Earthwindow-header">
+        <button class="minimize-button">—</button>
+        <p class="close-button" id="EarthWindow-close">X</p>
+                <div id="earthContent" class="earth-Content"></div>
+    </div>
+
     <div id="tigerChartWindow" class="tiger-Chart-Window">
         <img src="Images/stardance.avif" class="welcome-page-header" id="Chartwindow-header">
         <img src="Images/stardanceTrio.avif" class="stardance-Trio" alt=" Stardance pop up trio">
@@ -303,6 +320,9 @@
                 </div>
                 <div class="icon-bar">
                     <div class="icon-list">
+                        <div id="earthIcon" class=""earth-Icon">
+                            <img src="Images/planet-earth.png" class="icon-Img" alt="Earth window icon">
+                        </div>
                         <div id="chartIcon" class="chart-Icon">
                             <img src="Images/diagram.png" class="icon-Img" alt=" Chart window icon">
                         </div>
@@ -343,6 +363,7 @@
                     </div>
                 </div>
                 <div class="text-Icon-List">
+                    <p class="icon-text-earth">Tiger Earth</p>
                     <p class="icon-text-gallery">Tiger Gallery</p>
                     <p class="icon-text-roar">Tiger Roar Sound</p>
                     <p class="icon-text-map">Tiger Map</p>

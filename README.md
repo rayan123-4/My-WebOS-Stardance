@@ -116,6 +116,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 33. Paint canvas Icon - https://www.flaticon.com/free-icon/brush_15299746?term=canvas&page=1&position=22&origin=tag&related_id=15299746
 34. Camera image - https://www.magnific.com/free-psd/black-dslr-camera-with-lens_418464025.htm#fromView=keyword&page=1&position=1&uuid=de1dd188-5dd8-4b3a-9dff-95802f41bfe0&track=ais_hybrid&query=Camera
 35. Chart icon - https://www.flaticon.com/free-icon/diagram_1018716?term=chart&page=1&position=1&origin=search&related_id=1018716
+36. Earth icon - https://www.flaticon.com/free-icon/planet-earth_8635653?term=globe&page=1&position=9&origin=search&related_id=8635653
     
 **Audio:**
 1. Bengal Tiger roar - https://youtu.be/NocNyLel9Cg?si=X-rn8EsXESyfbvr4
@@ -138,4 +139,5 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 10. Paint canvas tutorial - https://youtu.be/TYiFhk9hKy0?si=imWCNUuhktyDkJ2m and https://youtu.be/wCwKkT1P7vY?si=DZ3kGUfejhcSx-B-
 11. Graph Data - https://s2r.iucnredlist.org/sis2_attachments/attachments/533/261/5332619/11439E5B64000E59D5D3AA01CF5AE69A
 12. Chart tutorial - https://www.w3schools.com/ai/ai_chartjs.asp
+13. Earth three.js tutorial - https://youtu.be/FntV9iEJ0tU?si=Q5bn-Yvsx9oeEWq5
 
