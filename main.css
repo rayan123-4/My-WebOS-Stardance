@@ -1862,6 +1862,8 @@ body:has(.chart-Icon:hover) .icon-text-chart {
     background-color: var(--paint-board);
     cursor: crosshair;
     display: block;
+    max-height: 480px;
+    max-width: 445px;
 }
 
 #paintToolBar {
