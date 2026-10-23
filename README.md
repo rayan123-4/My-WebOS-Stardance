@@ -118,7 +118,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 33. Paint canvas Icon - https://www.flaticon.com/free-icon/brush_15299746?term=canvas&page=1&position=22&origin=tag&related_id=15299746
 34. Camera image - https://www.magnific.com/free-psd/black-dslr-camera-with-lens_418464025.htm#fromView=keyword&page=1&position=1&uuid=de1dd188-5dd8-4b3a-9dff-95802f41bfe0&track=ais_hybrid&query=Camera
 35. Chart icon - https://www.flaticon.com/free-icon/diagram_1018716?term=chart&page=1&position=1&origin=search&related_id=1018716
-36. Earth icon - https://www.flaticon.com/free-icon/planet-earth_8635653?term=globe&page=1&position=9&origin=search&related_id=8635653
+36. Earth icon - https://www.flaticon.com/free-icon/globe_12871700?term=globe+asia&page=1&position=19&origin=search&related_id=12871700
 37. Earth texture - https://www.solarsystemscope.com/textures/
     
 **Audio:**
