@@ -16,8 +16,10 @@ document.querySelector("#earthContent").appendChild(renderer.domElement);
 new OrbitControls(camera, renderer.domElement);
 const loader = new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, 12);
+const earthTexture = loader.load("Images/2k_earth_daymap.jpg");
+earthTexture.colorSpace = THREE.SRGBColorSpace;
 const material = new THREE.MeshStandardMaterial({
-  map: loader.load("./textures/00_earthmap4k.jpg"),
+  map: earthTexture,
 });
 
 const earthMesh = new THREE.Mesh(geometry, material);
@@ -30,8 +32,8 @@ scene.add(hemiLight);
 function animate() {
   requestAnimationFrame(animate);
 
-  earthMesh.rotation.x += 0.0
-  earthMesh.rotation.y += 0.0
+  earthMesh.rotation.x += 0.002;
+  earthMesh.rotation.y += 0.002;
   renderer.render(scene, camera);
 }
 
