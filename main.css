@@ -449,7 +449,6 @@ p {
 
 
 .tiger-gallery img,
-.earth-Icon img,
 .roar-Icon img,
 .tiger-map-icon img,
 .information-icon img,
@@ -475,11 +474,11 @@ p {
 
 .earth-Icon img {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
     object-fit: contain;
 }
 
