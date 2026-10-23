@@ -76,6 +76,10 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 9. Added a 3d earth in a new earth window, that is animated and can be rotated.
 - **(I did this using three.js and and making the 3d circle and animations first, then locally adding the earth textures. I also made it so when you press the space bar it will stop and start the animation.)**
 
+## Tip:
+- There are many different small tigers hiding across a few windows and app icons.
+- There are 2 in the windows and 4 in the app icons. Clue for the earth one: (where do most tigers live?).
+
 ## Credits:
 
 **Images:**
