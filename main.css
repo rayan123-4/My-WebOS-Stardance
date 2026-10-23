@@ -443,6 +443,7 @@ p {
 
 
 .tiger-gallery img,
+.earth-Icon img,
 .roar-Icon img,
 .tiger-map-icon img,
 .information-icon img,
@@ -457,6 +458,16 @@ p {
 }
 
 .chart-Icon img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.earth-Icon img {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -551,6 +562,17 @@ p {
     background-color: var(--color-ui-white);
 }
 
+.earth-Icon {
+    cursor: pointer;
+    position: fixed;
+    top: 1220px;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: var(--color-ui-white);
+}
+
 .calc-Icon {
     cursor: pointer;
     position: fixed;
@@ -601,6 +623,7 @@ p {
 
 /* App Icon Hover: */
 .tiger-gallery:hover,
+.earth-Icon:hover,
 .roar-Icon:hover,
 .tiger-map-icon:hover,
 .settings-Icon:hover,
@@ -611,7 +634,8 @@ p {
 .snake-icon:hover,
 .calc-Icon:hover,
 .paint-Icon:hover,
-.chart-Icon:hover {
+.chart-Icon:hover,
+.earth-Icon:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px var(--color-window-border));
 }
@@ -635,6 +659,7 @@ p {
 
 /* Window content */
 .settings-content,
+.earth-Content,
 .Tiger-Information-content,
 .gallery-images,
 .title-roar-window,
@@ -647,7 +672,8 @@ p {
 .calc-container,
 .paint-content,
 .rayan-Links,
-.chart-Content {
+.chart-Content,
+.earth-Content {
     box-shadow: 0 4px 12px var(--content-border);
 }
 
@@ -1080,6 +1106,7 @@ p {
 }
 
 #welcomepage, 
+#earth-Window,
 #snakeGameWindow, 
 #ManualWindow, 
 #RealWeatherWindow, 
@@ -1092,7 +1119,8 @@ p {
 #calcWindow,
 #paintWindow,
 #rayanLinkWindow,
-#tigerChartWindow {
+#tigerChartWindow,
+#earthWindow {
     animation: alertPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
     box-shadow: 0 4px 12px var(--color-window-border);
 }
@@ -1378,6 +1406,7 @@ p {
 }
 
 .tiger-gallery,
+.earth-Icon,
 .roar-Icon,
 .tiger-map-icon,
 .settings-Icon,
@@ -1388,7 +1417,8 @@ p {
 .snake-icon,
 .calc-Icon,
 .paint-Icon,
-.chart-Icon {
+.chart-Icon,
+.earth-Icon {
     position: absolute;
     transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1418,6 +1448,10 @@ p {
 
 .icon-text-gallery {
     top: 120px;
+}
+
+.icon-text-earth {
+    top: 1320px;
 }
 
 .icon-text-roar {
@@ -1463,12 +1497,17 @@ p {
 .icon-text-chart {
     top: 1220px;
 }
+
+.icon-text-earth {
+    top: 1320px;
 }
 
 /* Divider*/
-
-
 body:has(.tiger-gallery:hover) .icon-text-gallery {
+    display: flex;
+}
+
+body:has(.earth-Icon:hover) .icon-text-earth {
     display: flex;
 }
 
@@ -1513,6 +1552,10 @@ body:has(.paint-Icon:hover) .icon-text-canvas {
 }
 
 body:has(.chart-Icon:hover) .icon-text-chart {
+    display: flex;
+}
+
+body:has(.earth-Icon:hover) .icon-text-earth {
     display: flex;
 }
 
@@ -1963,7 +2006,7 @@ body:has(.chart-Icon:hover) .icon-text-chart {
     font-size: 10px;
 }
 
-/* Camera flas overlay*/
+/* Camera flash overlay*/
 .camera-flash {
     position: absolute;
     top: 0;
@@ -2030,4 +2073,31 @@ body:has(.chart-Icon:hover) .icon-text-chart {
 
 .chart-Content h1 {
     font-size: 37px;
+}
+
+/* Tiger Earth Window: */
+.earth-Window {
+    display: none;
+    border: solid;
+    border-color: var(--color-window-border);
+    width: 600px;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    backdrop-filter: blur(16px);
+    background-color: var(--color-glass-background);
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.earth-Content {
+    border: 2px solid var(--content-border);
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 32px;
+    background: var(--color-panel-background);
 }

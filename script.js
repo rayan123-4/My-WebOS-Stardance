@@ -1,7 +1,7 @@
 // TIGEROS JAVASCRIPT:
 
 // ALL WINDOWS:
-let windows = (".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window, .rayan-Link-Window, .tiger-Chart-Window")
+let windows = (".window-box, .gallery-window, .roar-window, .tiger-map-window, .settings-window, .Tiger-Information, .Weather-Window, .real-weather-window, .manual-window, .snake-Game-Window, .calc-Window, .paint-window, .rayan-Link-Window, .tiger-Chart-Window, .earth-Window")
 
 // Code for making the DIV element draggable:
 document.querySelectorAll(windows).forEach(dragElement);
@@ -290,6 +290,26 @@ if (paintIcon) {
 if (paintWindowClose) {
   paintWindowClose.addEventListener("click", function () {
     closeWindow(paintWindow);
+  });
+}
+
+// for tiger earth window drag:
+// for paint window drag:
+dragElement(document.querySelector("#earth-Window"));
+
+var earthWindow = document.querySelector("#earth-Window");
+var earthIcon = document.querySelector("#earthIcon");
+var earthWindowClose = document.querySelector("#EarthWindow-close");
+
+if (earthIcon) {
+  earthIcon.addEventListener("click", function () {
+    openWindow(earthWindow);
+  });
+}
+
+if (earthWindowClose) {
+  earthWindowClose.addEventListener("click", function () {
+    closeWindow(earthWindow);
   });
 }
 
@@ -1350,7 +1370,7 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
 // Making the app icons stay hover light if they open:
 
 // List of icons:
-    var iconList = document.querySelectorAll(".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon, .chart-Icon");
+    var iconList = document.querySelectorAll(".tiger-gallery, .roar-Icon, .tiger-map-icon, .settings-Icon, .information-icon, .real-weather-icon, .weather-icon, .manual-icon, .snake-icon, .calc-Icon, .paint-Icon, .chart-Icon, .earth-Icon");
 
 // List of the images:
     var windowMapping = {
@@ -1367,7 +1387,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
       "snake-icon": "#snakeGameWindow",
       "calc-Icon": "#calcWindow",
       "paint-Icon": "#paintWindow",
-      "chart-Icon": "#tigerChartWindow"
+      "chart-Icon": "#tigerChartWindow",
+      "earth-Icon": "#earth-Window"
     };
 
     function updateIconHoverDisplay() {
@@ -1469,7 +1490,8 @@ if (selectedBackground === "Images/lightTheme.jpg") enableLightBackground()
     "snake-icon": ".icon-text-game",
     "calc-Icon": ".icon-text-calc",
     "paint-Icon": ".icon-text-canvas",
-    "chart-Icon": ".icon-text-chart"
+    "chart-Icon": ".icon-text-chart",
+    "earth-Icon": ".icon-text-earth"
 };
 
 iconList.forEach(function(icon) {
