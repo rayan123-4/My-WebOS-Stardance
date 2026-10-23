@@ -73,6 +73,8 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 - **(Just using CSS and making the website really stand out.)**
 8. Added a Tiger Graph window that displays Tiger population timeline in the countries, India, Nepal, and Russia.
 - **(I did this using simple chart JavaScript, using datasets and x and y values to put the data in the graph code.)**
+9. Added a 3d earth in a new earth window, that is animated and can be rotated.
+- **(I did this using three.js and and making the 3d circle and animations first, then locally adding the earth textures.)**
 
 ## Credits:
 
