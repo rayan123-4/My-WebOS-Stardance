@@ -345,8 +345,14 @@ h1 {
 #calcWindow h1,
 #paintWindow h1,
 #rayanLinkWindow h1,
-#tigerChartWindow h1 {
+#tigerChartWindow h1,
+#earthWindow h1 {
     font-weight: 700;
+}
+
+.earth-Content h1 {
+    font-size: 16px;
+    font: italic 41px "Fira Sans", serif;
 }
 
 h2,
