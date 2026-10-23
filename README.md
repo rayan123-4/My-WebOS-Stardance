@@ -78,7 +78,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 
 ## Tip:
 - There are many different small tigers hiding across a few windows and app icons.
-- There are 2 in the windows and 4 in the app icons. Clue for the earth one: (where do most tigers live?).
+- There are 2 in the windows and 4 in the app icons. Clue for the earth one: (where do most tigers live?, and Devlog 50 ).
 
 ## Credits:
 
