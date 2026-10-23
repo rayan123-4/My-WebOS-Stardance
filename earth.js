@@ -28,13 +28,27 @@ scene.add(earthMesh);
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x000000, 1.0);
 scene.add(hemiLight);
 
+let isSpinning = true;
+
 // Make earth rotate at a constant speed.
 function animate() {
   requestAnimationFrame(animate);
 
-  earthMesh.rotation.x += 0.002;
-  earthMesh.rotation.y += 0.002;
+  if (isSpinning) {
+    earthMesh.rotation.x += 0.002;
+    earthMesh.rotation.y += 0.002;
+  }
   renderer.render(scene, camera);
 }
 
 animate();
+
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === ' ' || event.code === 'Space') {
+    event.preventDefault();
+    isSpinning = !isSpinning;
+  }
+});
+
+
