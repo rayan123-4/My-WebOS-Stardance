@@ -15,7 +15,7 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 - I used also **W3Schools tutorials** for some extra help, when I started out making the webOS.
 
 ## What was hard and what have I gained from building this project:
-- The most challenging thing for me was doing the JavaScript, since JavaScript is my least confident language out of the three, but I learnt and figured things out. I had too learn a lot about Javascript and things like the syntax, but I think I can definitely say that I have learnt soo much compared to before this project.
+- The most challenging thing for me was doing the JavaScript, since JavaScript is my least confident language out of the three, but I learnt and figured things out. I had too learn a lot about Javascript and things like the syntax,and its very simular to other coding languages so it has really helped me progress.
 - Styling the CSS was also very hard, trying to get the images to be aligned and the grid. CSS wasn't challenging like how Javascript was, it was like, it works, but it doesn't work/look how I would like it too be.
 - The HTML was simple, however the only problem I found were the occasional variable typo or an open parenthesis.
 - Building this project has helped me learn more about syntax errors, how to debug, trial and error, and just improve my general knowledge of coding. It has also helped me learn functions that are helpful in other langauges, such as Python.
@@ -74,7 +74,7 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 8. Added a Tiger Graph window that displays Tiger population timeline in the countries, India, Nepal, and Russia.
 - **(I did this using simple chart JavaScript, using datasets and x and y values to put the data in the graph code.)**
 9. Added a 3d earth in a new earth window, that is animated and can be rotated.
-- **(I did this using three.js and and making the 3d circle and animations first, then locally adding the earth textures.)**
+- **(I did this using three.js and and making the 3d circle and animations first, then locally adding the earth textures. I also made it so when you press the space bar it will stop and start the animation.)**
 
 ## Credits:
 
