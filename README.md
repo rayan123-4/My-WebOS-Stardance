@@ -1,4 +1,5 @@
 # My-WebOS-Stardance
+# TigerOS
 This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javascript**.
 - The website is themed on **Tigers** and has many cool features.
 - This project is made for the **WebOS** mission in **Stardance.**
@@ -6,6 +7,14 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 - It's a nonprofit program by https://hackclub.com/
 
 <img width="1365" height="767" alt="Screenshot 2026-09-26 16 09 03" src="https://github.com/user-attachments/assets/821bd435-6c37-4417-bb2b-6a8824ee28bb" />
+
+# Some AMAZING things you can explore
+- An interactive 3D Earth built with Three.js, with hidden tiger surprises.
+- A Tiger information, habitat content and a populated graph.
+- Live weather searches using a weather api.
+- A Drawing canvas to draw your own tiger, with undo and download buttons.
+- A Tiger themed snake game, calculator and customizable desktop.
+### These are only some of the things you can experience in TigerOS
 
 # How I made it:
 - It's a simple **WebOS** that I have made using the **Jams official guide** (https://jams.hackclub.com/batch/webOS).
@@ -140,10 +149,11 @@ git clone https://github.com/rayan123-4/My-WebOS-Stardance
 4. Tutorial for light/dark theme - https://youtu.be/_gKEUYarehE?si=AgS2rTlwhXKqBQA0
 5. Tutoral for WebOS and resource - https://jams.hackclub.com/batch/webOS and https://www.w3schools.com/
 6. Some information from the tiger information window - https://www.britannica.com/animal/tiger
-7. Data Api from Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
-8. Tutorial for Snake game - https://youtu.be/Je0B3nHhKmM?si=DQiSr36gDDSM3Psj
-9. Number 1 best tutorial for JavaScript calculater: https://youtu.be/KM8PIiqq97c?si=74JOiETd0lBZZytu
-10. Paint canvas tutorial - https://youtu.be/TYiFhk9hKy0?si=imWCNUuhktyDkJ2m and https://youtu.be/wCwKkT1P7vY?si=DZ3kGUfejhcSx-B-
-11. Graph Data - https://s2r.iucnredlist.org/sis2_attachments/attachments/533/261/5332619/11439E5B64000E59D5D3AA01CF5AE69A
-12. Chart tutorial - https://www.w3schools.com/ai/ai_chartjs.asp
-13. Earth three.js tutorial - https://youtu.be/FntV9iEJ0tU?si=Q5bn-Yvsx9oeEWq5
+7. Data from fake Weather window - https://timesofindia.indiatimes.com/city/bhopal/nowgaon-in-madhya-pradesh-hottest-with-49-degrees-celsius/articleshow/69729113.cms
+8. Data from real api Weather window - https://www.weatherapi.com/
+10. Tutorial for Snake game - https://youtu.be/Je0B3nHhKmM?si=DQiSr36gDDSM3Psj
+11. Number 1 best tutorial for JavaScript calculater: https://youtu.be/KM8PIiqq97c?si=74JOiETd0lBZZytu
+12. Paint canvas tutorial - https://youtu.be/TYiFhk9hKy0?si=imWCNUuhktyDkJ2m and https://youtu.be/wCwKkT1P7vY?si=DZ3kGUfejhcSx-B-
+13. Graph Data - https://s2r.iucnredlist.org/sis2_attachments/attachments/533/261/5332619/11439E5B64000E59D5D3AA01CF5AE69A
+14. Chart tutorial - https://www.w3schools.com/ai/ai_chartjs.asp
+15. Earth three.js tutorial - https://youtu.be/FntV9iEJ0tU?si=Q5bn-Yvsx9oeEWq5
