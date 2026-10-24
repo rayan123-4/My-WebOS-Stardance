@@ -20,14 +20,14 @@ scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 const loader = new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, 12);
-const earthTexture = loader.load("Images/2k_earth_daymap.jpg");
+const earthTexture = loader.load("Images/8k_earth_daymap.jpg");
 earthTexture.colorSpace = THREE.SRGBColorSpace;
 const material = new THREE.MeshStandardMaterial({
   map: earthTexture,
 });
 
 const earthMesh = new THREE.Mesh(geometry, material);
-scene.add(earthMesh);
+earthGroup.add(earthMesh);
 
 const stars = getStarfield({numStars: 2000});
 scene.add(stars);
