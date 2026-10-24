@@ -1,6 +1,7 @@
 // Earth moving window code:
 import * as THREE from "three";
 import { OrbitControls } from "jsm/controls/OrbitControls.js";
+import getStarfield from "./getStarfield.js";
 
 // Setting up the scene and camera.
 const w = 560;
@@ -24,6 +25,9 @@ const material = new THREE.MeshStandardMaterial({
 
 const earthMesh = new THREE.Mesh(geometry, material);
 scene.add(earthMesh);
+
+const stars = getStarfield({numStars: 2000});
+scene.add(stars);
 
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x000000, 1.0);
 scene.add(hemiLight);
