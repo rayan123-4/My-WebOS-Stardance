@@ -14,6 +14,9 @@ renderer.setSize(w, h);
 document.querySelector("#earthContent").appendChild(renderer.domElement);
 
 // Creating the earth shape and texture.
+const earthGroup = new THREE.Group();
+earthGroup.rotation.z = -23.4 * Math.PI / 180;
+scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 const loader = new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, 12);
