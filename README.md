@@ -6,7 +6,7 @@ This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javasc
 - https://stardance.hackclub.com/ is the largest free STEM event of the 2026 summer.
 - It's a nonprofit program by https://hackclub.com/
 
-<img width="1365" height="767" alt="Screenshot 2026-09-26 16 09 03" src="https://github.com/user-attachments/assets/821bd435-6c37-4417-bb2b-6a8824ee28bb" />
+<img width="1365" height="657" alt="Screenshot 2026-10-25 15 38 20" src="https://github.com/user-attachments/assets/4fe73b28-954d-4b70-8672-00425c785ebf" />
 
 # Some AMAZING things you can explore
 - An interactive 3D Earth built with Three.js, with hidden tiger surprises.
