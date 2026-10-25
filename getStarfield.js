@@ -1,5 +1,6 @@
 import * as THREE from "three";
 
+// Function to create all the stars in the background.
 export default function getStarfield({numStars = 500} = {}) {
   function randomSpherePoint() {
     const radius = Math.random() * 25 + 25;
@@ -13,11 +14,12 @@ export default function getStarfield({numStars = 500} = {}) {
 
   return {
     pos: new THREE.Vector3(x, y, z),
-    hue: 0.6, // radius * 0.02 + 0.5
+    hue: 0.6,
     minDist: radius,
   };
 }
 
+// Create the stars and set a random position for each star.
 const verts = [];
 const colors = [];
 const positions = [];
@@ -31,6 +33,7 @@ for (let i = 0; i < numStars; i += 1) {
     colors.push(col.r, col.g, col.b);
 }
 
+// Set the star shape and color.
 const geo = new THREE.BufferGeometry();
 geo.setAttribute("position", new THREE.Float32BufferAttribute(verts, 3));
 geo.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));

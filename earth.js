@@ -29,6 +29,7 @@ const material = new THREE.MeshStandardMaterial({
 const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
 
+// How many stars are added is the number.
 const stars = getStarfield({numStars: 2000});
 scene.add(stars);
 
@@ -50,7 +51,7 @@ function animate() {
 
 animate();
 
-
+// To make the animation stop and start when the spacebar is pressed.
 document.addEventListener("keydown", (event) => {
   if (event.key === ' ' || event.code === 'Space') {
     event.preventDefault();
