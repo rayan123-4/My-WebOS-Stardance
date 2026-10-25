@@ -1,6 +1,7 @@
 # My-WebOS-Stardance
 # TigerOS
 This is my **WebOS** that I have have made using **HTML**, **CSS**, and **Javascript**.
+- Take your time to read through and learn about TigerOS.
 - The website is themed on **Tigers** and has many cool features.
 - This project is made for the **WebOS** mission in **Stardance.**
 - https://stardance.hackclub.com/ is the largest free STEM event of the 2026 summer.
